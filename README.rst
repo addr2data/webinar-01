@@ -1,6 +1,19 @@
 Webinar-01
 ==========
 
+Introduction
+------------
+During this we will be creating AWS components using the AWS console. Below I have outlined the steps and
+provided the equivalent awscli command for each operation
+
+Notes
+-----
+In the awscli commands provided below
+
+- The commands are meant for the Windows cmd prompt (commands spread over multiple lines use **'^'** vs. **'\'**.
+- For parameters where the value is static, the **value** is included.
+- For parameters where the value is dynamic, **<parameter>** is included.
+
 VPC
 ---
 Using the AWS Console, create a VPC named **webinar-01** with a CIDR of **10.2.0.0/16**. 
