@@ -55,7 +55,8 @@ Addes routes
 
 awscli (windows)::
 
-	aws ec2 create-route --destination-cidr-block 0.0.0.0/0 --gateway-id <igw-id> --route-table-id <rtb-id>
+	aws ec2 create-route --destination-cidr-block 0.0.0.0/0 ^
+	--gateway-id <igw-id> --route-table-id <rtb-id>
 
 ****
 
@@ -100,15 +101,18 @@ Add routes to the peer-link
 
 awscli (windows)::
 
-	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 --gateway-id <value> --route-table-id <value>
+	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
+	--gateway-id <value> --route-table-id <value>
 
 awscli (windows)::
 
-	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 --gateway-id <value> --route-table-id <value>
+	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
+	--gateway-id <value> --route-table-id <value>
 
 awscli (windows)::
 
-	aws ec2 create-route --destination-cidr-block 10.2.0.0/16 --gateway-id <value> --route-table-id <value>
+	aws ec2 create-route --destination-cidr-block 10.2.0.0/16 ^
+	--gateway-id <value> --route-table-id <value>
 
 
 
