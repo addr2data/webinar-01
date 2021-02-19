@@ -62,6 +62,4 @@ aws ec2 create-route --destination-cidr-block 10.2.0.0/16 --gateway-id <value> -
 
 
 
-
-------------------------------------------------------------------------
 aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01
