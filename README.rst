@@ -13,12 +13,21 @@ awscli (windows)::
 ****
 
 
-Route Table
------------
-aws ec2 create-tags --resources <route-table-id> --tags Key=Name,Value=webinar-01-private
+Route Tables
+------------
 
-aws ec2 create-route-table --vpc-id <vpc-id> --tag-specifications ResourceType=route-table,Tags=[{Key=Name,Value=webinar-01-public}]
- 
+Add a name (webinar-01-private) to the main route table
+
+awscli (windows)::
+
+	aws ec2 create-tags --resources <route-table-id> --tags Key=Name,Value=webinar-01-private
+
+Create a second route table named (webinar-01-public) 
+
+awscli (windows)::
+
+	aws ec2 create-route-table --vpc-id <vpc-id> --tag-specifications ResourceType=route-table,Tags=[{Key=Name,Value=webinar-01-public}]
+
 
 IGW
 ---
