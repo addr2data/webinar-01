@@ -47,18 +47,22 @@ awscli (windows)::
 	aws ec2 attach-internet-gateway ^
 	--internet-gateway-id <igw-id> --vpc-id <vpc-id>
 
+****
 
 Routes
 ------
-
+Addes routes
 
 awscli (windows)::
 
 	aws ec2 create-route --destination-cidr-block 0.0.0.0/0 --gateway-id <igw-id> --route-table-id <rtb-id>
 
+****
 
-Create Subnets
---------------
+Subnets
+-------
+
+Create subnets
 
 awscli (windows)::
 
@@ -66,6 +70,7 @@ awscli (windows)::
 	--vpc-id <vpc-id> --availability-zone us-east-1b ^
 	--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-private02}]
 
+****
 
 Associate Subnets with Route Table
 ----------------------------------
@@ -74,6 +79,7 @@ awscli (windows)::
 
 	aws ec2 associate-route-table --route-table-id <value>--subnet-id <value>
 
+****
 
 VPC peering link
 ----------------
@@ -90,9 +96,7 @@ awscli (windows)::
 
 	aws ec2 accept-vpc-peering-connection --vpc-peering-connection-id <value>
 
-
-Add routes for peering link
----------------------------
+Add routes to the peer-link
 
 awscli (windows)::
 
