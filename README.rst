@@ -45,10 +45,8 @@ toDoList
 
 ****
 
-****
-
-goingCmdO
-~~~~~~~~~
+*goingCmdO*
+~~~~~~~~~~~
 
 awscli::
 
