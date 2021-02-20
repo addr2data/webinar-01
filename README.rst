@@ -38,10 +38,11 @@ awscli::
     $ aws ec2 create-vpc --cidr-block 10.2.0.0/16 --tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=webinar-01}]
 
 
-For subsequent operations, you will need to know the dynamically assigned **vpc-id** , so here's how you it from the awscli
+For subsequent operations, you will need to know the dynamically assigned **vpc-id** , so here's how you it from the awscli.
 
 awscli::
-	aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01
+	
+	$ aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01
 
 ****
 
