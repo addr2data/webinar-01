@@ -26,6 +26,7 @@ Amazon Virtual Private Cloud (VPC)
 VPCs are logically isolated sections of the AWS cloud.
 
 - VPCs have the look and feel of traditional networks
+
 	+ You can define the IPv4/IPv6 address space
 	+ You can create subnets
 	+ YOu can configure routing tables 
