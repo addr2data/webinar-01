@@ -91,8 +91,8 @@ A VPC component that allows communication between your VPC and the Internet. It 
 toDoList
 ~~~~~~~~
 
-- Create an Internet Gateway
-- Attach it to your VPC
+- Create an named **webinar-01-igw** Internet Gateway
+- Attach it to our VPC
 
 ****
 
