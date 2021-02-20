@@ -355,7 +355,7 @@ toDoList
 - Discuss **outbound** vs. **inbound**
 - Add the **web-servers** with the following inbound rules:
 
-| SSH			TCP		22		10.0.0.0/16		SSH traffic from **addr2data** VPC  
+| SSH           TCP		22		10.0.0.0/16		SSH traffic from **addr2data** VPC  
 | Custom TCP 	TCP 	5000	10.0.0.0/16		Web traffic from **addr2data** VPC  
 
 ****
