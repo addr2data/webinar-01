@@ -38,8 +38,13 @@ VPCs are logically isolated sections of the AWS cloud.
 	+ You can create subnets
 	+ YOu can configure routing tables 
 
+Stuff to do
+~~~~~~~~~~~
 
-Create a VPC named **webinar-01** with a CIDR of **10.2.0.0/16**. 
+- Create a VPC named **webinar-01** with a CIDR of **10.2.0.0/16**. 
+
+Going cmdline-o
+---------------
 
 awscli::
 
@@ -55,6 +60,21 @@ awscli::
 
 ****
 
+Internet Gateway
+-----------------
+Create an Internet Gateway
+
+awscli::
+
+	aws ec2 create-internet-gateway --tag-specifications ResourceType=internet-gateway,Tags=[{Key=Name,Value=webinar-01-igw}]
+
+Attach the Internet Gateway to the VPC
+
+awscli (windows)::
+
+	aws ec2 attach-internet-gateway --internet-gateway-id <igw-id> --vpc-id <vpc-id>
+
+****
 
 Route Tables
 ------------
@@ -74,23 +94,7 @@ awscli (windows)::
 
 ****
 
-Internet Gateway
------------------
-Create an Internet Gateway
 
-awscli (windows)::
-
-	aws ec2 create-internet-gateway ^
-	--tag-specifications ResourceType=internet-gateway,Tags=[{Key=Name,Value=webinar-01-igw}]
-
-Attach the Internet Gateway to the VPC
-
-awscli (windows)::
-
-	aws ec2 attach-internet-gateway ^
-	--internet-gateway-id <igw-id> --vpc-id <vpc-id>
-
-****
 
 Routes
 ------
