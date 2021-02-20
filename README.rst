@@ -16,8 +16,8 @@ Notes
 -----
 In the awscli commands provided below
 
-- For parameters where the value is **static**, the **value** specific to this webinar is included.
-- For parameters where the value is **dynamic** and must be discovered, **<parameter>** is included.
+- For parameters where the value is **static**, the specific **value** for this webinar is included.
+- For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
 
 ****
 
@@ -38,7 +38,7 @@ awscli::
     $ aws ec2 create-vpc --cidr-block 10.2.0.0/16 --tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=webinar-01}]
 
 
-You will need to know the dynamically assigned **vpc-id** for subsequent operations, so heres how you it with awscli
+For subsequent operations, you will need to know the dynamically assigned **vpc-id** , so here's how you it from the awscli
 
 awscli::
 	aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01
