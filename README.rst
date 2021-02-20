@@ -38,8 +38,9 @@ awscli::
 
     $ aws ec2 create-vpc --cidr-block 10.2.0.0/16 --tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=webinar-01}]
 
+|
 
-For subsequent operations, you will need to know the dynamically assigned **vpc-id** , so here's how you it from the awscli.
+The above awscli command will return the configuration of the newly created VPC. You will need to know the **vpc-id** for future operations. Here's how you get it from the awscli.
 
 awscli::
 	
