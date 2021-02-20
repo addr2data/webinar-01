@@ -200,16 +200,16 @@ Subnets
 -------
 Subnets are
 
-*Note: there are no charges associated with subnets*
+** *Note: there are no charges associated with subnets*
 
 toDoList
 ~~~~~~~~
 
-- Create a subnet in availability zone **us-east-1a** named **webinar-01-sub-private-01**, using cidr **10.2.128.0/23
-- Create a subnet in availability zone **us-east-1a** named **webinar-01-sub-public-01**, using cidr **10.2.0.0/23
-- Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-private-02**, using cidr **10.2.130.0/23
-- Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-public-02**, using cidr **10.2.2.0/23
-
+- Create a subnet in availability zone **us-east-1a** named **webinar-01-sub-private-01**, using cidr **10.2.128.0/23**
+- Create a subnet in availability zone **us-east-1a** named **webinar-01-sub-public-01**, using cidr **10.2.0.0/23**
+- Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-private-02**, using cidr **10.2.130.0/23**
+- Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-public-02**, using cidr **10.2.2.0/23**
+- Review the subnets just created.
 
 ****
 
@@ -217,9 +217,9 @@ toDoList
 ~~~~~~~~~~~
 
 
-Create subnets
+First, let's create some subnets
 
-awscli (windows)::
+awscli::
 
 	aws ec2 create-subnet --cidr-block 10.2.128.0/23 --vpc-id <vpcId> --availability-zone us-east-1a --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-01}]
 
@@ -230,6 +230,13 @@ awscli (windows)::
 	aws ec2 create-subnet --cidr-block 10.2.2.0/23 --vpc-id <vpcId> --availability-zone us-east-1a --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
 
 |
+
+Next, let's review the subnet configuration.
+
+awscli::
+
+	aws ec2 describe-subnets --filters "Name=vpc-id,Values=<vpc-id>"
+
 
 ****
 
