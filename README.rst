@@ -278,34 +278,53 @@ awscli::
 
 ****
 
-VPC peering link
-----------------
-Create a VPC peering link
+VPC Peering
+-----------
+VPC peering allows you to create a network connection (VPC peering connection) between two VPCs and route IPv4/IPv6 traffic between them.
 
-awscli (windows)::
+- VPC peering connection can be created within the AWS account or between AWS accounts.
+- VPCs can be in the same or different regions.
+
+toDoList
+~~~~~~~~
+
+- Create a VPC peering connection between the **webinar-01** and **addr2data** VPCs.
+
+****
+
+*goingCmdO*
+~~~~~~~~~~~
+
+First, we create the peering connection.
+
+awscli::
 
 	aws ec2 create-vpc-peering-connection --peer-vpc-id <value> --vpc-id <value> ^
 	--tag-specifications ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=webinar-01-peerlink}]
 
-Accept the peering link
+Then, we accept the peering link
 
-awscli (windows)::
+awscli::
 
 	aws ec2 accept-vpc-peering-connection --vpc-peering-connection-id <value>
 
-Add routes to the peer-link
+Then, we a route.
 
 awscli (windows)::
 
 	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
 	--gateway-id <value> --route-table-id <value>
 
-awscli (windows)::
+Then, we a route.
+
+awscli::
 
 	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
 	--gateway-id <value> --route-table-id <value>
 
-awscli (windows)::
+Then, we a route.
+
+::
 
 	aws ec2 create-route --destination-cidr-block 10.2.0.0/16 ^
 	--gateway-id <value> --route-table-id <value>
