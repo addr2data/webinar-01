@@ -13,7 +13,7 @@ During this webinar we will be primarily using the AWS console, but I have also 
 
 
 Notes
------
+~~~~~
 In the awscli commands provided below
 
 - For parameters where the value is **static**, the specific **value** for this webinar is included.
@@ -115,7 +115,7 @@ awscli::
 
 |
 
-awscli (windows)::
+awscli::
 
 	aws ec2 attach-internet-gateway --internet-gateway-id <igw-id> --vpc-id <vpc-id>
 
