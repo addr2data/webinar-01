@@ -302,11 +302,15 @@ awscli::
 	aws ec2 create-vpc-peering-connection --peer-vpc-id <value> --vpc-id <value> ^
 	--tag-specifications ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=webinar-01-peerlink}]
 
+|
+
 Then, we accept the peering link
 
 awscli::
 
 	aws ec2 accept-vpc-peering-connection --vpc-peering-connection-id <value>
+
+|
 
 Then, we a route.
 
@@ -315,12 +319,16 @@ awscli (windows)::
 	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
 	--gateway-id <value> --route-table-id <value>
 
+|
+
 Then, we a route.
 
 awscli::
 
 	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
 	--gateway-id <value> --route-table-id <value>
+
+|
 
 Then, we a route.
 
