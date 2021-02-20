@@ -151,6 +151,7 @@ toDoList
 First, let's examine the main route table.
 
 awscli::
+
 	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=<vpc-id>"
 
 |
@@ -161,6 +162,7 @@ as text, from the awscli.
 
 
 awscli::
+
 	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=<vpc-id>" --query RouteTables[].RouteTableId --output text
 
 |
