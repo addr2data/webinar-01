@@ -200,7 +200,7 @@ Subnets
 -------
 Subnets are
 
-** *Note: there are no charges associated with subnets*
+*Note: there are no charges associated with subnets*
 
 toDoList
 ~~~~~~~~
@@ -215,7 +215,6 @@ toDoList
 
 *goingCmdO*
 ~~~~~~~~~~~
-
 
 First, let's create some subnets
 
@@ -237,15 +236,44 @@ awscli::
 
 	aws ec2 describe-subnets --filters "Name=vpc-id,Values=<vpc-id>"
 
+|
+
+Next, let's show the **Name** and **SubnetId** of the subnets we created in a table.
+
+awscli::
+
+	aws ec2 describe-subnets --filters "Name=vpc-id,Values=<vpcId>" --query "Subnets[*].{name: Tags[?Key=='Name'] | [0].Value, Id: SubnetId}" --output table --color off
+
+	-----------------------------------------------------------
+	|                     DescribeSubnets                     |
+	+---------------------------+-----------------------------+
+	|            Id             |            name             |
+	+---------------------------+-----------------------------+
+	|  subnet-06d45e8022909b538 |  webinar-01-sub-private-01  |
+	|  subnet-0a89f3ebc7a958154 |  webinar-01-sub-public-02   |
+	|  subnet-057041e32aad58f18 |  webinar-01-sub-private-02  |
+	|  subnet-085968550caaec8d7 |  webinar-01-sub-public-01   |
+	+---------------------------+-----------------------------+
+
+|
+
+Next, let's associate the two *public* subnets with the *public* route table 
+
+awscli::
+
+	aws ec2 associate-route-table --route-table-id <RouteTableId>--subnet-id <SubnetId>
+
+|
+
+Finally, let's review the **public* route table.
+
+awscli::
+
+	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-0728135c72ee58885"
+
+|
 
 ****
-
-Associate Subnets with Route Table
-----------------------------------
-
-awscli (windows)::
-
-	aws ec2 associate-route-table --route-table-id <value>--subnet-id <value>
 
 ****
 
