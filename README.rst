@@ -16,8 +16,8 @@ Notes
 -----
 In the awscli commands provided below
 
-- For parameters where the value is static, the **value** specific to this webinar is included.
-- For parameters where the are dynamic and must be discovered, **<parameter>** is included.
+- For parameters where the value is **static**, the **value** specific to this webinar is included.
+- For parameters where the value is **dynamic** and must be discovered, **<parameter>** is included.
 
 ****
 
