@@ -44,6 +44,7 @@ toDoList
 - Create a VPC named **webinar-01** with a CIDR of **10.2.0.0/16**. 
 
 ****
+
 ****
 
 goingCmdO
@@ -62,6 +63,7 @@ awscli::
 	$ aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01 --query Vpcs[].VpcId --output text
 
 ****
+
 ****
 
 Internet Gateway
