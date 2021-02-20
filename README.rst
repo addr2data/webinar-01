@@ -3,25 +3,45 @@ Webinar-01
 
 Introduction
 ------------
-During this we will be creating AWS components using the AWS console. Below I have outlined the steps and
-provided the equivalent awscli command for each operation
+When getting started with AWS (and when get started with a new service), I found that the following approach worked well for me. Hopefully, it will work well for you.
+
+- Deploy using the console
+- Deploy using awscli
+- Deploy from a scripting language (e.g. Python)
+
+During this webinar we will be primarily using the AWS console, but I have also provided equivalent awscli commands for each operation.
+
 
 Notes
 -----
 In the awscli commands provided below
 
-- The commands are meant for the Windows cmd prompt (commands spread over multiple lines use **'^'** vs. **'\'**.
-- For parameters where the value is static, the **value** is included.
-- For parameters where the value is dynamic, **<parameter>** is included.
+- For parameters where the value is static, the **value** specific to this webinar is included.
+- For parameters where the are dynamic and must be discovered, **<parameter>** is included.
 
-VPC
----
-Using the AWS Console, create a VPC named **webinar-01** with a CIDR of **10.2.0.0/16**. 
+****
 
-awscli (windows)::
+Amazon Virtual Private Cloud (VPC)
+----------------------------------
+VPCs are logically isolated sections of the AWS cloud.
 
-    $ aws ec2 create-vpc --cidr-block 10.2.0.0/16 ^
-    --tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=webinar-01}]
+- VPCs have the look and feel of traditional networks
+	+ You can define the IPv4/IPv6 address space
+	+ You can create subnets
+	+ YOu can configure routing tables 
+
+
+Create a VPC named **webinar-01** with a CIDR of **10.2.0.0/16**. 
+
+awscli::
+
+    $ aws ec2 create-vpc --cidr-block 10.2.0.0/16 --tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=webinar-01}]
+
+
+You will need to know the dynamically assigned **vpc-id** for subsequent operations, so heres how you it with awscli
+
+awscli::
+	aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01
 
 ****
 
@@ -133,4 +153,3 @@ awscli (windows)::
 
 
 
-aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01
