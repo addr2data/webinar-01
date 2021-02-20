@@ -210,6 +210,7 @@ toDoList
 - Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-private-02**, using cidr **10.2.130.0/23**
 - Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-public-02**, using cidr **10.2.2.0/23**
 - Review the subnets just created.
+- Review the association in the **public** route table
 
 ****
 
@@ -265,7 +266,7 @@ awscli::
 
 |
 
-Finally, let's review the **public* route table.
+Finally, let's review the associations in the *public* route table.
 
 awscli::
 
