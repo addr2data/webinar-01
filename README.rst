@@ -40,11 +40,11 @@ awscli::
 
 |
 
-The above awscli command will return the configuration of the newly created VPC. You will need to know the **vpc-id** for future operations. Here's how you get it from the awscli.
+The above awscli command will return the configuration of the newly created VPC. The output will include the **vpcId**, which will be required for future operations. Here's one way to return just the **vpcId**, as text, from the awscli.
 
 awscli::
 	
-	$ aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01
+	$ aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01 --query Vpcs[].VpcId --output text
 
 ****
 
