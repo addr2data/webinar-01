@@ -343,7 +343,51 @@ Then, let's add a route to the **public** route table in the **addr2data-01** VP
 
 ****
 
+Security Groups
+---------------
+We will 
+
+
+toDoList
+~~~~~~~~
+
+- Create a security group named **web-servers**
+
+- Discuss **outbound** vs. **inbound**
+
+- Add the **web-servers** with the following inbound rules:
+
+	+ SSH			TCP		22		10.0.0.0/16		SSH traffic from **addr2data** VPC
+	+ Custom TCP 	TCP 	5000	10.0.0.0/16		Web traffic from **addr2data** VPC
+
+****
+
+*goingCmdO*
+~~~~~~~~~~~
+
+First, let's deploy two instances
+
+::
 
 
 
 
+
+Testing local connectivity
+--------------------------
+We will 
+
+
+toDoList
+~~~~~~~~
+
+- Deploy an instance named **web-public**, using the **base_webserver** AMI, selecting **webinar-01-sub-public-01** for the subnet.
+
+****
+
+*goingCmdO*
+~~~~~~~~~~~
+
+First, let's deploy two instances
+
+::
