@@ -288,54 +288,54 @@ VPC peering allows you to create a network connection (VPC peering connection) b
 toDoList
 ~~~~~~~~
 
-- Create a VPC peering connection between the **webinar-01** and **addr2data** VPCs.
+- Create a VPC peering connection between **webinar-01** (requester) and **addr2data** VPCs (acceptor).
+- Accept the VPC peering connection
+- Add a route to the **private** routing table in the **webinar-01** VPC.
+- Add a route to the **public** routing table in the **webinar-01** VPC.
+- Add a route to the **public** routing table in the **addr2data** VPC.
 
 ****
 
 *goingCmdO*
 ~~~~~~~~~~~
 
-First, we create the peering connection.
+First, let's create a VPC peering connection between **webinar-01** (requester) and **addr2data** (acceptor)
 
 ::
 
-	aws ec2 create-vpc-peering-connection --peer-vpc-id <value> --vpc-id <value> ^
-	--tag-specifications ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=webinar-01-peerlink}]
+	aws ec2 create-vpc-peering-connection --peer-vpc-id <vpcId> --vpc-id <vpcId> --tag-specifications ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=webinar-01-peerlink}]
 
 |
 
-Then, we accept the peering link
+Then, let's accept the VPC peering connection
 
 ::
 
-	aws ec2 accept-vpc-peering-connection --vpc-peering-connection-id <value>
+	aws ec2 accept-vpc-peering-connection --vpc-peering-connection-id <VpcPeeringConnectionId>
 
 |
 
-Then, we a route.
+Then, let's add a route to the **private** route table in the **webinar-01** VPC
 
 ::
 
-	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
-	--gateway-id <value> --route-table-id <value>
+	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 --gateway-id <VpcPeeringConnectionId> --route-table-id <RouteTableId>
 
 |
 
-Then, we a route.
+Then, let's add a route to the **public** route table in the **webinar-01** VPC
 
 ::
 
-	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
-	--gateway-id <value> --route-table-id <value>
+	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 --gateway-id <VpcPeeringConnectionId> --route-table-id <RouteTableId>
 
 |
 
-Then, we a route.
+Then, let's add a route to the **public** route table in the **addr2data-01** VPC.
 
 ::
 
-	aws ec2 create-route --destination-cidr-block 10.2.0.0/16 ^
-	--gateway-id <value> --route-table-id <value>
+	aws ec2 create-route --destination-cidr-block 10.2.0.0/16 --gateway-id <VpcPeeringConnectionId> --route-table-id <RouteTableId>
 
 |
 
