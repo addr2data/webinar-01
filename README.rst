@@ -125,8 +125,8 @@ awscli::
 
 ****
 
-Route Tables
-------------
+Route Tables and Routes
+-----------------------
 A VPC component that contains a set of routes. These routes determine where network traffic is directed within your VPC.
 
 - A route table that automatically comes with your VPC. It is called the **main** route table.
@@ -134,14 +134,15 @@ A VPC component that contains a set of routes. These routes determine where netw
 - Subnets are associated with route tables, either explicitly or implicitly.
 - Any subnet not explicitly associated with a **custom** route table, is implicitly associated with the **main** route table 
 
-*Note: there are no charges associated with Route Tables*
+*Note: there are no charges associated with route tables or routes*
 
 toDoList
 ~~~~~~~~
 
-- Review the **main** route table
-- Name main route table **webinar-01-rt-private** 
-- Create a **custom** route table named **webinar-01-rt-public** 
+- Review the **main** route table.
+- Name main route table **webinar-01-rt-private**.
+- Create a **custom** route table named **webinar-01-rt-public** .
+- Add a **default route** to the **webinar-01-rt-public** route table.
 
 ****
 
@@ -175,7 +176,7 @@ awscli::
 
 |
 
-Finally, we are going create a custom route table named **webinar-01-rt-public**
+Next, we are going create a custom route table named **webinar-01-rt-public**
 
 awscli::
 
@@ -183,19 +184,15 @@ awscli::
 
 |
 
-****
+Finally, we are going to add a default route to the **webinar-01-rt-public** route table.
+
+awscli::
+
+	aws ec2 create-route --destination-cidr-block 0.0.0.0/0 --gateway-id <igw-id> --route-table-id <rtb-id>
+
+|
 
 ****
-
-
-Routes
-------
-Addes routes
-
-awscli (windows)::
-
-	aws ec2 create-route --destination-cidr-block 0.0.0.0/0 ^
-	--gateway-id <igw-id> --route-table-id <rtb-id>
 
 ****
 
