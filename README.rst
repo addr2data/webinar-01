@@ -26,6 +26,10 @@ What we are building
 
 .. image:: ./images/webinar_net-01.png
 
+|
+
+****
+
 ****
 
 Amazon Virtual Private Cloud (VPC)
