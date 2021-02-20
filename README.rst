@@ -38,13 +38,15 @@ VPCs are logically isolated sections of the AWS cloud.
 	+ You can create subnets
 	+ YOu can configure routing tables 
 
-To do list
-~~~~~~~~~~
+toDoList
+~~~~~~~~
 
 - Create a VPC named **webinar-01** with a CIDR of **10.2.0.0/16**. 
 
-Going cmd-o
-~~~~~~~~~~~~~~~
+****
+
+goingCmdO
+~~~~~~~~~
 
 awscli::
 
