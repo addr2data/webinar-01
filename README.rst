@@ -354,8 +354,8 @@ toDoList
 - Create a security group named **web-servers**
 - Discuss **outbound** vs. **inbound** rules
 - Add the following rules to the **web-servers** security group:
-	+ *type* = **SSH**, *protocol* = **TCP**, *port* = **22**, *source* = **10.0.0.0/16**, *description* = **SSH from addr2data VPC**
-	+ *type* = **Custom**, *protocol* = **TCP**, *port* = **5000**, *source* = **10.0.0.0/16**, *description* = **HTTP from addr2data VPC**
+	+ *type* = **SSH**, *protocol* = **TCP**, *port* = **22**, *source* = **10.0.0.0/16**, *description* = **SSH from addr2data**
+	+ *type* = **Custom**, *protocol* = **TCP**, *port* = **5000**, *source* = **10.0.0.0/16**, *description* = **HTTP from addr2data**
 
 ****
 
