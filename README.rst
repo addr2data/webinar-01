@@ -19,10 +19,16 @@ In the awscli commands provided below
 - For parameters where the value is **static**, the specific **value** for this webinar is included.
 - For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
 
+|
+
 ****
 
-What we are building
---------------------
+****
+
+Let's build this
+----------------
+
+|
 
 .. image:: ./images/webinar_net-01.png
 
