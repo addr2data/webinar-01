@@ -225,9 +225,9 @@ awscli::
 
 	aws ec2 create-subnet --cidr-block 10.2.0.0/23 --vpc-id <vpcId> --availability-zone us-east-1a --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-01}]
 
-	aws ec2 create-subnet --cidr-block 10.2.130.0/23 --vpc-id <vpcId> --availability-zone us-east-1a --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-02}]
+	aws ec2 create-subnet --cidr-block 10.2.130.0/23 --vpc-id <vpcId> --availability-zone us-east-1b --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-02}]
 
-	aws ec2 create-subnet --cidr-block 10.2.2.0/23 --vpc-id <vpcId> --availability-zone us-east-1a --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
+	aws ec2 create-subnet --cidr-block 10.2.2.0/23 --vpc-id <vpcId> --availability-zone us-east-1b --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
 
 |
 
@@ -343,6 +343,69 @@ Then, let's add a route to the **public** route table in the **addr2data-01** VP
 
 ****
 
+Instances
+---------
+EC2 provides cloud-based compute capacity and offers a wide variety of configurations (Instance Types). Comprehensive coverage of EC2 would require a separate webinar. For our purposes, we are going to focus on the following configuration options and skip the rest/
+
+- AMI
+- Network
+- Subnet
+
+toDoList
+~~~~~~~~
+
+- Launch an instance, using the following options:
+	+ Under **My AMIs**, select **base_webserver**
+	+ Under **Network**, select **webinar-01**
+	+ Under **Subnet**, select **webinar-01-sub-public-01**
+	+ Under **Tags**, add a tag *Key* = **Name**, *Value* = **web-public**
+	+ Under **Security Groups**, leave **Create a new security group** selected.
+	+ Review the default security group configuration.
+	* During the **Launch** process, select the existing key pair **Webinar**
+	+ Monitor the **Instance State** until it reaches running 
+
+*goingCmdO*
+~~~~~~~~~~~
+
+First, let's deploy two instances
+
+::
+
+	aws ec2 run-instances ^
+    --image-id ami-0090f21784e1f13dd ^
+    --instance-type t2.micro ^
+    --key-name Webinar ^
+    --subnet-id <SubnetId> ^
+    --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
+
+|
+
+****
+
+****
+
+Connectivity
+------------
+We will 
+
+
+toDoList
+~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Security Groups
 ---------------
 We will 
@@ -362,16 +425,21 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
-First, let's deploy two instances
+First, let's launch an instance.
 
 ::
 
+aws ec2 run-instances ^
+    --image-id ami-0090f21784e1f13dd ^
+    --instance-type t2.micro ^
+    --key-name Webinar ^
+    --subnet-id <SubnetId> ^
+    --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
 
 
 
-
-Testing local connectivity
---------------------------
+Connectivity
+------------
 We will 
 
 
