@@ -21,6 +21,13 @@ In the awscli commands provided below
 
 ****
 
+What we are building
+--------------------
+
+.. image:: ./images/webinar_net-01.png
+
+***
+
 Amazon Virtual Private Cloud (VPC)
 ----------------------------------
 VPCs are logically isolated sections of the AWS cloud.
