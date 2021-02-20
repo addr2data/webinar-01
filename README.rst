@@ -91,7 +91,7 @@ A VPC component that allows communication between your VPC and the Internet. It 
 toDoList
 ~~~~~~~~
 
-- Create an named **webinar-01-igw** Internet Gateway
+- Create an Internet Gateway named **webinar-01-igw**.
 - Attach it to our VPC
 
 ****
@@ -127,22 +127,63 @@ awscli::
 
 Route Tables
 ------------
-Add a name (webinar-01-private) to the main route table
+A VPC component that contains a set of routes. These routes determine where network traffic is directed within your VPC.
 
-awscli (windows)::
+- A route table that automatically comes with your VPC. It is called the **main** route table.
+- You can create your own **custom** route tables.
+- Subnets are associated with route tables, either explicitly or implicitly.
+- Any subnet not explicitly associated with a **custom** route table, is implicitly associated with the **main** route table 
 
-	aws ec2 create-tags --resources <route-table-id> ^
-	--tags Key=Name,Value=webinar-01-private
+*Note: there are no charges associated with Route Tables*
 
-Create a second route table named (webinar-01-public) 
+toDoList
+~~~~~~~~
 
-awscli (windows)::
-
-	aws ec2 create-route-table --vpc-id <vpc-id> ^
-	--tag-specifications ResourceType=route-table,Tags=[{Key=Name,Value=webinar-01-public}]
+- Review the **main** route table
+- Name main route table **webinar-01-rt-private** 
+- Create a **custom** route table named **webinar-01-rt-public** 
 
 ****
 
+*goingCmdO*
+~~~~~~~~~~~
+
+First, let's examine the main route table.
+
+awscli::
+	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=<vpc-id>"
+
+|
+
+The above awscli command will return the configuration of the automatically created Route Table. The output will include the
+**RouteTableId**, which will be required for future operations. Here's one way to return just the **RouteTableId**,
+as text, from the awscli.
+
+
+awscli::
+	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=<vpc-id>" --query RouteTables[].RouteTableId --output text
+
+|
+
+Next, we are going name the main route table **webinar-01-rt-private**.
+
+awscli::
+
+	aws ec2 create-tags --resources <route-table-id> --tags Key=Name,Value=webinar-01-rt-private
+
+|
+
+Finally, we are going create a custom route table named **webinar-01-rt-public**
+
+awscli::
+
+	aws ec2 create-route-table --vpc-id <vpc-id> --tag-specifications ResourceType=route-table,Tags=[{Key=Name,Value=webinar-01-rt-public}]
+
+|
+
+****
+
+****
 
 
 Routes
