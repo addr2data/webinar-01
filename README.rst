@@ -297,7 +297,7 @@ toDoList
 
 First, we create the peering connection.
 
-awscli::
+::
 
 	aws ec2 create-vpc-peering-connection --peer-vpc-id <value> --vpc-id <value> ^
 	--tag-specifications ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=webinar-01-peerlink}]
@@ -306,7 +306,7 @@ awscli::
 
 Then, we accept the peering link
 
-awscli::
+::
 
 	aws ec2 accept-vpc-peering-connection --vpc-peering-connection-id <value>
 
@@ -314,7 +314,7 @@ awscli::
 
 Then, we a route.
 
-awscli (windows)::
+::
 
 	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
 	--gateway-id <value> --route-table-id <value>
@@ -323,7 +323,7 @@ awscli (windows)::
 
 Then, we a route.
 
-awscli::
+::
 
 	aws ec2 create-route --destination-cidr-block 10.0.0.0/16 ^
 	--gateway-id <value> --route-table-id <value>
@@ -337,7 +337,11 @@ Then, we a route.
 	aws ec2 create-route --destination-cidr-block 10.2.0.0/16 ^
 	--gateway-id <value> --route-table-id <value>
 
+|
 
+****
+
+****
 
 
 
