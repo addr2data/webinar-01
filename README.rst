@@ -92,6 +92,15 @@ awscli::
 	aws ec2 create-internet-gateway --tag-specifications ResourceType=internet-gateway,Tags=[{Key=Name,Value=webinar-01-igw}]
 
 
+The above awscli command will return the configuration of the newly created Internet Gateway. The output will include the
+**InternetGatewayId**, which will be required for future operations. Here's one way to return just the **InternetGatewayId**,
+as text, from the awscli.
+
+awscli::
+	
+	$ aws ec2 describe-internet-gateways --filters Name=tag:Name,Values=webinar-01-igw --query InternetGateways[].InternetGatewayId --output text
+
+
 awscli (windows)::
 
 	aws ec2 attach-internet-gateway --internet-gateway-id <igw-id> --vpc-id <vpc-id>
