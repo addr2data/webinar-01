@@ -11,15 +11,13 @@ When getting started with AWS or learning and learning a new service), I have fo
 
 During this webinar we will be using the AWS console, but I have also provided equivalent awscli commands for each operation.
 
+**NO SLIDES** - all this content is publicly available on my GitHub (**https://github.com/addr2data/webinar-01**)
 
-Notes
-~~~~~
-In the awscli commands provided below
+Notes for awscli
+~~~~~~~~~~~~~~~~
 
 - For parameters where the value is **static**, the specific **value** for this webinar is included.
 - For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
-
-
 
 AWS Certified Advanced Networking Study Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,6 +27,8 @@ If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced
 
 - Private channel on the **API Users** team in Microsoft Teams.
 - Meets every Thu (5:00p -6:00p ET) starting Mar 4, 2021.
+- Sessions will be recorded, if the time is not convenient (EMEA, APJ).
+- Participation is required.
 - If you are interested, reach out to me via email or chat on teams. 
 
 |
