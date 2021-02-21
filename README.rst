@@ -186,7 +186,7 @@ toDoList
 
 First, let's examine the main route table.
 
-awscli::
+::
 
 	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=<vpc-id>"
 
@@ -197,33 +197,43 @@ The above awscli command will return the configuration of the automatically crea
 as text, from the awscli.
 
 
-awscli::
+::
 
-	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=<vpc-id>" --query RouteTables[].RouteTableId --output text
+	aws ec2 describe-route-tables ^
+		--filters "Name=vpc-id,Values=<vpc-id>" ^
+		--query RouteTables[].RouteTableId ^
+		--output text
 
 |
 
 Next, we are going name the main route table **webinar-01-rt-private**.
 
-awscli::
+::
 
-	aws ec2 create-tags --resources <route-table-id> --tags Key=Name,Value=webinar-01-rt-private
+	aws ec2 create-tags ^
+		--resources <route-table-id> ^
+		--tags Key=Name,Value=webinar-01-rt-private
 
 |
 
 Next, we are going create a custom route table named **webinar-01-rt-public**
 
-awscli::
+::
 
-	aws ec2 create-route-table --vpc-id <vpc-id> --tag-specifications ResourceType=route-table,Tags=[{Key=Name,Value=webinar-01-rt-public}]
+	aws ec2 create-route-table ^
+		--vpc-id <vpc-id> ^
+		--tag-specifications ResourceType=route-table,Tags=[{Key=Name,Value=webinar-01-rt-public}]
 
 |
 
 Finally, we are going to add a default route to the **webinar-01-rt-public** route table.
 
-awscli::
+::
 
-	aws ec2 create-route --destination-cidr-block 0.0.0.0/0 --gateway-id <igw-id> --route-table-id <rtb-id>
+	aws ec2 create-route ^
+		--destination-cidr-block 0.0.0.0/0 ^
+		--gateway-id <igw-id> ^
+		--route-table-id <rtb-id>
 
 |
 
