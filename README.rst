@@ -85,17 +85,19 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
-awscli::
+::
 
-    $ aws ec2 create-vpc --cidr-block 10.2.0.0/16 --tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=webinar-01}]
+    aws ec2 create-vpc ^
+    	--cidr-block 10.2.0.0/16 ^
+    	--tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=webinar-01}]
 
 |
 
 The above awscli command will return the configuration of the newly created VPC. The output will include the **vpcId**, which will be required for future operations. Here's one way to return just the **vpcId**, as text, from the awscli.
 
-awscli::
+::
 	
-	$ aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01 --query Vpcs[].VpcId --output text
+	aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01 --query Vpcs[].VpcId --output text
 
 |
 
