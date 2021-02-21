@@ -25,6 +25,8 @@ We are going to cover a lot of ground in this webinar, some details will be glos
 
 **NO SLIDES** - all this content is publicly available on GitHub **https://github.com/addr2data/webinar-01**
 
+|
+
 Notes for awscli
 ~~~~~~~~~~~~~~~~
 
