@@ -362,7 +362,15 @@ toDoList
 	+ Under **Security Groups**, leave **Create a new security group** selected.
 	+ Review the default security group configuration.
 	* During the **Launch** process, select the existing key pair **Webinar**
-	+ Monitor the **Instance State** until it reaches running 
+	+ Monitor the **Instance State** until it reaches running
+
+- From **jumpHost**, connect to **web-public**, using SSH (Putty).
+- From **web-public**, run **curl 127.0.0.1:5000**.
+- From **jumpHost**, attempt to browse to **http://<web-public-ip>:5000**.
+- Review the results from above.
+- Add a rule to security group associated with **web-public**
+- From **jumpHost**, attempt to browse to **http://<web-public-ip>:5000**.
+- From **web-public**, run **ping www.google.com**.
 
 *goingCmdO*
 ~~~~~~~~~~~
@@ -385,80 +393,41 @@ Then, let's launch a single instance
 
 |
 
-****
+Then, test connectivity
 
-****
+|
 
-Connectivity
-------------
-Let's explore where we have connectivity and where we don't.
-
-
-toDoList
-~~~~~~~~
-
-_ Connect to **web-public**, using SSH (Putty)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Security Groups
----------------
-We will 
-
-
-toDoList
-~~~~~~~~
-
-- Create a security group named **web-servers**
-- Discuss **outbound** vs. **inbound** rules
-- Add the following rules to the **web-servers** security group:
-	+ *type* = **SSH**, *protocol* = **TCP**, *port* = **22**, *source* = **10.0.0.0/16**, *description* = **SSH from addr2data**
-	+ *type* = **Custom**, *protocol* = **TCP**, *port* = **5000**, *source* = **10.0.0.0/16**, *description* = **HTTP from addr2data**
-
-****
-
-*goingCmdO*
-~~~~~~~~~~~
-
-First, let's launch an instance.
+Then, add a rule to the **createNewSecurityGroup** security group to allow TCP port 5000 from anywhere.
 
 ::
 
-aws ec2 run-instances ^
-    --image-id ami-0090f21784e1f13dd ^
-    --instance-type t2.micro ^
-    --key-name Webinar ^
-    --subnet-id <SubnetId> ^
-    --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
+	aws ec2 authorize-security-group-ingress --group-id <GroupId> --protocol tcp --port 5000 --cidr 0.0.0.0/0
 
+|
 
+****
 
-Connectivity
-------------
-We will 
+****
 
+Elastic IPs
+-----------
+To be added.
 
 toDoList
 ~~~~~~~~
 
-- Deploy an instance named **web-public**, using the **base_webserver** AMI, selecting **webinar-01-sub-public-01** for the subnet.
+- Allocate an Elastic IP address
+- Associate that Elastic IP address with **web-public**
+- From **web-public**, run **ping www.google.com**.
+- From **jumpHost**, attempt to browse to **http://<web-public-eip>:5000**.
+- From **jumpHost**, connect to **web-public-eip**, using SSH (Putty).
+- From **jumpHost**, disconnect from both Putty sessions to **web-public**
+- From **jumpHost**, close the browser tab associated with **web-public**
+- Terminate the **web-public** instance
+- Release the Elastic IP address 
+
+|
 
 ****
 
-*goingCmdO*
-~~~~~~~~~~~
-
-First, let's deploy two instances
-
-::
+****
