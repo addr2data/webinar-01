@@ -9,6 +9,8 @@ When getting started with AWS or learning and learning a new service), I have fo
 - Use the awscli, then
 - Use the API directly, via a scripting language (e.g. Python)
 
+|
+
 During this webinar we will be using the AWS console, but I have also provided equivalent awscli commands for each operation.
 
 *If the awscli is for you, then read the 'Notes or awscli' section*
