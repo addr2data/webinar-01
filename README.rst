@@ -11,6 +11,16 @@ When getting started with AWS or learning and learning a new service), I have fo
 
 During this webinar we will be using the AWS console, but I have also provided equivalent awscli commands for each operation.
 
+*If the awscli is for you, then read the 'Notes or awscli' section*
+
+|
+
+We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.
+
+*If you want the nitty-gritty, the read the 'AWS Certified Advanced Networking Study Group' section*
+
+|
+
 **NO SLIDES** - all this content is publicly available on GitHub **https://github.com/addr2data/webinar-01**
 
 Notes for awscli
@@ -21,8 +31,6 @@ Notes for awscli
 
 AWS Certified Advanced Networking Study Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.
-
 If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced Networking Study Group** is for you.
 
 - Private channel on the **API Users** team in Microsoft Teams.
