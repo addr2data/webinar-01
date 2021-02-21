@@ -188,7 +188,8 @@ First, let's examine the main route table.
 
 ::
 
-	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=<vpc-id>"
+	aws ec2 describe-route-tables ^
+		--filters "Name=vpc-id,Values=<vpc-id>"
 
 |
 
