@@ -71,7 +71,11 @@ VPCs are logically isolated sections of the AWS cloud.
 
 	+ You can define the IPv4/IPv6 address space
 	+ You can create subnets
-	+ YOu can configure routing tables 
+	+ You can configure routing tables
+
+Let's discuss regions
+
+Default VPCs
 
 *Note: there are no charges associated with VPCs*
 
@@ -246,15 +250,17 @@ Subnets
 -------
 Subnets are
 
+Let's discuss availability zones.
+
 *Note: there are no charges associated with subnets*
 
 toDoList
 ~~~~~~~~
 
-- Create a subnet in availability zone **us-east-1a** named **webinar-01-sub-private-01**, using cidr **10.2.128.0/23**
-- Create a subnet in availability zone **us-east-1a** named **webinar-01-sub-public-01**, using cidr **10.2.0.0/23**
-- Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-private-02**, using cidr **10.2.130.0/23**
-- Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-public-02**, using cidr **10.2.2.0/23**
+- Create a subnet in availability zone **us-east-1a** named **webinar-01-sub-private-01**, using cidr **10.2.0.0/23**
+- Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-private-02**, using cidr **10.2.2.0/23**
+- Create a subnet in availability zone **us-east-1a** named **webinar-01-sub-public-01**, using cidr **10.2.128.0/23**
+- Create a subnet in availability zone **us-east-1b** named **webinar-01-sub-public-02**, using cidr **10.2.130.0/23**
 - Review the subnets just created.
 - Review the association in the **public** route table
 
@@ -265,31 +271,50 @@ toDoList
 
 First, let's create some subnets
 
-awscli::
+::
 
-	aws ec2 create-subnet --cidr-block 10.2.128.0/23 --vpc-id <vpcId> --availability-zone us-east-1a --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-01}]
+	aws ec2 create-subnet ^
+		--cidr-block 10.2.0.0/23 ^
+		--vpc-id <vpcId> ^
+		--availability-zone us-east-1a ^
+		--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-01}]
 
-	aws ec2 create-subnet --cidr-block 10.2.0.0/23 --vpc-id <vpcId> --availability-zone us-east-1a --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-01}]
+	aws ec2 create-subnet ^
+		--cidr-block 10.2.2.0/23 ^
+		--vpc-id <vpcId> ^
+		--availability-zone us-east-1b ^
+		--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-02}]
 
-	aws ec2 create-subnet --cidr-block 10.2.130.0/23 --vpc-id <vpcId> --availability-zone us-east-1b --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-02}]
+	aws ec2 create-subnet ^
+		--cidr-block 10.2.128.0/23 ^
+		--vpc-id <vpcId> ^
+		--availability-zone us-east-1a ^
+		--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-01}]
 
-	aws ec2 create-subnet --cidr-block 10.2.2.0/23 --vpc-id <vpcId> --availability-zone us-east-1b --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
+	aws ec2 create-subnet ^
+		--cidr-block 10.2.130.0/23 ^
+			--vpc-id <vpcId> ^
+			--availability-zone us-east-1b ^
+			--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
 
 |
 
 Next, let's review the subnet configuration.
 
-awscli::
+::
 
-	aws ec2 describe-subnets --filters "Name=vpc-id,Values=<vpc-id>"
+	aws ec2 describe-subnets ^
+		--filters "Name=vpc-id,Values=<vpc-id>"
 
 |
 
 Next, let's show the **Name** and **SubnetId** of the subnets we created in a table.
 
-awscli::
+::
 
-	aws ec2 describe-subnets --filters "Name=vpc-id,Values=<vpcId>" --query "Subnets[*].{name: Tags[?Key=='Name'] | [0].Value, Id: SubnetId}" --output table --color off
+	aws ec2 describe-subnets ^
+		--filters "Name=vpc-id,Values=<vpcId>" ^
+		--query "Subnets[*].{name: Tags[?Key=='Name'] | [0].Value, Id: SubnetId}" --output table --color off
 
 	-----------------------------------------------------------
 	|                     DescribeSubnets                     |
@@ -306,17 +331,20 @@ awscli::
 
 Next, let's associate the two *public* subnets with the *public* route table 
 
-awscli::
+::
 
-	aws ec2 associate-route-table --route-table-id <RouteTableId>--subnet-id <SubnetId>
+	aws ec2 associate-route-table ^
+		--route-table-id <RouteTableId> ^
+		--subnet-id <SubnetId>
 
 |
 
 Finally, let's review the associations in the *public* route table.
 
-awscli::
+::
 
-	aws ec2 describe-route-tables --filters "Name=vpc-id,Values=vpc-0728135c72ee58885"
+	aws ec2 describe-route-tables ^
+		--filters "Name=vpc-id,Values=vpc-0728135c72ee58885"
 
 |
 
