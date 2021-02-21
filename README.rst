@@ -11,7 +11,7 @@ When getting started with AWS or learning and learning a new service), I have fo
 
 During this webinar we will be using the AWS console, but I have also provided equivalent awscli commands for each operation.
 
-**NO SLIDES** - all this content is publicly available on my GitHub (**https://github.com/addr2data/webinar-01**)
+**NO SLIDES** - all this content is publicly available on GitHub **https://github.com/addr2data/webinar-01**
 
 Notes for awscli
 ~~~~~~~~~~~~~~~~
