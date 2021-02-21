@@ -96,8 +96,9 @@ toDoList
 The above awscli command will return the configuration of the newly created VPC. The output will include the **vpcId**, which will be required for future operations. Here's one way to return just the **vpcId**, as text, from the awscli.
 
 ::
-	
-	aws ec2 describe-vpcs --filters Name=tag:Name,Values=webinar-01 --query Vpcs[].VpcId --output text
+	aws ec2 describe-vpcs ^
+		--filters Name=tag:Name,Values=webinar-01 ^
+		--query Vpcs[].VpcId --output text
 
 |
 
