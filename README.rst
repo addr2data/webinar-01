@@ -27,8 +27,8 @@ If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced
 
 - Private channel on the **API Users** team in Microsoft Teams.
 - Meets every Thu (5:00p -6:00p ET) starting Mar 4, 2021.
-- Sessions will be recorded, if the time is not convenient (EMEA, APJ).
-- Participation is required.
+- Sessions will be recorded, if the time is not convenient (EMEA, APJ, etc.).
+- Participation is mandatory.
 - If you are interested, reach out to me via email or chat on teams. 
 
 |
