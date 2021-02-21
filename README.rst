@@ -367,16 +367,21 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
-First, let's deploy two instances
+First, we need to create a security group that would match the rules of the security that would be created by selecting **Create a new security group** in the console.  
 
 ::
 
-	aws ec2 run-instances ^
-    	--image-id ami-0090f21784e1f13dd ^
-    	--instance-type t2.micro ^
-    	--key-name Webinar ^
-    	--subnet-id <SubnetId> ^
-    	--tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
+	aws ec2 create-security-group --group-name createNewSecurityGroup --description "Allow SHH from anywhere" --vpc-id <vpc-id>
+
+	aws ec2 authorize-security-group-ingress --group-id <GroupId> --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+|
+
+Then, let's launch a single instance
+
+::
+
+	aws ec2 run-instances --image-id ami-0090f21784e1f13dd --instance-type t2.micro --key-name Webinar --subnet-id <SubnetId> --security-group-ids <GroupId> --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
 
 |
 
@@ -386,12 +391,13 @@ First, let's deploy two instances
 
 Connectivity
 ------------
-We will 
+Let's explore where we have connectivity and where we don't.
 
 
 toDoList
 ~~~~~~~~
 
+_ Connect to **web-public**, using SSH (Putty)
 
 
 
