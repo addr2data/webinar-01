@@ -1,0 +1,46 @@
+---
+base:
+  vpc_name: "webinar-01"
+  priv_subnets:
+    - "webinar-01-sub-private-01"
+    - "webinar-01-sub-private-02"
+  webservers_per_subnet: 2
+
+webservers:
+  ami: "ami-0090f21784e1f13dd"
+  type: "t2.micro"
+  keypair: "Webinar"
+  count: 2
+  tags:
+    -
+      ResourceType: instance
+      Tags:
+        -
+          Key: 'Name'
+          Value: 'webserver'
+
+security_group:
+  name: 'webinar-01-sg-webservers'
+  description: "Security group for webservers"
+  tags:
+    -
+      ResourceType: 'security-group'
+      Tags:
+        -
+          Key: 'Name'
+          Value: 'webinar-01-sg-webservers'
+  rules:
+    -
+      FromPort: 22
+      IpProtocol: 'tcp'
+      IpRanges:
+        -
+          CidrIp: "10.0.0.0/16"
+          Description: ""
+      Ipv6Ranges: []
+      PrefixListIds: []
+      ToPort: 22
+      UserIdGroupPairs: []
+
+
+
