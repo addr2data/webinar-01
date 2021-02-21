@@ -466,9 +466,15 @@ First, we need to create a security group that would match the rules of the secu
 
 ::
 
-	aws ec2 create-security-group --group-name createNewSecurityGroup --description "Allow SHH from anywhere" --vpc-id <vpc-id>
+	aws ec2 create-security-group ^
+		--group-name createNewSecurityGroup ^
+		--description "Allow SHH from anywhere" --vpc-id <vpc-id>
 
-	aws ec2 authorize-security-group-ingress --group-id <GroupId> --protocol tcp --port 22 --cidr 0.0.0.0/0
+	aws ec2 authorize-security-group-ingress ^
+		--group-id <GroupId> ^
+		--protocol tcp ^
+		--port 22 ^
+		--cidr 0.0.0.0/0
 
 |
 
@@ -476,7 +482,13 @@ Then, let's launch a single instance
 
 ::
 
-	aws ec2 run-instances --image-id ami-0090f21784e1f13dd --instance-type t2.micro --key-name Webinar --subnet-id <SubnetId> --security-group-ids <GroupId> --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
+	aws ec2 run-instances ^
+		--image-id ami-0090f21784e1f13dd ^
+		--instance-type t2.micro ^
+		--key-name Webinar ^
+		--subnet-id <SubnetId> ^
+		--security-group-ids <GroupId> ^
+		--tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
 
 |
 
@@ -488,7 +500,11 @@ Then, add a rule to the **createNewSecurityGroup** security group to allow TCP p
 
 ::
 
-	aws ec2 authorize-security-group-ingress --group-id <GroupId> --protocol tcp --port 5000 --cidr 0.0.0.0/0
+	aws ec2 authorize-security-group-ingress ^
+		--group-id <GroupId> ^
+		--protocol tcp ^
+		--port 5000 ^
+		--cidr 0.0.0.0/0
 
 |
 
