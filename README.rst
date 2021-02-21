@@ -19,25 +19,27 @@ In the awscli commands provided below
 - For parameters where the value is **static**, the specific **value** for this webinar is included.
 - For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
 
+
+
+AWS Certified Advanced Networking Study Group
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.
+
+If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced Networking Study Group** is for you.
+
+- Private channel on the **API Users** team in Microsoft Teams.
+- Meets every Thu (5:00p -6:00p ET) starting Mar 4, 2021.
+- If you are interested, reach out to me via email or chat on teams. 
+
 |
 
 ****
 
 ****
 
-AWS Certified Advanced Networking Study Group
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.
 
-If the nitty-gritty is for you, then maybe the **AWS Certified Advanced Networking Study Group** is for you.
-
-- Private channel on the **API Users** team in Microsoft Teams.
-- Meets every Thu (5:00p -6:00p ET) starting Mar 4, 2021.
-- If you are interested, reach out to me via email or chat on teams. 
-
-
-Let's build this
-~~~~~~~~~~~~~~~~
+Let's build something
+---------------------
 
 |
 
