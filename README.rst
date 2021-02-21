@@ -3,13 +3,13 @@ Webinar-01
 
 Introduction
 ------------
-When getting started with AWS (and when get started with a new service), I found that the following approach worked well for me. Hopefully, it will work well for you.
+When getting started with AWS or learning and learning a new service), I have found that the following approach works well for me. Hopefully, it will work well for you.
 
-- Deploy using the console
-- Deploy using awscli
-- Deploy from a scripting language (e.g. Python)
+- Use the AWS console, then
+- Use the awscli, then
+- Use the API directly, via a scripting language (e.g. Python)
 
-During this webinar we will be primarily using the AWS console, but I have also provided equivalent awscli commands for each operation.
+During this webinar we will be using the AWS console, but I have also provided equivalent awscli commands for each operation.
 
 
 Notes
