@@ -587,15 +587,15 @@ toDoList
 
 	+ Basic Configuration
 
-		~ name: **webinar-01-lb-app**
+		+ name: **webinar-01-lb-app**
 
-		~ IP address type: ipv4
+		+ IP address type: ipv4
 
 	+ Listeners
 
-		~ Load Balancer Protocol: **HTTP**
+		+ Load Balancer Protocol: **HTTP**
 
-		~ Load Balancer Port: **5000**
+		+ Load Balancer Port: **5000**
 
 	+ Availability Zones
 
@@ -603,9 +603,9 @@ toDoList
 
 		+ Availability Zones
 
-			us-east-1a: **webinar-01-sub-public-01**
+			+ us-east-1a: **webinar-01-sub-public-01**
 
-			us-east-1b: **webinar-01-sub-public-02**
+			+ us-east-1b: **webinar-01-sub-public-02**
 
 - Create Target Group for Application Load-balancer
 - Register Targets
