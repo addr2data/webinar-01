@@ -467,6 +467,8 @@ This Python script will do a few things for us:
 	
 	+ Tags: *Key* = **Name**, *Value* = **web-private**
 
+|
+
 Instances
 ~~~~~~~~~
 Reasonable coverage of EC2 would require a separate webinar. Let it suffice to say they are virtual machines.
@@ -474,8 +476,7 @@ Reasonable coverage of EC2 would require a separate webinar. Let it suffice to s
 Security Groups
 ~~~~~~~~~~~~~~~
 
-
-
+|
 
 toDoList
 ~~~~~~~~
