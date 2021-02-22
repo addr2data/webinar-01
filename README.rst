@@ -625,15 +625,36 @@ toDoList
 
 			Source: **Custom 0.0.0.0/0**
 
+	+ Configure Routing
 
+		+ Target group
 
-- Create Target Group for Application Load-balancer
-- Register Targets
-- Describe Target Group health
-- Create Listener for each Application Load-balancer
-- Describe Target Group health
-- Verify Application Load-balancer
-- Test connectivity
+			Target group: **New target group**
+
+			Name: **webinar-01-tg-app**
+
+			Target type: **Instance**
+
+			Protocol: **HTTP**
+
+			Port: **5000**
+
+			Protocol version: **HTTP1**
+
+		+ Health checks
+
+			Protocol: **HTTP**
+
+			Path: **/**
+
+	+ Register Targets
+
+		+ Instances
+
+			Select **all**
+
+			Click **Add to registered**
+
 
 
 *goingCmdO*
