@@ -599,9 +599,9 @@ toDoList
 
 	+ Availability Zones
 
-		VPC: **webinar-01**
+		+ VPC: **webinar-01**
 
-		Availability Zones
+		+ Availability Zones
 
 			us-east-1a: **webinar-01-sub-public-01**
 
