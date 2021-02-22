@@ -350,6 +350,15 @@ Finally, let's review the associations in the *public* route table.
 
 |
 
+Let's review
+------------
+
+|
+
+.. image:: ./images/webinar_net-02.png
+
+|
+
 ****
 
 ****
