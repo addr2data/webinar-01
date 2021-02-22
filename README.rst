@@ -473,6 +473,8 @@ Instances
 ~~~~~~~~~
 Reasonable coverage of EC2 would require a separate webinar. Let it suffice to say they are virtual machines.
 
+|
+
 Security Groups
 ~~~~~~~~~~~~~~~
 
@@ -509,7 +511,6 @@ toDoList
 ::
 
 	ping www.google.com
-
 
 
 *goingCmdO*
@@ -568,15 +569,6 @@ To be added.
 toDoList
 ~~~~~~~~
 
-- Allocate an Elastic IP address
-- Associate that Elastic IP address with **web-public**
-- From **web-public**, run **ping www.google.com**.
-- From **jumpHost**, attempt to browse to **http://<web-public-eip>:5000**.
-- From **jumpHost**, connect to **web-public-eip**, using SSH (Putty).
-- From **jumpHost**, disconnect from both Putty sessions to **web-public**
-- From **jumpHost**, close the browser tab associated with **web-public**
-- Terminate the **web-public** instance
-- Release the Elastic IP address 
 
 |
 
