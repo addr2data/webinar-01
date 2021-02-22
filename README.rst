@@ -443,21 +443,21 @@ Then, let's add a route to the **public** route table in the **addr2data-01** VP
 
 Getting started with Instances and Security Groups
 --------------------------------------------------
-First, we are going to run the following on **jumpHost**
+First, we are going to run the following command on **jumpHost**
 
 ::
 
 	python webserver.py create cfg-private.yaml
 
-The is Python script will do a few things:
+This Python script will do a few things for us:
 
 - It will create a security group named **webinar-01-sg-web-private**
 
-- It will an ingress rule to that security group to allow **SSH** traffic from **10.0.0.0/16** and **10.2.0.0/16** 
+- It will add an ingress rule to **webinar-01-sg-web-private** that allows **SSH** traffic from **10.0.0.0/16** and **10.2.0.0/16** 
 
 - It will launch a single instance on using the following parameters:
 
-	+ AMI: **base_webserver** (I saved this image previously, on boot it starts a simple web server on port 5000)
+	+ AMI: **base_webserver** (previously saved image - on boot, a simple web server starts on port 5000)
 	
 	+ Network: **webinar-01**
 	
