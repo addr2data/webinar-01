@@ -1,10 +1,10 @@
 ---
 base:
   vpc_name: "webinar-01"
+  output_file: "private.json"
   priv_subnets:
-    - "webinar-01-sub-public-01"
-    - "webinar-01-sub-public-02"
-  webservers_per_subnet: 2
+    - "webinar-01-sub-private-01"
+  webservers_per_subnet: 1
 
 webservers:
   ami: "ami-0090f21784e1f13dd"
@@ -20,15 +20,15 @@ webservers:
           Value: 'webserver'
 
 security_group:
-  name: 'webinar-01-sg-webservers'
-  description: "Security group for webservers"
+  name: 'webinar-01-sg-web-private'
+  description: "Security group for private webservers"
   tags:
     -
       ResourceType: 'security-group'
       Tags:
         -
           Key: 'Name'
-          Value: 'webinar-01-sg-webservers'
+          Value: 'webinar-01-sg-web-private'
   rules:
     -
       FromPort: 22

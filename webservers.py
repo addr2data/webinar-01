@@ -50,8 +50,6 @@ def main():
 
         try:
             instances = ec2_client.run_instances(cfg['webservers'])
-            with open('results.json', 'w') as fout:
-                fout.write(json.dumps(instances, indent=4, sort_keys=False))
         except AwsHelperError as err:
             sys.exit(err)
 
@@ -67,6 +65,9 @@ def main():
             status = list(set(status))
             if len(status) == 1 and status[0] == "running":
                 break
+
+        with open(cfg['base']['output_file'], 'w') as fout:
+            fout.write(json.dumps(instances, indent=4, sort_keys=False))
 
     elif args['destroy']:
         with open(args['<results_file>'], 'r') as fin:
