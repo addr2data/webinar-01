@@ -3,7 +3,7 @@ Webinar-01
 
 Introduction
 ------------
-When getting started with AWS or learning and learning a new service), I have found that the following approach works well for me. Hopefully, it will work well for you.
+When getting started with AWS or learning and learning a new service, I have found that the following approach works well for me. Hopefully, it will work well for you.
 
 - Use the AWS console, then
 - Use the awscli, then
