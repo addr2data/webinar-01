@@ -497,15 +497,14 @@ toDoList
 
 - Add a rule to allow HTTP on port 5000 to security group **webinar-01-sg-web-private**
 
-- From **jumpHost**, run the following command to browse to http://**web-private**:5000.
+- From **jumpHost**, run the following command to browse to **http://<web-private>:5000**.
 
-- From **jumpHost**, attempt to browse to **http://<web-public-ip>:5000**.
 
 ::
 
 	python webserver.py connect private.json --browser
 
-- From **web-public**, run the following command.
+- From **web-private**, run the following command.
 
 ::
 
