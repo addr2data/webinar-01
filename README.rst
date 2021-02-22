@@ -17,7 +17,7 @@ When getting started with AWS or learning and learning a new service, I have fou
 
 |
 
-We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.
+**We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.**
 
 	| If you want the nitty-gritty, then read the 'AWS Certified Advanced Networking Study Group' section
 
