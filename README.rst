@@ -463,37 +463,47 @@ This Python script will do a few things for us:
 	
 	+ Subnet: **webinar-01-sub-private-01**
 	
-	+ Security Groups: webinar-01-sg-web-private
+	+ Security Groups: **webinar-01-sg-web-private**
 	
 	+ Tags: *Key* = **Name**, *Value* = **web-private**
 
+Instances
+~~~~~~~~~
+Reasonable coverage of EC2 would require a separate webinar. Let it suffice to say they are virtual machines.
+
+Security Groups
+~~~~~~~~~~~~~~~
 
 
-EC2 provides cloud-based compute capacity and offers a wide variety of configurations (Instance Types). Comprehensive coverage of EC2 would require a separate webinar. For our purposes, we are going to focus on the following configuration options and skip the rest/
 
-- AMI
-- Network
-- Subnet
 
 toDoList
 ~~~~~~~~
 
-- Launch an instance, using the following options:
-	+ Under **My AMIs**, select **base_webserver**
-	+ Under **Network**, select **webinar-01**
-	+ Under **Subnet**, select **webinar-01-sub-public-01**
-	+ Under **Tags**, add a tag *Key* = **Name**, *Value* = **web-public**
-	+ Under **Security Groups**, leave **Create a new security group** selected.
-	+ Review the default security group configuration.
-	* During the **Launch** process, select the existing key pair **Webinar**
-	+ Monitor the **Instance State** until it reaches running
+- From **jumpHost**, run the following command to connect to **web-private** via SSH.
 
-- From **jumpHost**, connect to **web-public**, using SSH (Putty).
-- From **web-public**, run **curl 127.0.0.1:5000**.
+::
+
+	python webserver.py connect private.json
+
+
+- From **jumpHost**, run the following command to browse to http://**web-private**:5000.
+
+::
+
+	python webserver.py connect private.json --browser
+
+
+- Add a rule to allow HTTP on port 5000 to security group **webinar-01-sg-web-private**
+
+- From **jumpHost**, run the following command to browse to http://**web-private**:5000.
+
 - From **jumpHost**, attempt to browse to **http://<web-public-ip>:5000**.
-- Review the results from above.
-- Add a rule to security group associated with **web-public**
-- From **jumpHost**, attempt to browse to **http://<web-public-ip>:5000**.
+
+::
+
+	python webserver.py connect private.json --browser
+
 - From **web-public**, run **ping www.google.com**.
 
 *goingCmdO*

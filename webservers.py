@@ -3,7 +3,7 @@
 Usage:
     webservers create <cfgfile>
     webservers destroy <results_file>
-    webservers connect <results_file>
+    webservers connect <results_file> [--browser]
 
 Arguments:
     create
@@ -104,7 +104,11 @@ def main():
             cfg = json.load(fin)
 
         for instance in cfg['instances']:
-            command = subprocess.Popen(["putty", "-ssh", f"ubuntu@{instance[1]}", "-i", "C:\\Users\\Administrator\\.ssh\\webinar.ppk"])
+            if args['--browser']:
+                subprocess.Popen(f"start firefox http://{instance[1]}:5000", shell=True)
+            else:
+                subprocess.Popen(
+                    ["putty", "-ssh", f"ubuntu@{instance[1]}", "-i", "C:\\Users\\Administrator\\.ssh\\webinar.ppk"])
 
 if __name__ == "__main__":
     main()
