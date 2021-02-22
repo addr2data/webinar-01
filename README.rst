@@ -655,6 +655,57 @@ toDoList
 
 			Click **Add to registered**
 
+|
+
+- Create an Network Load-balancer with the following settings
+
+	+ Basic Configuration
+
+		+ name: **webinar-01-lb-net**
+
+		+ IP address type: ipv4
+
+	+ Listeners
+
+		+ Load Balancer Protocol: **HTTP**
+
+		+ Load Balancer Port: **5000**
+
+	+ Availability Zones
+
+		+ VPC: **webinar-01**
+
+		+ Availability Zones
+
+			us-east-1a: **webinar-01-sub-public-01**
+
+			us-east-1b: **webinar-01-sub-public-02**
+
+	+ Configure Routing
+
+		+ Target group
+
+			Target group: **New target group**
+
+			Name: **webinar-01-tg-net**
+
+			Target type: **Instance**
+
+			Protocol: **TCP**
+
+			Port: **5000**
+
+		+ Health checks
+
+			Protocol: **TCP**
+
+	+ Register Targets
+
+		+ Instances
+
+			Select **all**
+
+			Click **Add to registered**
 
 
 *goingCmdO*
