@@ -11,15 +11,15 @@ When getting started with AWS or learning and learning a new service, I have fou
 
 |
 
-During this webinar we will be using the AWS console, but I have also provided equivalent awscli commands for each operation.
+**During this webinar we will be using the AWS console, but I have also provided equivalent awscli commands for each operation.**
 
-*If the awscli is for you, then read the 'Notes or awscli' section*
+	| If the awscli is for you, then read the 'Notes or awscli' section
 
 |
 
 We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.
 
-*If you want the nitty-gritty, the read the 'AWS Certified Advanced Networking Study Group' section*
+	| If you want the nitty-gritty, then read the 'AWS Certified Advanced Networking Study Group' section
 
 |
 
