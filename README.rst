@@ -603,9 +603,29 @@ toDoList
 
 		+ Availability Zones
 
-			- us-east-1a: **webinar-01-sub-public-01**
+			us-east-1a: **webinar-01-sub-public-01**
 
-			- us-east-1b: **webinar-01-sub-public-02**
+			us-east-1b: **webinar-01-sub-public-02**
+
+	+ Configure Security Groups
+
+		+ Assign a security group: **Create a new security group**
+
+		+ Security group name: **webinar-01-sg-lb-app**
+
+		+ Description : **Security group for application load Balancer**
+
+		+ Rule
+
+			Type: **Custom TCP Rule**
+
+			Protocol: **TCP**
+
+			Port Range: **5000**
+
+			Source: **Custom 0.0.0.0/0**
+
+
 
 - Create Target Group for Application Load-balancer
 - Register Targets
