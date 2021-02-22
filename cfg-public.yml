@@ -5,7 +5,6 @@ base:
   priv_subnets:
     - "webinar-01-sub-public-01"
     - "webinar-01-sub-public-02"
-  webservers_per_subnet: 2
 
 webservers:
   ami: "ami-0090f21784e1f13dd"

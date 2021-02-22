@@ -441,8 +441,34 @@ Then, let's add a route to the **public** route table in the **addr2data-01** VP
 
 ****
 
-Instances
----------
+Getting started with Instances and Security Groups
+--------------------------------------------------
+First, we are going to run the following on **jumpHost**
+
+::
+
+	python webserver.py create cfg-private.yaml
+
+The is Python script will do a few things:
+
+- It will create a security group named **webinar-01-sg-web-private**
+
+- It will an ingress rule to that security group to allow **SSH** traffic from **10.0.0.0/16** and **10.2.0.0/16** 
+
+- It will launch a single instance on using the following parameters:
+
+	+ AMI: **base_webserver** (I saved this image previously, on boot it starts a simple web server on port 5000)
+	
+	+ Network: **webinar-01**
+	
+	+ Subnet: **webinar-01-sub-private-01**
+	
+	+ Security Groups: webinar-01-sg-web-private
+	
+	+ Tags: *Key* = **Name**, *Value* = **web-private**
+
+
+
 EC2 provides cloud-based compute capacity and offers a wide variety of configurations (Instance Types). Comprehensive coverage of EC2 would require a separate webinar. For our purposes, we are going to focus on the following configuration options and skip the rest/
 
 - AMI
