@@ -2,8 +2,8 @@
 base:
   vpc_name: "webinar-01"
   priv_subnets:
-    - "webinar-01-sub-private-01"
-    - "webinar-01-sub-private-02"
+    - "webinar-01-sub-public-01"
+    - "webinar-01-sub-public-02"
   webservers_per_subnet: 2
 
 webservers:
@@ -41,6 +41,19 @@ security_group:
       PrefixListIds: []
       ToPort: 22
       UserIdGroupPairs: []
-
+    -
+      FromPort: 80
+      IpProtocol: 'tcp'
+      IpRanges:
+        -
+          CidrIp: "10.0.0.0/16"
+          Description: ""
+        -
+          CidrIp: "10.2.0.0/16"
+          Description: ""
+      Ipv6Ranges: []
+      PrefixListIds: []
+      ToPort: 80
+      UserIdGroupPairs: []
 
 

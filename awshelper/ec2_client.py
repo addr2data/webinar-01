@@ -37,23 +37,33 @@ class Ec2Client(object):
             raise AwsHelperError(err)
 
     def create_webserver_sg(self, sg_cfg):
+        self.sg_id = ""
         try:
-            response = self.ec2.create_security_group(
-                Description=sg_cfg['description'],
-                GroupName=sg_cfg['name'],
-                VpcId=self.vpc_id,
-                TagSpecifications=sg_cfg['tags']
-            )
-            self.sg_id = response['GroupId']
+            response = self.ec2.describe_security_groups()
+            for sec_group in response['SecurityGroups']:
+                if sec_group['GroupName'] == sg_cfg['name']:
+                    self.sg_id = sec_group['GroupId']
         except ClientError as err:
             raise AwsHelperError(err)
 
-        try:
-            response = self.ec2.authorize_security_group_ingress(
-                GroupId=self.sg_id,
-                IpPermissions=sg_cfg['rules'])
-        except ClientError as err:
-            raise AwsHelperError(err)
+        if self.sg_id == "":
+            try:
+                response = self.ec2.create_security_group(
+                    Description=sg_cfg['description'],
+                    GroupName=sg_cfg['name'],
+                    VpcId=self.vpc_id,
+                    TagSpecifications=sg_cfg['tags']
+                )
+                self.sg_id = response['GroupId']
+            except ClientError as err:
+                raise AwsHelperError(err)
+
+            try:
+                response = self.ec2.authorize_security_group_ingress(
+                    GroupId=self.sg_id,
+                    IpPermissions=sg_cfg['rules'])
+            except ClientError as err:
+                raise AwsHelperError(err)
 
     def run_instances(self, webserver_cfg):
         instances = []
@@ -80,6 +90,16 @@ class Ec2Client(object):
     def term_instances(self, instances):
         try:
             response = self.ec2.terminate_instances(InstanceIds=instances)
+        except ClientError as err:
+            raise AwsHelperError(err)
+
+    def get_instance_state(self, instances):
+        status = []
+        try:
+            response = self.ec2.describe_instance_status(InstanceIds=instances, IncludeAllInstances=True)
+            for instance in response['InstanceStatuses']:
+                status.append(instance['InstanceState']['Name'])
+            return status
         except ClientError as err:
             raise AwsHelperError(err)
 

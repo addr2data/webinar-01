@@ -578,12 +578,17 @@ Add a default route to the **webinar-01-rt-private** route table, using the NAT 
 
 Application Load Balancer
 -------------------------
-
+To be added.
 
 toDoList
 ~~~~~~~~
 
-- Create Application Load-balancer
+- Create Application Load-balancer with the following settings:
+	+ Basic Configuration
+		~ name: **webinar-01-lb-app**
+		~ IP address type: ipv4
+	+ Listeners
+
 - Create Target Group for Application Load-balancer
 - Register Targets
 - Describe Target Group health
@@ -596,6 +601,14 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
+::
+	aws elbv2 create-load-balancer ^
+		--name webinar-01-lb-app ^
+		--scheme internet-facing ^
+		--type application ^
+		--ip-address-type ipv4 ^
+		--subnets <SubnetId> <SubnetId> ^
+		--security-groups <SecurityGroupId>
 
 
 

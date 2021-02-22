@@ -13,6 +13,7 @@ Options:
 """
 
 import sys
+import time
 from docopt import docopt
 import yaml
 import simplejson as json
@@ -30,7 +31,7 @@ def main():
     if args['create']:
         with open(args['<cfgfile>']) as fin:
             cfg = yaml.safe_load(fin)
-        print("Deploying web servers to private subnets")
+        print("Deploying web servers to public subnets")
 
         try:
             ec2_client.find_vpc(cfg['base']['vpc_name'])
@@ -54,6 +55,19 @@ def main():
         except AwsHelperError as err:
             sys.exit(err)
 
+        instance_ids = [x[0] for x in instances['instances']]
+        while True:
+            print("Waiting instances to reach 'running' state")
+            time.sleep(3)
+            try:
+                status = ec2_client.get_instance_state(instance_ids)
+            except AwsHelperError as err:
+                sys.exit(err)
+
+            status = list(set(status))
+            if len(status) == 1 and status[0] == "running":
+                break
+
     elif args['destroy']:
         with open(args['<results_file>'], 'r') as fin:
             cfg = json.load(fin)
@@ -62,9 +76,21 @@ def main():
         instance_ids = [x[0] for x in cfg['instances']]
 
         try:
-            ec2_client.term_instances(cfg['instances'])
+            ec2_client.term_instances(instance_ids)
         except AwsHelperError as err:
             sys.exit(err)
+
+        while True:
+            print("Waiting instances to terminate")
+            time.sleep(3)
+            try:
+                status = ec2_client.get_instance_state(instance_ids)
+            except AwsHelperError as err:
+                sys.exit(err)
+
+            status = list(set(status))
+            if len(status) == 1 and status[0] == "terminated":
+                break
 
         print("Removing security group.")
         try:
