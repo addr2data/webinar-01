@@ -534,3 +534,67 @@ toDoList
 ****
 
 ****
+
+Nat Gateway
+-----------
+
+
+toDoList
+~~~~~~~~
+
+- Deploy NAT Gateway
+
+*goingCmdO*
+~~~~~~~~~~~
+
+|
+
+****
+
+****
+
+Application Load Balancer
+-------------------------
+
+
+toDoList
+~~~~~~~~
+
+- Create Application Load-balancer
+- Create Target Group for Application Load-balancer
+- Register Targets
+- Describe Target Group health
+- Create Listener for each Application Load-balancer
+- Describe Target Group health
+- Verify Application Load-balancer
+- Test connectivity
+
+
+*goingCmdO*
+~~~~~~~~~~~
+
+|
+
+****
+
+****
+
+Network Load Balancer
+---------------------
+
+- Create Network Load-balancer
+- Create Target Group for Network Load-balancer
+- Register Targets
+- Describe Target Group health
+- Create Listener for each Network Load-balancer
+- Describe Target Group health
+- Verify Network Load-balancer
+- Test connectivity
+
+toDoList
+~~~~~~~~
+
+- Deploy NAT Gateway
+
+*goingCmdO*
+~~~~~~~~~~~
