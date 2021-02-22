@@ -540,10 +540,6 @@ Then, let's launch a single instance
 
 |
 
-Then, test connectivity
-
-|
-
 Then, add a rule to the **createNewSecurityGroup** security group to allow TCP port 5000 from anywhere.
 
 ::
