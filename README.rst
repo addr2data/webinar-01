@@ -3,7 +3,7 @@ Webinar-01
 
 Introduction
 ------------
-When getting started with AWS or learning and learning a new service, I have found that the following approach works well for me. Hopefully, it will work well for you.
+When getting started with AWS or learning a new service, I have found that the following approach works well for me. Hopefully, it will work well for you.
 
 - Use the AWS console, then
 - Use the awscli, then
@@ -67,7 +67,7 @@ Let's build something
 
 Amazon Virtual Private Cloud (VPC)
 ----------------------------------
-VPCs are logically isolated sections of the AWS cloud.
+A VPC is a logically isolated sections of the AWS cloud.
 
 - VPCs have the look and feel of traditional networks
 
