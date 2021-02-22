@@ -576,18 +576,20 @@ Add a default route to the **webinar-01-rt-private** route table, using the NAT 
 
 ****
 
-Load Balancer
--------------
+Load Balancers
+--------------
 To be added.
 
 toDoList
 ~~~~~~~~
 
-- Create Application Load-balancer with the following settings
+- Create an Application Load-balancer with the following settings
 
 	+ Basic Configuration
+
 		~ name: **webinar-01-lb-app**
 		~ IP address type: ipv4
+
 	+ Listeners
 
 - Create Target Group for Application Load-balancer
