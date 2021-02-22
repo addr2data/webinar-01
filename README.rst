@@ -595,6 +595,18 @@ toDoList
 
 		~ Load Balancer Protocol: **HTTP**
 
+		~ Load Balancer Port: **5000**
+
+	+ Availability Zones
+
+		~ VPC: **webinar-01**
+
+		~ Availability Zones
+
+			^ us-east-1a: **webinar-01-sub-public-01**
+
+			^ us-east-1b: **webinar-01-sub-public-01**
+
 - Create Target Group for Application Load-balancer
 - Register Targets
 - Describe Target Group health
