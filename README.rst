@@ -505,7 +505,13 @@ toDoList
 
 	python webserver.py connect private.json --browser
 
-- From **web-public**, run **ping www.google.com**.
+- From **web-public**, run the following command.
+
+::
+
+	ping www.google.com
+
+
 
 *goingCmdO*
 ~~~~~~~~~~~
