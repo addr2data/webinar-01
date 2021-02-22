@@ -588,9 +588,12 @@ toDoList
 	+ Basic Configuration
 
 		~ name: **webinar-01-lb-app**
+
 		~ IP address type: ipv4
 
 	+ Listeners
+
+		~ Load Balancer Protocol: **HTTP**
 
 - Create Target Group for Application Load-balancer
 - Register Targets
