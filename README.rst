@@ -603,9 +603,9 @@ toDoList
 
 		+ Availability Zones
 
-			+ us-east-1a: **webinar-01-sub-public-01**
+			- us-east-1a: **webinar-01-sub-public-01**
 
-			+ us-east-1b: **webinar-01-sub-public-02**
+			- us-east-1b: **webinar-01-sub-public-02**
 
 - Create Target Group for Application Load-balancer
 - Register Targets
