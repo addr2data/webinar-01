@@ -2,7 +2,8 @@
 
 Usage:
     webservers create <cfgfile>
-    webservers destroy <cfgfile>
+    webservers destroy <results_file>
+    webservers connect <results_file>
 
 Arguments:
     create
@@ -15,19 +16,20 @@ import sys
 from docopt import docopt
 import yaml
 import simplejson as json
+import subprocess
 from awshelper import Ec2Client, Ec2Resource, AwsHelperError
 
 
 def main():
     """Startup or shutdown aws(addr2data) environment."""
     args = docopt(__doc__)
-    with open(args['<cfgfile>']) as fin:
-        cfg = yaml.safe_load(fin)
 
     ec2_client = Ec2Client()
     ec2_resource = Ec2Resource()
 
     if args['create']:
+        with open(args['<cfgfile>']) as fin:
+            cfg = yaml.safe_load(fin)
         print("Deploying web servers to private subnets")
 
         try:
@@ -53,10 +55,12 @@ def main():
             sys.exit(err)
 
     elif args['destroy']:
-        with open(args['<cfgfile>'], 'r') as fin:
+        with open(args['<results_file>'], 'r') as fin:
             cfg = json.load(fin)
 
         print("Destroying web servers.")
+        instance_ids = [x[0] for x in cfg['instances']]
+
         try:
             ec2_client.term_instances(cfg['instances'])
         except AwsHelperError as err:
@@ -68,6 +72,12 @@ def main():
         except AwsHelperError as err:
             sys.exit(err)
 
+    elif args['connect']:
+        with open(args['<results_file>'], 'r') as fin:
+            cfg = json.load(fin)
+
+        for instance in cfg['instances']:
+            command = subprocess.Popen(["putty", "-ssh", f"ubuntu@{instance[1]}", "-i", "C:\\Users\\Administrator\\.ssh\\webinar.ppk"])
 
 if __name__ == "__main__":
     main()

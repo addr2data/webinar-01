@@ -70,7 +70,7 @@ class Ec2Client(object):
                     TagSpecifications=webserver_cfg['tags']
                 )
                 for instance in response['Instances']:
-                    instances.append(instance['InstanceId'])
+                    instances.append((instance['InstanceId'], instance['PrivateIpAddress']))
             except ClientError as err:
                 raise AwsHelperError(err)
         return {'sgId': self.sg_id, 'instances': instances}

@@ -542,10 +542,33 @@ Nat Gateway
 toDoList
 ~~~~~~~~
 
-- Deploy NAT Gateway
+- Deploy NAT Gateway named **webinar-01-nat**
+- Add a default route to the **webinar-01-rt-private** route table, using the NAT gateway as the target. 
 
 *goingCmdO*
 ~~~~~~~~~~~
+
+::
+
+	aws ec2 allocate-address ^
+		--domain vpc
+
+::
+
+	aws ec2 create-nat-gateway ^
+		--allocation-id <AllocationId> ^
+		--subnet-id <SubnetId>
+
+|
+
+Add a default route to the **webinar-01-rt-private** route table, using the NAT gateway as the taget.
+
+::
+
+	aws ec2 create-route ^
+		--destination-cidr-block 0.0.0.0/0 ^
+		--nat-gateway-id <NatGatewayId> ^
+		--route-table-id <RouteTableId>
 
 |
 
@@ -572,6 +595,11 @@ toDoList
 
 *goingCmdO*
 ~~~~~~~~~~~
+
+
+
+
+
 
 |
 

@@ -10,7 +10,7 @@ webservers:
   ami: "ami-0090f21784e1f13dd"
   type: "t2.micro"
   keypair: "Webinar"
-  count: 2
+  count: 1
   tags:
     -
       ResourceType: instance
