@@ -33,6 +33,8 @@ Notes for awscli
 - For parameters where the value is **static**, the specific **value** for this webinar is included.
 - For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
 
+|
+
 AWS Certified Advanced Networking Study Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced Networking Study Group** is for you.
