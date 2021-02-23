@@ -160,8 +160,6 @@ Costs
 
 - There are no charges directly associated with VPCs
 
-|
-
 toDoList
 ~~~~~~~~
 
