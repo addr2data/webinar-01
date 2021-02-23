@@ -85,21 +85,43 @@ Let's build something
 Virtual Private Cloud (VPC)
 ---------------------------
 
-The basic
-~~~~~~~~~
-A VPC is a logically isolated sections of the AWS cloud.
+The basics
+~~~~~~~~~~
+
+- VPCs are the networking layer for EC2.
+
+- They are logically isolated sections of the AWS cloud.
 
 - VPCs have the look and feel of traditional networks
 
-	+ You can define the IPv4/IPv6 address space
-	+ You can create subnets
-	+ You can configure routing tables
+	+ You define the address space (IPv4/IPv6)
+	+ You configure subnets
+	+ You configure routing tables
+	+ You configure network gateways
+	+ You apply security
 
-Let's discuss regions
+- VPCs are created per AWS Region
 
-Default VPCs
+What is an AWS Region?
+~~~~~~~~~~~~~~~~~~~~~~
 
-*Note: there are no charges associated with VPCs*
+- A physical location where data centers are clustered.
+
+- Each AWS Region consists of multiple Availability Zones (AZ).
+
+	+ More on AZs when we get to Subnets.
+
+- We will be working in the **us-east-1** Region.
+
+	+ Located in Northern Virginia
+
+	+ Has six (6) AZs
+
+
+Costs
+~~~~~
+
+- There are no charges associated with VPCs
 
 
 VPC Quotas
