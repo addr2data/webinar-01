@@ -40,7 +40,7 @@ During this webinar we will introduce the following AWS services/components/conc
 
 **We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.**
 
-	| If you want the nitty-gritty, then read the 'AWS Certified Advanced Networking Study Group' section
+	| If you want the nitty-gritty, then join the **AWS Certified Advanced Networking Study Group** (see details below)
 
 |
 
@@ -58,8 +58,8 @@ If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced
 
 - Private channel on the **API Users** team in Microsoft Teams.
 - Meets every Thu (5:00p -6:00p ET) starting Mar 4, 2021.
-- Sessions will be recorded, if the time is not convenient (EMEA, APJ, etc.).
-- Participation is mandatory.
+- Sessions will be recorded, for those in different regions (i.e. EMEA, APJ).
+- Once you join, active participation is required. Either, during the weekly sessions or through the teams channel. 
 - If you are interested, reach out to me via email or chat on teams. 
 
 |
