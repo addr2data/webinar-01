@@ -483,7 +483,7 @@ The basics
 
 		+ last: Broadcast address
 
-- If traffic for a particular Subnet is routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *public* subnet.
+- If traffic for a particular Subnet can be routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *public* subnet.
 
 - For an Instance on a *public* subnet to communicate over the Internet with IPv4, it must have a *Public IPv4 address* or an *Elastic IP address*.
 
@@ -495,7 +495,7 @@ The basics
 
 - For an Instance on a *public* subnet to communicate over the Internet with IPv6, it must have an IPv6 address.
 
-- If traffic for a particular Subnet is not routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *private* subnet.
+- If traffic for a particular Subnet can not be routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *private* subnet.
 
 Quotas
 ~~~~~~
