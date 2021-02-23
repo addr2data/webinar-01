@@ -312,12 +312,17 @@ The basics
 
 - Each route has a **destination** and a **target**.
 
-	+ For example, the IPv4 default route associated with your *public* subnets, may look like this:
+	+ The IPv4 default route associated with your *public* subnets, may look like this:
 
 		+ Destination: **0.0.0.0/0**
 
 		+ Target: **igw-xxxxxxxxxxxxxxxxx**
 
+	+ Every route table contains an IPv4 local route, that routes traffic within a VPC:
+
+		+ Destination: **10.2.0.0/16** (or whatever your VPC IPv4 CIDR block is)
+
+		+ Target: **local**
 				  
 Quotas
 ~~~~~~
