@@ -173,6 +173,8 @@ toDoList
 
 	+ Tenancy: **Default** 
 
+- Review the details of **webinar-01**
+
 ****
 
 *goingCmdO*
