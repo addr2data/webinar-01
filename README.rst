@@ -1291,6 +1291,12 @@ Costs
 toDoList
 ~~~~~~~~
 
+- From **jumpHost**, run the following command to create the Security Group and the Instance.
+
+::
+
+	python webservers.py create cfg-private.yml
+
 - Create an Application Load-balancer with the following settings
 
 	+ Basic Configuration
@@ -1420,6 +1426,7 @@ toDoList
 ~~~~~~~~~~~
 
 ::
+
 	aws elbv2 create-load-balancer ^
 		--name webinar-01-lb-app ^
 		--scheme internet-facing ^
@@ -1428,32 +1435,8 @@ toDoList
 		--subnets <SubnetId> <SubnetId> ^
 		--security-groups <SecurityGroupId>
 
-
-
-
-
 |
 
 ****
 
 ****
-
-Network Load Balancer
----------------------
-
-- Create Network Load-balancer
-- Create Target Group for Network Load-balancer
-- Register Targets
-- Describe Target Group health
-- Create Listener for each Network Load-balancer
-- Describe Target Group health
-- Verify Network Load-balancer
-- Test connectivity
-
-toDoList
-~~~~~~~~
-
-- Deploy NAT Gateway
-
-*goingCmdO*
-~~~~~~~~~~~
