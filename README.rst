@@ -876,19 +876,28 @@ Getting started with the EC2 API
 The basic
 ~~~~~~~~~
 
+.. code-block:: d
+   :linenos:
+   :emphasize-lines: 1,2,4
 
-```yaml
-en:
-  errors:
-    format: "%{attribute} %{message}"
-    messages:
-      confirmation: "doesn't match %{attribute}"
-      accepted: "must be accepted"
-      wrong_length:
-        one: "is the wrong length (should be 1 character)"
-        other: "is the wrong length (should be %{count} characters)"
-      equal_to: "must be equal to %{count}"
-```
+   import std.stdio;
+   import yaml;
+
+   void main()
+   {
+       //Read the input.
+       Node root = Loader("input.yaml").load();
+
+       //Display the data read.
+       foreach(string word; root["Hello World"])
+       {
+           writeln(word);
+       }
+       writeln("The answer is ", root["Answer"].as!int);
+
+       //Dump the loaded document to output.yaml.
+       Dumper("output.yaml").dump(root);
+   }
 
 
 ::
