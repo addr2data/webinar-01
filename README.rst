@@ -104,7 +104,7 @@ The basics
 	+ You configure subnets
 	+ You configure routing tables
 	+ You configure network gateways
-	+ You apply security
+	+ You apply security 
 
 - VPCs are created per AWS Region
 
@@ -136,6 +136,10 @@ The basics
 	+ Amazon treats these addresses as public.
 
 - Once created, you can't change the initial IPv4 CIDR block, but you can add/remove other CIDR blocks.
+
+- You can remove or replace your IPv6 CIDR block.
+
+	+ You can't add more IPv6 CIDR blocks 
 
 - VPCs can operate in dual-stack mode. You instances can communicate using IPv4, IPv6 or both.
 
