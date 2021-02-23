@@ -771,14 +771,27 @@ Add the following route to **addr2data-rt-public**
 
 ****
 
-Let's review
-------------
+Let's review where we are at
+----------------------------
 
 |
 
 .. image:: ./images/webinar_net-02.png
 
 |
+
+Security Groups
+---------------
+
+The basics
+~~~~~~~~~~
+
+
+|
+
+****
+
+****
 
 Getting started with Instances and Security Groups
 --------------------------------------------------
