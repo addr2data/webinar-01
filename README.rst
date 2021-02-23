@@ -457,18 +457,42 @@ The basics
 	- Customers who operate applications across AZs are able to achieve higher levels of availability.
 	- The two (2) AZs that we will use during this webinar are us-east-1a and us-east-1b
 
+|
+
+- Each Subnet has five (5) addresses reserved from its IPv4 CIDR block.
+
+	+ For example, our Subnets will use IPv4 CIDR blocks with a prefix length of **/23**, which results in **512** possible IPv4 addresses, but only **507** IPv4 addresses available for Instances.
+
+	+ The reserved addresses are as follows:
+
+		+ base + 0: Network address
+
+		+ base + 1: Reserved by AWS (VPC router)
+
+		+ base + 2: Reserved by AWS (VPC base + 2 is DNS server, but base + 2 is also reserved in each subnet)
+
+		+ base + 3: Reserved by AWS (future use)
+
+		+ last: Broadcast address
+
 - If traffic for a particular Subnet is routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *public* subnet.
 
 - For an Instance on a *public* subnet to communicate over the Internet with IPv4, it must have a *Public IPv4 address* or an *Elastic IP address*.
 
 	+ More on *Public IPv4 addresses* and *Elastic IP addresses* later  
 
+- Subnets have a setting called **Auto-assign IPv4**, which can be enabled/disabled. If this setting is enabled for a subnet:
+
+	+ Instances launched in that Subnet will be assigned a *Public IPv4 address*, unless overridden during Instance launch. 
+
+- For an Instance on a *public* subnet to communicate over the Internet with IPv6, it must have an IPv6 address.
+
 - If traffic for a particular Subnet is not routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *private* subnet.
 
 
 
 
-- Subnets have a setting called **Auto-assign IPv4** that can be enabled/disabled. If this setting is enabled:
+
 
 	+ 
 
