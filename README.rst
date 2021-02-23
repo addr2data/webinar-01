@@ -104,12 +104,12 @@ The basics
 
 ::
 
-	What is an AWS Region?
+		What is an AWS Region?
 
-	- A physical location where data centers are clustered.
-	- Each AWS Region consists of multiple Availability Zones (AZ)
+		- A physical location where data centers are clustered.
+		- Each AWS Region consists of multiple Availability Zones (AZ)
 		- More on AZs when we get to Subnets
-	- We will be working in the **us-east-1** Region
+		- We will be working in the **us-east-1** Region
 		- Located in Northern Virginia
 		- Has six (6) AZs
 
