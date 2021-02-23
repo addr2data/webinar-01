@@ -883,7 +883,7 @@ Let's take a look at what arguments that Python script takes
 
 |
 
-We are going to run the following command, but before we do let's examine the that **cfg-private.yml** file.
+We are going to run the following command, but before we do let's examine that **cfg-private.yml** file.
 
 ::
 
@@ -900,7 +900,7 @@ Here is a summary of what that script using the *create* argument will do.
 
 - It will add an ingress rule to **webinar-01-sg-web-private** that allows **SSH** traffic from **10.0.0.0/16** and **10.2.0.0/16** 
 
-- It will launch a single instance on using the following parameters:
+- It will launch a single instance, using the following parameters:
 
 	+ AMI: **base_webserver** (previously saved image - on boot, a simple web server starts on port 5000)
 	
@@ -912,54 +912,15 @@ Here is a summary of what that script using the *create* argument will do.
 	
 	+ Tags: *Key* = **Name**, *Value* = **web-private**
 
-Let's go ahead and run it.
+toDoList
+~~~~~~~~
+
+- Let's go ahead and run it.
 
 ::
 
 	python webservers.py create cfg-private.yml
 
-
-
-
-Getting started with Instances and Security Groups
---------------------------------------------------
-First, we are going to run the following command on **jumpHost**
-
-::
-
-	python webserver.py create cfg-private.yaml
-
-This Python script will do a few things for us:
-
-- It will create a security group named **webinar-01-sg-web-private**
-
-- It will add an ingress rule to **webinar-01-sg-web-private** that allows **SSH** traffic from **10.0.0.0/16** and **10.2.0.0/16** 
-
-- It will launch a single instance on using the following parameters:
-
-	+ AMI: **base_webserver** (previously saved image - on boot, a simple web server starts on port 5000)
-	
-	+ Network: **webinar-01**
-	
-	+ Subnet: **webinar-01-sub-private-01**
-	
-	+ Security Groups: **webinar-01-sg-web-private**
-	
-	+ Tags: *Key* = **Name**, *Value* = **web-private**
-
-|
-
-
-
-|
-
-Security Groups
-~~~~~~~~~~~~~~~
-
-|
-
-toDoList
-~~~~~~~~
 
 - From **jumpHost**, run the following command to connect to **web-private** via SSH.
 
@@ -975,7 +936,9 @@ toDoList
 	python webserver.py connect private.json --browser
 
 
-- Add a rule to allow HTTP on port 5000 to security group **webinar-01-sg-web-private**
+- Add a rule to allow TCP 5000 from **10.0.0.0/16** and **10.2.0.0/16** to security group **webinar-01-sg-web-private**
+
+|
 
 - From **jumpHost**, run the following command to browse to **http://<web-private>:5000**.
 
@@ -994,12 +957,12 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
-First, we need to create a security group that would match the rules of the security that would be created by selecting **Create a new security group** in the console.  
+Create a security group.  
 
 ::
 
 	aws ec2 create-security-group ^
-		--group-name createNewSecurityGroup ^
+		--group-name webinar-01-sg-web-private ^
 		--description "Allow SHH from anywhere" --vpc-id <vpc-id>
 
 	aws ec2 authorize-security-group-ingress ^
@@ -1010,21 +973,21 @@ First, we need to create a security group that would match the rules of the secu
 
 |
 
-Then, let's launch a single instance
+Launch a single instance.
 
 ::
 
 	aws ec2 run-instances ^
 		--image-id ami-0090f21784e1f13dd ^
 		--instance-type t2.micro ^
-		--key-name Webinar ^
+		--key-name web-private ^
 		--subnet-id <SubnetId> ^
 		--security-group-ids <GroupId> ^
 		--tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
 
 |
 
-Then, add a rule to the **createNewSecurityGroup** security group to allow TCP port 5000 from anywhere.
+Add a rule to the security group to allow TCP port 5000 from **10.0.0.0/16**.
 
 ::
 
@@ -1032,7 +995,19 @@ Then, add a rule to the **createNewSecurityGroup** security group to allow TCP p
 		--group-id <GroupId> ^
 		--protocol tcp ^
 		--port 5000 ^
-		--cidr 0.0.0.0/0
+		--cidr 10.0.0.0/16
+
+|
+
+Add a rule to the security group to allow TCP port 5000 from **10.2.0.0/16**.
+
+::
+
+	aws ec2 authorize-security-group-ingress ^
+		--group-id <GroupId> ^
+		--protocol tcp ^
+		--port 5000 ^
+		--cidr 10.2.0.0/16
 
 |
 
