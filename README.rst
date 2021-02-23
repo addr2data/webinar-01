@@ -876,78 +876,9 @@ Getting started with the EC2 API
 The basic
 ~~~~~~~~~
 
-.. code-block:: d
-   :linenos:
-   :emphasize-lines: 1,2,4
-
-   import std.stdio;
-   import yaml;
-
-   void main()
-   {
-       //Read the input.
-       Node root = Loader("input.yaml").load();
-
-       //Display the data read.
-       foreach(string word; root["Hello World"])
-       {
-           writeln(word);
-       }
-       writeln("The answer is ", root["Answer"].as!int);
-
-       //Dump the loaded document to output.yaml.
-       Dumper("output.yaml").dump(root);
-   }
 
 
-::
 
-		---
-		base:
-		  vpc_name: "webinar-01"
-      	  output_file: "private.json"
-      	  priv_subnets:
-            - "webinar-01-sub-private-01"
-
-	webservers:
-      ami: "ami-0090f21784e1f13dd"
-      type: "t2.micro"
-      keypair: "Webinar"
-      count: 1
-      tags:
-        -
-          ResourceType: instance
-          Tags:
-            -
-              Key: 'Name'
-              Value: 'web-private'
-
-	security_group:
-  	  name: 'webinar-01-sg-web-private'
-      description: "Security group for private webservers"
-      tags:
-        -
-          ResourceType: 'security-group'
-          Tags:
-            -
-              Key: 'Name'
-              Value: 'webinar-01-sg-web-private'
-      rules:
-        -
-          FromPort: 22
-          IpProtocol: 'tcp'
-          IpRanges:
-            -
-              CidrIp: "10.0.0.0/16"
-              Description: ""
-            -
-              CidrIp: "10.2.0.0/16"
-              Description: ""
-          Ipv6Ranges: []
-          PrefixListIds: []
-          ToPort: 22
-          UserIdGroupPairs: []
-          ...
 
 
 
