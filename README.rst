@@ -113,12 +113,23 @@ The basics
 		- Located in Northern Virginia
 		- Has six (6) AZs
 
+|
 
 - When you create an account, a default VPC is created per region. This allows you to launch instances quickly without having to configure a VPC first.
 
 - When you create a VPC, you must define an IPv4 CIDR block (/16 to /28).
+	
+	+ No matter IPv4 CIDR block you use, Amazon treats these addresses as private.
 
-- Once created, you can't change this IPv4 block, but you can add/remove other CIDR blocks.
+- When you create a VPC, you can optionally define an IPv6 CIDR block (/56).
+	
+	+ This block can be Amazon provided or customer provided.
+
+	+ Amazon treats these addresses as public.
+
+- Once created, you can't change the initial IPv4 CIDR block, but you can add/remove other CIDR blocks.
+
+- VPCs can operate in dual-stack mode. You instances can communicate using IPv4, IPv6 or both.
 
 - When you create a VPC, you must select a value for **Tenancy**.
 
