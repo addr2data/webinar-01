@@ -137,8 +137,8 @@ The basics
 
 	+ **Dedicated:** The tenancy of all instances launched in this VPC is dedicated. 
 
-VPC Quotas
-~~~~~~~~~~
+Quotas
+~~~~~~
 
 .. list-table::
    :widths: 25, 25
@@ -180,6 +180,8 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
+Create a VPC
+
 ::
 
     aws ec2 create-vpc ^
@@ -204,13 +206,42 @@ The above awscli command will return the configuration of the newly created VPC.
 
 Internet Gateway
 -----------------
-A VPC component that allows communication between your VPC and the Internet. It is highly-available and scalable.
+
+The basics
+~~~~~~~~~~
+
+- A VPC component that allows communication between your VPC and the Internet.
+
+- Internet Gateways are highly-available and scalable.
 
 - Provides a target for Internet routable traffic in your VPC route tables (i.e. default route)
-- Performs Network Address Translation (NAT) for IPv4
+
 - Supports both IPv4 and IPv6
 
-*Note: there are no charges associated with Internet Gateways*
+- Performs Network Address Translation (NAT) for IPv4
+
+- You can have one (1) Internet Gateway per VPC. 
+
+
+Quotas
+~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Internet Gateways
+     - 5 per region ++
+
+*++ Directly associated with the 'VPCs per region' quota.*
+
+Costs
+~~~~~
+
+- There are no charges directly associated with Internet Gateways
+
 
 toDoList
 ~~~~~~~~
@@ -222,6 +253,8 @@ toDoList
 
 *goingCmdO*
 ~~~~~~~~~~~
+
+Create an Internet Gateway
 
 ::
 
@@ -242,6 +275,8 @@ as text, from the awscli.
 		--output text
 
 |
+
+Attach the Internet Gateway to a VPC.
 
 ::
 
