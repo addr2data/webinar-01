@@ -1139,7 +1139,14 @@ toDoList
 
 - Deploy NAT Gateway named **webinar-01-nat**
 
-- Add a default route to the **webinar-01-rt-private** route table, using the NAT gateway as the target. 
+- Add a default route to the **webinar-01-rt-private** route table, using the NAT gateway as the target.
+
+- From **web-private**, run the following command.
+
+::
+
+	ping www.google.com
+
 
 *goingCmdO*
 ~~~~~~~~~~~
