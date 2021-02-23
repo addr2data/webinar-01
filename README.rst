@@ -802,7 +802,7 @@ The basics
 
 - When you launch an instance in a VPC, you specify one or more security groups from that VPC.
 
-	+ If you don't, then the default security group.
+	+ If you don't, then the default security group will be used.
 
 - You can modify the rules in a Security Group at any time.
 
@@ -868,10 +868,6 @@ Quotas
      - Varies per Instance Type (1,2)
    * - Network interfaces per Region
      - 5000
-   * - Outbound rules per security group
-     - 60 (1, 2, 4)
-   * - Security groups per network interface
-     - 5 (1, 3, 4)
 
 - *(1) For Instance Type t2.micro the limit is 2*
 
