@@ -935,6 +935,7 @@ toDoList
 
 	python webserver.py connect private.json --browser
 
+|
 
 - Add a rule to allow TCP 5000 from **10.0.0.0/16** and **10.2.0.0/16** to security group **webinar-01-sg-web-private**
 
