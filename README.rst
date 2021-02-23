@@ -1275,7 +1275,17 @@ Quotas (Target groups)
 Costs
 ~~~~~
 
-- There is no charge for Elastic IP addresses or Public IPv4 address that are in use.
+- Load balancer charges (NLB and ALB)
+
+	+ $0.0225 per Application Load Balancer-hour (or partial hour)
+
+- LCU charges (ALB)
+
+	+ $0.008 per LCU-hour (or partial hour)
+
+- NLCU charges (NLB)
+
+	+ $0.006 per NLCU-hour (or partial hour)
 
 
 toDoList
