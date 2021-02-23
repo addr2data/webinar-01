@@ -873,6 +873,11 @@ Quotas
 
 - *(2) For Instance Type t2.medium the limit is 3*
 
+|
+
+****
+
+****
 
 Getting started with the EC2 API
 --------------------------------
