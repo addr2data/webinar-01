@@ -519,8 +519,8 @@ toDoList
      - **Availability Zone**
      - **IPv4 CIDR**
    * - `webinar-01-sub-private-01`
-     - 200
-     - 123
+     - `us-east-1a`
+     - `10.2.0.0/23`
 
 
 
