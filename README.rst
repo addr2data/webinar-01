@@ -516,7 +516,7 @@ toDoList
    :header-rows: 0
 
    * - **Component**
-     - **Limit**
+     - **Availability Zone**
      - **AZ**
    * - Subnets per VPC
      - 200
