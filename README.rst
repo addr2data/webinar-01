@@ -306,8 +306,19 @@ The basics
 
 - Any subnet not explicitly associated with a route table, is implicitly associated with the **main** route table.
 
-- You can change which route table is the route table. 
+- A route table defined the routing for any subnet associated with it. 
 
+- You can change which route table is the **main** route table.
+
+- Each route has a **destination** and a **target**.
+
+	+ For example, the IPv4 default route associated with your *public* subnets, may look like this:
+
+		+ Destination: **0.0.0.0/0**
+
+		+ Target: **igw-xxxxxxxxxxxxxxxxx**
+
+				  
 Quotas
 ~~~~~~
 
