@@ -951,14 +951,14 @@ toDoList
 
 ::
 
-	python webserver.py connect private.json
+	python webservers.py connect private.json
 
 
 - From **jumpHost**, run the following command to browse to http://**web-private**:5000.
 
 ::
 
-	python webserver.py connect private.json --browser
+	python webservers.py connect private.json --browser
 
 |
 
@@ -971,7 +971,7 @@ toDoList
 
 ::
 
-	python webserver.py connect private.json --browser
+	python webservers.py connect private.json --browser
 
 - From **web-private**, run the following command.
 
