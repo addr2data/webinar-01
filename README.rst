@@ -518,7 +518,7 @@ toDoList
    * - **Name-tag**
      - **Availability Zone**
      - **IPv4 CIDR**
-   * - Subnets per VPC
+   * - `webinar-01-sub-private-01`
      - 200
      - 123
 
