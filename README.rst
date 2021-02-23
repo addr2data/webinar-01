@@ -1205,7 +1205,78 @@ Add a default route to the **webinar-01-rt-private** route table, using the NAT 
 
 Load Balancers
 --------------
-To be added.
+
+The basics
+~~~~~~~~~~
+
+- To be added.
+
+Quotas (Regional)
+~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Load balancers per Region
+     - 50
+   * - Target groups per Region
+     - 3000
+   * - ENIs per VPC (NLB)
+     - 300
+
+
+Quotas (Load balancer)
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Listeners per load balancer
+     - 50
+   * - Targets per load balancer (NLB)
+     - 3000
+   * - [Cross-zone load balancing disabled] Targets per Availability Zone per load balancer (NLB)
+     - 500
+   * - [Cross-zone load balancing enabled] Targets per load balancer (NLB)
+     - 500
+   * - Targets per load balancer (ALB)
+     - 1000
+   * - Target groups per load balancer (ALB)
+     - 100
+   * - Subnets per Availability Zone per load balancer
+     - 1
+   * - Security groups per load balancer (ALB)
+     - 5
+   * - Rules per load balancer (not counting default rules) (ALB)
+     - 100
+   * - Certificates per load balancer (not counting default certificates)
+     - 25
+
+Quotas (Target groups)
+~~~~~~~~~~~~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Load balancers per target group
+     - 1
+   * - Targets per target group
+     - 1000
+
+Costs
+~~~~~
+
+- There is no charge for Elastic IP addresses or Public IPv4 address that are in use.
+
 
 toDoList
 ~~~~~~~~
