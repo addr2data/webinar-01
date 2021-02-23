@@ -919,7 +919,7 @@ Before we run **webserver.py**, let's take a look what the output file **private
 
 |
 
-Here is a summary of what that script using the *create* argument will do.
+Here is a summary of what **webserver.py** with the *create* argument will do.
 
 - It will create a security group named **webinar-01-sg-web-private**
 
