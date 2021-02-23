@@ -99,8 +99,8 @@ Default VPCs
 *Note: there are no charges associated with VPCs*
 
 
-Limits
-------
+VPC Quotas
+~~~~~~~~~~
 The following table shows the default limits for the components utilized in this exercise.
 
 .. list-table::
@@ -111,14 +111,12 @@ The following table shows the default limits for the components utilized in this
      - **Limit**
    * - VPC
      - 5 per region
-   * - Route Tables
-     - 200 per VPC
-   * - Entries per Route Table
-     - 50
-   * - Subnets
-     - 200 per VPC
+   * - IPv4 CIDR blocks per VPC
+     - 5
+   * - IPv6 CIDR blocks per VPC ++
+     - 1
 
-
+*++ Can not be increased**
 
 
 toDoList
