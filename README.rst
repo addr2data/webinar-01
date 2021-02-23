@@ -1081,15 +1081,25 @@ Quotas
      - 5
 
 Costs
+~~~~~
 
-    There is no charge for Elastic IP addresses or Public IPv4 address that are in use.
-    There is a charges of **$0.005** per hour for Elastic IP address that allocated, but not in use.  
+- There is no charge for Elastic IP addresses or Public IPv4 address that are in use.
 
-
+- There is a charges of **$0.005** per hour for Elastic IP address that allocated, but not in use by a running Instance. 
 
 toDoList
 ~~~~~~~~
 
+- Allocate an Elastic IP address
+
+
+*goingCmdO*
+~~~~~~~~~~~
+
+::
+
+	aws ec2 allocate-address ^
+		--domain vpc
 
 |
 
@@ -1100,20 +1110,39 @@ toDoList
 Nat Gateway
 -----------
 
+The basics
+~~~~~~~~~~
+Nat Gateway
+
+
+Quotas
+~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - NAT gateways per Availability Zone
+     - 5
+
+Costs
+~~~~~
+
+- You are billed **$0.045** per hour for a NAT Gateway.
+
+- You are billed **$0.045** per GB for data processed by a NAT Gateway.
 
 toDoList
 ~~~~~~~~
 
 - Deploy NAT Gateway named **webinar-01-nat**
+
 - Add a default route to the **webinar-01-rt-private** route table, using the NAT gateway as the target. 
 
 *goingCmdO*
 ~~~~~~~~~~~
-
-::
-
-	aws ec2 allocate-address ^
-		--domain vpc
 
 ::
 
