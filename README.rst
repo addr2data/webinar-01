@@ -877,7 +877,17 @@ The basics
 ~~~~~~~~~~
 Now we are going to deploy some Instances and test connectivity. To do that we are going to use a Python script that communicates with EC API, using **boto3**.
 
-Let's take a look at what arguments that Python script takes  
+Let's take a look at what arguments that Python script takes
+
+::
+
+	Usage:
+    	webservers create <cfgfile>
+   	 	webservers destroy <results_file>
+    	webservers connect <results_file> [--browser]
+
+
+
 
 |
 
