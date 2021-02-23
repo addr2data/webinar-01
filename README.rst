@@ -115,6 +115,8 @@ The basics
 
 |
 
+- A VPC spans all AZs in a Region.
+
 - When you create an account, a default VPC is created per region. This allows you to launch instances quickly without having to configure a VPC first.
 
 - When you create a VPC, you must define an IPv4 CIDR block (/16 to /28).
@@ -433,11 +435,54 @@ Add a default route to the **webinar-01-rt-public** route table.
 
 Subnets
 -------
-Subnets are
 
-Let's discuss availability zones.
+The basics
+~~~~~~~~~~
 
-*Note: there are no charges associated with subnets*
+- When you create a Subnet in a VPC:
+
+	+ You must specify an AZ within the associated Region.
+
+	+ You must specify a IPv4 CIDR block within the IPv4 CIDR block of the VPC.
+
+	+ If the VPC has an IPv6 CIDR block defined, then you can optionally define an IPv6 CIDR block for the Subnet
+
+::
+
+	What is an AWS Availability Zone (AZ)?
+
+	- An AZ consists of one or more data centers
+	- These data centers have redundant power, networking and connectivity.
+	- AZs are physically separated by many kilometers. 
+	- Customers who operate applications across AZs are able to achieve higher levels of availability.
+	- The two (2) AZs that we will use during this webinar are us-east-1a and us-east-1b
+
+- If traffic for a particular Subnet is routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *public* subnet.
+
+- If traffic for a particular Subnet is not routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *private* subnet.
+
+
+- Subnets have a setting called **Auto-assign IPv4** that can be enabled/disabled. If this setting is enabled:
+
+	+ 
+
+
+Quotas
+~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Subnets per VPC
+     - 200
+
+Costs
+~~~~~
+
+- There are no charges directly associated with Subnets
 
 toDoList
 ~~~~~~~~
