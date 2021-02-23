@@ -459,7 +459,13 @@ The basics
 
 - If traffic for a particular Subnet is routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *public* subnet.
 
+- For an Instance on a *public* subnet to communicate over the Internet with IPv4, it must have a *Public IPv4 address* or an *Elastic IP address*.
+
+	+ More on *Public IPv4 addresses* and *Elastic IP addresses* later  
+
 - If traffic for a particular Subnet is not routed to an Internet Gateway (based on the Route Table association), then it is considered to be a *private* subnet.
+
+
 
 
 - Subnets have a setting called **Auto-assign IPv4** that can be enabled/disabled. If this setting is enabled:
