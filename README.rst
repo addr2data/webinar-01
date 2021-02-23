@@ -531,14 +531,15 @@ toDoList
      - `us-east-1b`
      - `10.2.130.0/23`
 
-- Review the subnets just created.
+|
 
-- Review the association in the **public** route table
+- Review the four (4) subnets that we just created.
 
+- Associate **webinar-01-sub-public-01** and **webinar-01-sub-public-02** with **webinar-01-rt-public**
+
+- Review the association in **webinar-01-rt-public**
 
 ****
-
-
 
 *goingCmdO*
 ~~~~~~~~~~~
@@ -573,7 +574,7 @@ Create four (4) subnets
 
 |
 
-Next, let's review the subnet configuration.
+Review the the four (4) subnets created above.
 
 ::
 
@@ -582,7 +583,7 @@ Next, let's review the subnet configuration.
 
 |
 
-Next, let's show the **Name** and **SubnetId** of the subnets we created in a table.
+Show the **Name** and **SubnetId** of the four (4) Subnets in a table.
 
 ::
 
@@ -603,7 +604,7 @@ Next, let's show the **Name** and **SubnetId** of the subnets we created in a ta
 
 |
 
-Next, let's associate the two *public* subnets with the *public* route table 
+Associate **webinar-01-sub-public-01** and **webinar-01-sub-public-02** with **webinar-01-rt-public**
 
 ::
 
@@ -613,21 +614,12 @@ Next, let's associate the two *public* subnets with the *public* route table
 
 |
 
-Finally, let's review the associations in the *public* route table.
+Review the associations in **webinar-01-rt-public**.
 
 ::
 
 	aws ec2 describe-route-tables ^
 		--filters "Name=vpc-id,Values=vpc-0728135c72ee58885"
-
-|
-
-Let's review
-------------
-
-|
-
-.. image:: ./images/webinar_net-02.png
 
 |
 
@@ -712,6 +704,15 @@ Then, let's add a route to the **public** route table in the **addr2data-01** VP
 ****
 
 ****
+
+Let's review
+------------
+
+|
+
+.. image:: ./images/webinar_net-02.png
+
+|
 
 Getting started with Instances and Security Groups
 --------------------------------------------------
