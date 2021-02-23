@@ -292,14 +292,43 @@ Attach the Internet Gateway to a VPC.
 
 Route Tables and Routes
 -----------------------
-A VPC component that contains a set of routes. These routes determine where network traffic is directed within your VPC.
+
+The basics
+~~~~~~~~~~
+
+- A VPC component that contains a set of routes that determine where network traffic is directed within your VPC.
 
 - A route table that automatically comes with your VPC. It is called the **main** route table.
+
 - You can create your own **custom** route tables.
+
 - Subnets are associated with route tables, either explicitly or implicitly.
+
 - Any subnet not explicitly associated with a **custom** route table, is implicitly associated with the **main** route table 
 
-*Note: there are no charges associated with route tables or routes*
+Quotas
+~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Route tables per VPC
+     - 200
+   * - Routes per route table (non-propagated routes)
+     - 50
+   * - BGP advertised routes per route table (propagated routes)
+     - 100 ++
+
+*++ Propagation is beyond the scope of this webinar.*
+
+Costs
+~~~~~
+
+- There are no charges directly associated with Route Tables
+
 
 toDoList
 ~~~~~~~~
