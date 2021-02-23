@@ -676,11 +676,38 @@ toDoList
 
 - Accept the VPC peering connection
 
-- Add a route to the **private** routing table in the **webinar-01** VPC.
+- Add the following route to **webinar-01-rt-public**
 
-- Add a route to the **public** routing table in the **webinar-01** VPC.
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
 
-- Add a route to the **public** routing table in the **addr2data** VPC.
+   * - **Destination**
+     - **Target**
+   * - `10.0.0.0/16`
+     - `<VpcPeeringConnectionId>`
+
+- Add the following route to **webinar-01-rt-private**
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Destination**
+     - **Target**
+   * - `10.0.0.0/16`
+     - `<VpcPeeringConnectionId>`
+
+- Add the following route to **addr2data-rt-public**
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Destination**
+     - **Target**
+   * - `10.2.0.0/16`
+     - `<VpcPeeringConnectionId>`
 
 ****
 
