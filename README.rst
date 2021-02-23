@@ -6,7 +6,7 @@ Objectives
 
 - Expose attendees to significant number of AWS services over 4-5 webinars.
 
-	+ Each webinar builds on the previous webinars
+	+ Each webinar will build on the previous webinars
 
 - Provide an opportunity to develop **hands-on-literacy** with AWS services, in three steps:
 
