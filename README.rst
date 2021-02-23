@@ -123,7 +123,7 @@ The basics
 
 - When you create a VPC, you can optionally define an IPv6 CIDR block (/56).
 	
-	+ This block can be Amazon provided or customer provided.
+	+ This block can be Amazon or customer provided.
 
 	+ Amazon treats these addresses as public.
 
@@ -135,26 +135,9 @@ The basics
 
 	+ **Default:** The tenancy of instances is determined at launch.
 
-	+ **Dedicated:** The tenancy of all instances launch in this VPC is dedicated. 
+	+ **Dedicated:** The tenancy of all instances launched in this VPC is dedicated. 
 
-
-What is an AWS Region?
-~~~~~~~~~~~~~~~~~~~~~~
-
-- A physical location where data centers are clustered.
-
-- Each AWS Region consists of multiple Availability Zones (AZ).
-
-	+ More on AZs when we get to Subnets.
-
-- We will be working in the **us-east-1** Region.
-
-	+ Located in Northern Virginia
-
-	+ Has six (6) AZs
-
-
-
+|
 
 VPC Quotas
 ~~~~~~~~~~
