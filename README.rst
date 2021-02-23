@@ -44,14 +44,6 @@ During this webinar we will introduce the following AWS services/components/conc
 
 |
 
-Notes for awscli
-~~~~~~~~~~~~~~~~
-
-- For parameters where the value is **static**, the specific **value** for this webinar is included.
-- For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
-
-|
-
 AWS Certified Advanced Networking Study Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced Networking Study Group** is for you.
@@ -61,6 +53,14 @@ If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced
 - Sessions will be recorded, for those in different regions (i.e. EMEA, APJ).
 - Once you join, active participation is required. Either, during the weekly sessions or through the teams channel. 
 - If you are interested, reach out to me via email or chat on teams. 
+
+|
+
+Notes for awscli
+~~~~~~~~~~~~~~~~
+
+- For parameters where the value is **static**, the specific **value** for this webinar is included.
+- For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
 
 |
 
