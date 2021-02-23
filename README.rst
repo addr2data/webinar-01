@@ -787,6 +787,35 @@ The basics
 ~~~~~~~~~~
 
 
+
+Quotas
+~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - VPC security groups per Region
+     - 2500
+   * - Inbound rules per security group
+     - 60 (1, 2, 4)
+   * - Outbound rules per security group
+     - 60 (1, 2, 4)
+   * - Security groups per network interface
+     - 5 (1, 3, 4)
+
+*(1) This quota is enforced separately for IPv4 and IPv6*
+*(2) Referencing another security counts as one rule*
+*(3) The maximum is 16*
+*(4) The quota for security groups per network interface multiplied by the quota for rules per security group cannot exceed 1000*
+
+Costs
+~~~~~
+
+- There are no charges directly associated with Security Groups
+
 |
 
 ****
