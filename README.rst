@@ -1206,10 +1206,38 @@ Add a default route to the **webinar-01-rt-private** route table, using the NAT 
 Load Balancers
 --------------
 
-The basics
-~~~~~~~~~~
+Application Load Balancers
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- To be added.
+- Operates at Layer-7
+
+- Load balances HTTP and HTTPS traffic
+
+- Supports TLS Offloading
+
+- Supports sticky sessions
+
+- Native IPv6 Support
+
+- Supports Security Groups
+
+Network Load Balancers
+~~~~~~~~~~~~~~~~~~~~~~
+
+- Operates at layer 4.
+
+- Load balances TCP and UDP traffic.
+
+- Supports TLS offloading
+
+- Supports sticky sessions
+
+- Low Latency
+
+- Preserves source IP address
+
+- Supports long-lived TCP connections
+
 
 Quotas (Regional)
 ~~~~~~~~~~~~~~~~~
