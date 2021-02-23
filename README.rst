@@ -4,7 +4,9 @@ AWS Webinar Series
 Objectives
 ----------
 
-- Introduce as many AWS services as possible over 4-5 webinars.
+- Expose attendees to significant number of AWS services over 4-5 webinars.
+
+	+ Each webinar builds on the previous webinars
 
 - Provide an opportunity to develop **hands-on-literacy** with AWS services, in three steps:
 
