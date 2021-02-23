@@ -873,6 +873,11 @@ Quotas
 
 - *(2) For Instance Type t2.medium the limit is 3*
 
+Costs
+~~~~~
+
+- Charges for Instances are based on Instance Type and Reservation Type.
+
 |
 
 ****
