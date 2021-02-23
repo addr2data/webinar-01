@@ -82,8 +82,11 @@ Let's build something
 
 ****
 
-Amazon Virtual Private Cloud (VPC)
-----------------------------------
+Virtual Private Cloud (VPC)
+---------------------------
+
+The basic
+~~~~~~~~~
 A VPC is a logically isolated sections of the AWS cloud.
 
 - VPCs have the look and feel of traditional networks
@@ -113,11 +116,12 @@ The following table shows the default limits for the components utilized in this
      - 5 per region
    * - IPv4 CIDR blocks per VPC
      - 5
-   * - IPv6 CIDR blocks per VPC ++
-     - 1
+   * - IPv6 CIDR blocks per VPC
+     - 1 ++
 
 *++ Can not be increased**
 
+|
 
 toDoList
 ~~~~~~~~
