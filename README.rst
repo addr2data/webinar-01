@@ -1291,11 +1291,11 @@ Costs
 toDoList
 ~~~~~~~~
 
-- From **jumpHost**, run the following command to create the Security Group and the Instance.
+- From **jumpHost**, run the following command to create a Security Group and four (4) Instances.
 
 ::
 
-	python webservers.py create cfg-private.yml
+	python webservers.py create cfg-public.yml
 
 |
 
