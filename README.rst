@@ -98,6 +98,29 @@ Default VPCs
 
 *Note: there are no charges associated with VPCs*
 
+
+Limits
+------
+The following table shows the default limits for the components utilized in this exercise.
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - VPC
+     - 5 per region
+   * - Route Tables
+     - 200 per VPC
+   * - Entries per Route Table
+     - 50
+   * - Subnets
+     - 200 per VPC
+
+
+
+
 toDoList
 ~~~~~~~~
 
