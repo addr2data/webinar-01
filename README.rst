@@ -1112,7 +1112,36 @@ Nat Gateway
 
 The basics
 ~~~~~~~~~~
-Nat Gateway
+
+- NAT (Network Address Translation) Gateways allow instances on a private subnet to connect to the Internet or other AWS services, but prevent the Internet from initiating a connection with those instances.
+
+- NAT gateways are not supported for IPv6 traffic
+	+  Egress-only Internet Gateways can be used instead.
+
+- When you create a NAT gateway, you specify the *public* subnet in which the NAT gateway will reside. 
+
+- You must also specify an Elastic IP address to associate with the NAT gateway when you create it.
+
+- The Elastic IP address cannot be changed after you associate it with the NAT Gateway.
+
+- After you've created a NAT gateway, you must update the route table associated with one or more of your private subnets to point internet-bound traffic to the NAT gateway.
+
+- Each NAT gateway is created in a specific Availability Zone and implemented with redundancy in that zone.
+
+- A NAT gateway supports 5 Gbps of bandwidth and automatically scales up to 45 Gbps. If you require more, you can distribute the workload by splitting your resources into multiple subnets, and creating a NAT gateway in each subnet.
+
+- You can associate exactly one Elastic IP address with a NAT gateway.
+
+- A NAT gateway supports the following protocols: TCP, UDP, and ICMP.
+
+- You cannot associate a security group with a NAT gateway. You can use security groups for your instances in the private subnets to control the traffic to and from those instances.
+
+- You can use a network ACL to control the traffic to and from the subnet in which the NAT gateway is located. The network ACL applies to the NAT gateway's traffic. A NAT gateway uses ports 1024–65535.
+
+- You cannot route traffic to a NAT gateway through a VPC peering connection, a Site-to-Site VPN connection, or AWS Direct Connect. A NAT gateway cannot be used by resources on the other side of these connections.
+
+- A NAT gateway can support up to 55,000 simultaneous connections to each unique destination. This limit also applies if you create approximately 900 connections per second to a single destination (about 55,000 connections per minute). If the destination IP address, the destination port, or the protocol (TCP/UDP/ICMP) changes, you can create an additional 55,000 connections. For more than 55,000 connections, there is an increased chance of connection errors due to port allocation errors. These errors can be monitored by viewing the ErrorPortAllocation CloudWatch metric for your NAT gateway. For more information, see Monitoring NAT gateways using Amazon CloudWatch.
+
 
 
 Quotas
