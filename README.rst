@@ -714,7 +714,7 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
-First, let's create a VPC peering connection between **webinar-01** (requester) and **addr2data** (acceptor)
+Create a VPC peering connection between **webinar-01** (requester) and **addr2data** (acceptor)
 
 ::
 
@@ -725,7 +725,7 @@ First, let's create a VPC peering connection between **webinar-01** (requester) 
 
 |
 
-Then, let's accept the VPC peering connection
+Accept the VPC peering connection
 
 ::
 
@@ -734,7 +734,7 @@ Then, let's accept the VPC peering connection
 
 |
 
-Then, let's add a route to the **private** route table in the **webinar-01** VPC
+Add the following route to **webinar-01-rt-public**
 
 ::
 
@@ -745,7 +745,7 @@ Then, let's add a route to the **private** route table in the **webinar-01** VPC
 
 |
 
-Then, let's add a route to the **public** route table in the **webinar-01** VPC
+Add the following route to **webinar-01-rt-private**
 
 ::
 
@@ -756,7 +756,7 @@ Then, let's add a route to the **public** route table in the **webinar-01** VPC
 
 |
 
-Then, let's add a route to the **public** route table in the **addr2data-01** VPC.
+Add the following route to **addr2data-rt-public**
 
 ::
 
