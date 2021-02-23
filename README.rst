@@ -1034,9 +1034,51 @@ Add a rule to the security group to allow TCP port 5000 from **10.2.0.0/16**.
 
 ****
 
-Elastic IPs
------------
-To be added.
+Elastic IP addresses vs. Public IPv4 addresses
+----------------------------------------------
+
+The basics
+~~~~~~~~~~
+
+- An Elastic IP address is a static Internet routable IPv4 address.
+
+- An Elastic IP address is allocated to your AWS account, and is yours until you release it. 
+
+- Elastic IP addresses are not currently supported for IPv6.
+
+- Elastic IP addresses can be associate it with your instance or a network interface.
+
+	+ When you associate it with an Instance it is associated with the primary network interface.
+
+- When you associate an Elastic IP address with a network interface that is attached to an instance, it is also associated with the instance.
+
+- When you associate an Elastic IP address with an instance or its primary network interface, the instance's public IPv4 address (if it had one) is released back into Amazon's pool of public IPv4 addresses. You cannot reuse a public IPv4 address, and you cannot convert a public IPv4 address to an Elastic IP address. For more information, see Public IPv4 addresses and external DNS hostnames.
+
+- You can disassociate an Elastic IP address from a resource, and then associate it with a different resource.
+
+- A disassociated Elastic IP address remains allocated to your account until you explicitly release it.
+
+- When you associate an Elastic IP address with an instance that previously had a public IPv4 address, the public DNS host name of the instance changes to match the Elastic IP address.
+
+- We resolve a public DNS host name to the public IPv4 address or the Elastic IP address of the instance outside the network of the instance, and to the private IPv4 address of the instance from within the network of the instance.
+
+- An Elastic IP address comes from Amazon's pool of IPv4 addresses, or from a custom IP address pool that you have brought to your AWS account.
+
+- When you allocate an Elastic IP address from an IP address pool that you have brought to your AWS account, it does not count toward your Elastic IP address limits.
+
+- An Elastic IP address is for use in a specific Region only, and cannot be moved to a different Region.
+
+Quotas
+~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Elastic IP addresses per Region
+     - 5
 
 toDoList
 ~~~~~~~~
