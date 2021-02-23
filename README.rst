@@ -306,9 +306,11 @@ The basics
 
 - Any subnet not explicitly associated with a route table, is implicitly associated with the **main** route table.
 
-- A route table defined the routing for any subnet associated with it. 
+- A route table defines the routing for any subnet associated with it. 
 
 - You can change which route table is the **main** route table.
+
+- IPv4 and IPv6 is handled separately.
 
 - Each route has a **destination** and a **target**.
 
@@ -318,18 +320,20 @@ The basics
 
 		+ Target: **igw-xxxxxxxxxxxxxxxxx**
 
-	+ Every route table contains an IPv4 local route, that routes IPv4 traffic within a VPC:
+	+ Every route table has an IPv4 local route automatically added to it, for routing IPv4 traffic within a VPC:
 
 		+ Destination: **10.2.0.0/16** (or whatever your VPC IPv4 CIDR block is)
 
 		+ Target: **local**
 
-	+ If you have enabled IPv6. every route table will also contain an IPv6 local route:
+	+ If you have enabled IPv6, then every route table will also have an IPv6 local route automatically added to it:
 
 		+ Destination: **2600:1f18:a1c:b300::/56** (or whatever your VPC IPv6 CIDR block is)
 
 		+ Target: **local**
-		  
+
+- When a route table has multiple routes, the most specific route (longest prefix) that matches the traffic, determines how traffic is routed.
+
 Quotas
 ~~~~~~
 
