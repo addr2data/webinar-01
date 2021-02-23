@@ -511,7 +511,7 @@ Create four (4) subnets using the following parameters:
 toDoList
 ~~~~~~~~
 
-Create four (4) subnets using the following parameters:
+- Create four (4) subnets using the following parameters:
 
 .. list-table::
    :widths: 25, 25, 25
