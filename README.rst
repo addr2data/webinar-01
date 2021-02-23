@@ -362,8 +362,11 @@ toDoList
 ~~~~~~~~
 
 - Review the **main** route table.
-- Name main route table **webinar-01-rt-private**.
-- Create a **custom** route table named **webinar-01-rt-public** .
+
+- Add a name-tag **webinar-01-rt-private** to the main route table .
+
+- Create a second route table, using the name-tag **webinar-01-rt-public**.
+
 - Add a **default route** to the **webinar-01-rt-public** route table.
 
 ****
@@ -371,7 +374,7 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
-First, let's examine the main route table.
+Examine the main route table.
 
 ::
 
@@ -384,7 +387,6 @@ The above awscli command will return the configuration of the automatically crea
 **RouteTableId**, which will be required for future operations. Here's one way to return just the **RouteTableId**,
 as text, from the awscli.
 
-
 ::
 
 	aws ec2 describe-route-tables ^
@@ -394,7 +396,7 @@ as text, from the awscli.
 
 |
 
-Next, we are going name the main route table **webinar-01-rt-private**.
+Add a name-tag **webinar-01-rt-private** to the **main** route table .
 
 ::
 
@@ -404,7 +406,7 @@ Next, we are going name the main route table **webinar-01-rt-private**.
 
 |
 
-Next, we are going create a custom route table named **webinar-01-rt-public**
+Create a second route table, using the name-tag **webinar-01-rt-public**
 
 ::
 
@@ -414,7 +416,7 @@ Next, we are going create a custom route table named **webinar-01-rt-public**
 
 |
 
-Finally, we are going to add a default route to the **webinar-01-rt-public** route table.
+Add a default route to the **webinar-01-rt-public** route table.
 
 ::
 
