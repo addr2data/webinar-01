@@ -873,10 +873,14 @@ Quotas
 Getting started with the EC2 API
 --------------------------------
 
-The basic
-~~~~~~~~~
+The basics
+~~~~~~~~~~
 
+|
 
+.. image:: ./images/cfg-private.png
+
+|
 
 
 
