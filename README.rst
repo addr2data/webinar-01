@@ -896,13 +896,13 @@ The basics
 
 |
 
-Let's take a look at what arguments that Python script takes
+Let's take a look at what arguments **webservers.py** takes
 
 .. image:: ./images/webserver_cmd-01.png
 
 |
 
-We are going to run the following command, but before we do let's examine that **cfg-private.yml** file.
+Before we run **webserver.py**, let's examine that **cfg-private.yml** file.
 
 ::
 
@@ -910,6 +910,12 @@ We are going to run the following command, but before we do let's examine that *
 
 
 .. image:: ./images/cfg-private.png
+
+|
+
+Before we run **webserver.py**, let's take a look at the expected output file **private.json** will look like
+
+.. image:: ./images/private-json.png
 
 |
 
