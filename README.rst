@@ -786,7 +786,19 @@ Security Groups
 The basics
 ~~~~~~~~~~
 
+- Security Groups act as a virtual firewall for your EC2 instances.
 
+	+ Inbound rules control the incoming traffic to your instance.
+
+	+ Outbound rules control the outgoing traffic from your instance.
+
+- When you launch an instance in a VPC, you specify one or more security groups from that VPC.
+
+	+ If you don't, then the default security group.
+
+- You can modify the rules in a Security Group at any time.
+
+- New and modified rules are automatically applied to all instances that are associated with the security group.
 
 Quotas
 ~~~~~~
