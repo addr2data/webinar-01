@@ -26,8 +26,9 @@ During this webinar we will introduce the following AWS services/components/conc
 
 - Virtual Private Cloud (VPC)
 - Internet Gateways
-- Configuring Routing Tables
+- Routing Tables and Routes
 - Subnets
+- VPC Peering
 - Security Groups
 - Deploying instances via the API
 - NAT (Network Address Translation) Gateways
