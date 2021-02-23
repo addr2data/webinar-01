@@ -894,8 +894,29 @@ We are going to run the following command, but before we do let's examine the th
 
 |
 
+Here is a summary of what that script using the *create* argument will do.
 
+- It will create a security group named **webinar-01-sg-web-private**
 
+- It will add an ingress rule to **webinar-01-sg-web-private** that allows **SSH** traffic from **10.0.0.0/16** and **10.2.0.0/16** 
+
+- It will launch a single instance on using the following parameters:
+
+	+ AMI: **base_webserver** (previously saved image - on boot, a simple web server starts on port 5000)
+	
+	+ Network: **webinar-01**
+	
+	+ Subnet: **webinar-01-sub-private-01**
+	
+	+ Security Groups: **webinar-01-sg-web-private**
+	
+	+ Tags: *Key* = **Name**, *Value* = **web-private**
+
+Let's go ahead and run it.
+
+::
+
+	python webservers.py create cfg-private.yml
 
 
 
