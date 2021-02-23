@@ -506,8 +506,6 @@ Costs
 
 - There are no charges directly associated with Subnets
 
-Create four (4) subnets using the following parameters:
-
 toDoList
 ~~~~~~~~
 
@@ -533,13 +531,14 @@ toDoList
      - `us-east-1b`
      - `10.2.130.0/23`
 
+- Review the subnets just created.
 
+- Review the association in the **public** route table
 
 
 ****
 
-Review the subnets just created.
-Review the association in the **public** route table
+
 
 *goingCmdO*
 ~~~~~~~~~~~
