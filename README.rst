@@ -247,7 +247,7 @@ toDoList
 ~~~~~~~~
 
 - Create an Internet Gateway named **webinar-01-igw**.
-- Attach it to our VPC
+- Attach it to the **webinar-01** VPC
 
 ****
 
