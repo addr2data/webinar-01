@@ -913,7 +913,7 @@ Before we run **webserver.py**, let's examine that **cfg-private.yml** file.
 
 |
 
-Before we run **webserver.py**, let's take a look at the expected output file **private.json** will look like
+Before we run **webserver.py**, let's take a look what the output file **private.json** should look like
 
 .. image:: ./images/private-json.png
 
