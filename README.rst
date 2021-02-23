@@ -1,6 +1,23 @@
 Webinar-01
 ==========
 
+Objectives
+----------
+
+- **NO SLIDES** - content is publicly available on GitHub.
+
+	+ This session is available at **https://github.com/addr2data/webinar-01**.
+
+- Provide an opportunity to develop **hands-on-literacy** with AWS services, in two steps:
+
+	+ Introduce various AWS services/components using the AWS console (during the webinar).
+
+	+ On your own, recreate what was built in the webinar using the awscli (**goingCmdO** sections).
+
+- Introduce as many AWS service as possible over 4-5 webinars.
+
+|
+
 Introduction
 ------------
 When getting started with AWS or learning a new service, I have found that the following approach works well for me. Hopefully, it will work well for you.
@@ -23,7 +40,7 @@ When getting started with AWS or learning a new service, I have found that the f
 
 |
 
-**NO SLIDES** - all this content is publicly available on GitHub **https://github.com/addr2data/webinar-01**
+
 
 |
 
