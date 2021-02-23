@@ -318,12 +318,18 @@ The basics
 
 		+ Target: **igw-xxxxxxxxxxxxxxxxx**
 
-	+ Every route table contains an IPv4 local route, that routes traffic within a VPC:
+	+ Every route table contains an IPv4 local route, that routes IPv4 traffic within a VPC:
 
 		+ Destination: **10.2.0.0/16** (or whatever your VPC IPv4 CIDR block is)
 
 		+ Target: **local**
-				  
+
+	+ If you have enabled IPv6. every route table will also contain an IPv6 local route:
+
+		+ Destination: **2600:1f18:a1c:b300::/56** (or whatever your VPC IPv6 CIDR block is)
+
+		+ Target: **local**
+		  
 Quotas
 ~~~~~~
 
