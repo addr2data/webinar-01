@@ -4,6 +4,8 @@ Webinar-01
 Objectives
 ----------
 
+- Introduce as many AWS services as possible over 4-5 webinars.
+
 - **NO SLIDES** - content is publicly available on GitHub.
 
 	+ This session is available at **https://github.com/addr2data/webinar-01**.
@@ -16,7 +18,7 @@ Objectives
 
 	+ **Explore** - become familiar with using the AWS APIs directly (**code samples**)
 
-- Introduce as many AWS services as possible over 4-5 webinars.
+
 
 |
 
