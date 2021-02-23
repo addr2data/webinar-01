@@ -512,13 +512,15 @@ toDoList
 ~~~~~~~~
 
 .. list-table::
-   :widths: 25, 25
+   :widths: 25, 25, 25
    :header-rows: 0
 
    * - **Component**
      - **Limit**
+     - **AZ**
    * - Subnets per VPC
      - 200
+     - 123
 
 
 
