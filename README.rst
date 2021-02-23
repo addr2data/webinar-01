@@ -892,7 +892,9 @@ The basics
 
 - We are going to deploy an Instance and test connectivity.
 
-- To do that. we will use a Python script that communicates with EC2 API via **boto3**.
+- To do that. we will use a Python script **webservers.py** that communicates with EC2 API via **boto3**.
+
+|
 
 Let's take a look at what arguments that Python script takes
 
