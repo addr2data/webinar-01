@@ -512,7 +512,7 @@ toDoList
 ~~~~~~~~
 
 .. list-table::
-   :widths: auto
+   :widths: 100, 100, 100
    :header-rows: 0
 
    * - **Name-tag**
