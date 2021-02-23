@@ -881,10 +881,10 @@ The basic
 
 		---
 		base:
-			vpc_name: "webinar-01"
-      		output_file: "private.json"
-      		priv_subnets:
-        		- "webinar-01-sub-private-01"
+		  vpc_name: "webinar-01"
+      	  output_file: "private.json"
+      	  priv_subnets:
+            - "webinar-01-sub-private-01"
 
 	webservers:
       ami: "ami-0090f21784e1f13dd"
