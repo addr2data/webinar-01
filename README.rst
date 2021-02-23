@@ -515,9 +515,9 @@ toDoList
    :widths: 25, 25, 25
    :header-rows: 0
 
-   * - **Component**
+   * - **Name-tag**
      - **Availability Zone**
-     - **AZ**
+     - **IPv4 CIDR**
    * - Subnets per VPC
      - 200
      - 123
