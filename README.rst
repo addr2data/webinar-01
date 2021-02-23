@@ -812,11 +812,11 @@ Quotas
    * - VPC security groups per Region
      - 2500
    * - Inbound rules per security group
-     - 60 (1, 2, 4)
+     - 60 (1,2,4)
    * - Outbound rules per security group
-     - 60 (1, 2, 4)
+     - 60 (1,2,4)
    * - Security groups per network interface
-     - 5 (1, 3, 4)
+     - 5 (1,3,4)
 
 - *(1) This quota is enforced separately for IPv4 and IPv6*
 
@@ -836,6 +836,99 @@ Costs
 ****
 
 ****
+
+Instances
+~~~~~~~~~
+
+The basics
+~~~~~~~~~~
+
+- Reasonable coverage of EC2 Instances would require an entire webinar.
+
+- Let it suffice to say that Instances are virtual machines.
+
+Quotas
+~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Network interfaces per instance
+     - Varies per Instance Type (1,2)
+   * - Network interfaces per Region
+     - 5000
+   * - Outbound rules per security group
+     - 60 (1, 2, 4)
+   * - Security groups per network interface
+     - 5 (1, 3, 4)
+
+- *(1) For Instance Type t2.micro the limit is 2*
+
+- *(2) For Instance Type t2.medium the limit is 3*
+
+
+Getting started with the EC2 API
+--------------------------------
+
+The basic
+~~~~~~~~~
+
+
+::
+
+	---
+	base:
+  	  vpc_name: "webinar-01"
+      output_file: "private.json"
+      priv_subnets:
+        - "webinar-01-sub-private-01"
+
+	webservers:
+      ami: "ami-0090f21784e1f13dd"
+      type: "t2.micro"
+      keypair: "Webinar"
+      count: 1
+      tags:
+        -
+          ResourceType: instance
+          Tags:
+            -
+              Key: 'Name'
+              Value: 'web-private'
+
+	security_group:
+  	  name: 'webinar-01-sg-web-private'
+      description: "Security group for private webservers"
+      tags:
+        -
+          ResourceType: 'security-group'
+          Tags:
+            -
+              Key: 'Name'
+              Value: 'webinar-01-sg-web-private'
+      rules:
+        -
+          FromPort: 22
+          IpProtocol: 'tcp'
+          IpRanges:
+            -
+              CidrIp: "10.0.0.0/16"
+              Description: ""
+            -
+              CidrIp: "10.2.0.0/16"
+              Description: ""
+          Ipv6Ranges: []
+          PrefixListIds: []
+          ToPort: 22
+          UserIdGroupPairs: []
+          ...
+
+
+
+
 
 Getting started with Instances and Security Groups
 --------------------------------------------------
@@ -865,9 +958,7 @@ This Python script will do a few things for us:
 
 |
 
-Instances
-~~~~~~~~~
-Reasonable coverage of EC2 would require a separate webinar. Let it suffice to say they are virtual machines.
+
 
 |
 
