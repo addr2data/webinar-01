@@ -646,14 +646,40 @@ The basics
 	+ Two VPCs in different Regions (aka inter-region VPC peering connection).
 
 
+Quotas
+~~~~~~
+
+.. list-table::
+   :widths: 25, 25
+   :header-rows: 0
+
+   * - **Component**
+     - **Limit**
+   * - Active VPC peering connections per VPC
+     - 50
+   * - Outstanding VPC peering connection requests
+     - 25
+   * - Expiry time for an unaccepted VPC peering connection request
+     - 168 hours (1 week)
+
+
+Costs
+~~~~~
+
+- There are no charges directly associated with VPC peering.
+
 
 toDoList
 ~~~~~~~~
 
 - Create a VPC peering connection named **webinar-01-pcx** between **webinar-01** (requester) and **addr2data** VPCs (acceptor).
+
 - Accept the VPC peering connection
+
 - Add a route to the **private** routing table in the **webinar-01** VPC.
+
 - Add a route to the **public** routing table in the **webinar-01** VPC.
+
 - Add a route to the **public** routing table in the **addr2data** VPC.
 
 ****
