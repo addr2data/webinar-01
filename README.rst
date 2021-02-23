@@ -22,27 +22,24 @@ Objectives
 
 Introduction
 ------------
-When getting started with AWS or learning a new service, I have found that the following approach works well for me. Hopefully, it will work well for you.
+During this webinar we will introduce the following AWS services/components/concepts:
 
-- Use the AWS console, then
-- Use the awscli, then
-- Use the API directly, via a scripting language (e.g. Python)
-
-|
-
-**During this webinar we will be using the AWS console, but I have also provided equivalent awscli commands for each operation.**
-
-	| If the awscli is for you, then read the 'Notes or awscli' section
+- Virtual Private Cloud (VPC)
+- Internet Gateways
+- Configuring Routing Tables
+- Subnets
+- Security Groups
+- Deploying instances via the API
+- NAT (Network Address Translation) Gateways
+- Elastic IP Addresses
+- Application Load Balancers (ALB)
+- Network Load Balancers (NLB) 
 
 |
 
 **We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.**
 
 	| If you want the nitty-gritty, then read the 'AWS Certified Advanced Networking Study Group' section
-
-|
-
-
 
 |
 
