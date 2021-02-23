@@ -521,27 +521,6 @@ toDoList
      - 200
 
 
-.. list-table::
-   :widths: 100, 100, 100
-   :header-rows: 0
-
-   * - **Name-tag**
-   	 - **Availability Zone**
-     - **IPv4 CIDR**
-   * - webinar-01-sub-private-01
-     - us-east-1a
-     - 10.2.0.0/23
-   * - webinar-01-sub-private-02
-     - us-east-1b
-     - 10.2.2.0/23
-   * - webinar-01-sub-public-01
-     - us-east-1a
-     - 10.2.128.0/23
-   * - webinar-01-sub-public-02
-     - us-east-1b
-     - 10.2.130.0/23
-
-
 
 
 ****
