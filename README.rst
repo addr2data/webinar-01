@@ -153,19 +153,27 @@ VPC Quotas
    * - IPv6 CIDR blocks per VPC
      - 1 ++
 
-*++ Can not be increased*
+*++ Can't be increased*
 
 Costs
 ~~~~~
 
-- There are no charges associated with VPCs
+- There are no charges directly associated with VPCs
 
 |
 
 toDoList
 ~~~~~~~~
 
-- Create a VPC named **webinar-01** with a CIDR of **10.2.0.0/16**. 
+- Create a VPC with the following parameters:
+
+	+ Name-tag: **webinar-01**
+
+	+ IPv4 CIDR block: **10.2.0.0/16**
+
+	+ IPv4 CIDR block: **No IPv6 CIDR block**
+
+	+ Tenancy: **Default** 
 
 ****
 
