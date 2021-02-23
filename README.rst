@@ -627,12 +627,25 @@ Review the associations in **webinar-01-rt-public**.
 
 ****
 
-VPC Peering
+VPC peering
 -----------
-VPC peering allows you to create a network connection (VPC peering connection) between two VPCs and route IPv4/IPv6 traffic between them.
 
-- VPC peering connection can be created within the AWS account or between AWS accounts.
-- VPCs can be in the same or different regions.
+The basics
+~~~~~~~~~~
+
+- VPC peering allows you to create a network connection (VPC peering connection) between two VPCs.
+
+- Traffic can be routed between VPCs, using private IPv4 address or IPv6 addresses.
+
+- A VPC peering connection can be created between:
+
+	+ Two VPCs in the same AWS account
+
+	+ Two VPCs in different AWS accounts
+
+	+ Two VPCs in different Regions (aka inter-region VPC peering connection).
+
+
 
 toDoList
 ~~~~~~~~
