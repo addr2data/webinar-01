@@ -506,10 +506,10 @@ Costs
 
 - There are no charges directly associated with Subnets
 
+Create four (4) subnets using the following parameters:
+
 toDoList
 ~~~~~~~~
-
-Create four (4) subnets using the following parameters:
 
 .. list-table::
    :widths: 25, 25, 25
@@ -532,10 +532,12 @@ Create four (4) subnets using the following parameters:
      - 10.2.130.0/23
 
 
-Review the subnets just created.
-Review the association in the **public** route table
+
 
 ****
+
+Review the subnets just created.
+Review the association in the **public** route table
 
 *goingCmdO*
 ~~~~~~~~~~~
