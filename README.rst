@@ -102,6 +102,34 @@ The basics
 
 - VPCs are created per AWS Region
 
+| What is an AWS Region?
+|
+| A physical location where data centers are clustered.
+| 
+| Each AWS Region consists of multiple Availability Zones (AZ).
+|
+|	More on AZs when we get to Subnets.
+|
+| We will be working in the **us-east-1** Region.
+|
+|	Located in Northern Virginia
+|
+|	Has six (6) AZs
+
+
+- When you create an account, a default VPC is created per region. This allows you to launch instances quickly without having to configure a VPC first.
+
+- When you create a VPC, you must define an IPv4 CIDR block (/16 to /28).
+
+- Once created, you can't change this IPv4 block, but you can add/remove other CIDR blocks.
+
+- When you create a VPC, you must select a value for **Tenancy**.
+
+	+ **Default:** The tenancy of instances is determined at launch.
+
+	+ **Dedicated:** The tenancy of all instances launch in this VPC is dedicated. 
+
+
 What is an AWS Region?
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -118,10 +146,6 @@ What is an AWS Region?
 	+ Has six (6) AZs
 
 
-Costs
-~~~~~
-
-- There are no charges associated with VPCs
 
 
 VPC Quotas
@@ -142,6 +166,12 @@ The following table shows the default limits for the components utilized in this
      - 1 ++
 
 *++ Can not be increased**
+
+
+Costs
+~~~~~
+
+- There are no charges associated with VPCs
 
 |
 
