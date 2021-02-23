@@ -882,9 +882,9 @@ Let's take a look at what arguments that Python script takes
 ::
 
 	Usage:
-    webservers create <cfgfile>
-   	webservers destroy <results_file>
-    webservers connect <results_file> [--browser]
+		webservers create <cfgfile>
+		webservers destroy <results_file>
+		webservers connect <results_file> [--browser]
 
 
 
