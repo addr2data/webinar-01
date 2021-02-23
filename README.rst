@@ -877,6 +877,20 @@ The basic
 ~~~~~~~~~
 
 
+```yaml
+en:
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      confirmation: "doesn't match %{attribute}"
+      accepted: "must be accepted"
+      wrong_length:
+        one: "is the wrong length (should be 1 character)"
+        other: "is the wrong length (should be %{count} characters)"
+      equal_to: "must be equal to %{count}"
+```
+
+
 ::
 
 		---
