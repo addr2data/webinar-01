@@ -879,24 +879,16 @@ Now we are going to deploy some Instances and test connectivity. To do that we a
 
 Let's take a look at what arguments that Python script takes
 
-::
-
-	Usage:
-		webservers create <cfgfile>
-		webservers destroy <results_file>
-		webservers connect <results_file> [--browser]
-
-
-
-
-|
-
 .. image:: ./images/webserver_cmd-01.png
 
 |
 
+We are going to run the following command, but before we do let's examine the that **cfg-private.yml** file.
 
-|
+::
+
+	python webservers.py create cfg-private.yml
+
 
 .. image:: ./images/cfg-private.png
 
