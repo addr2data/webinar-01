@@ -1080,6 +1080,13 @@ Quotas
    * - Elastic IP addresses per Region
      - 5
 
+Costs
+
+    There is no charge for Elastic IP addresses or Public IPv4 address that are in use.
+    There is a charges of **$0.005** per hour for Elastic IP address that allocated, but not in use.  
+
+
+
 toDoList
 ~~~~~~~~
 
