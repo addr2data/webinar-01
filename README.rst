@@ -6,10 +6,6 @@ Objectives
 
 - Introduce as many AWS services as possible over 4-5 webinars.
 
-- **NO SLIDES** - content is publicly available on GitHub.
-
-	+ This session is available at **https://github.com/addr2data/webinar-01**.
-
 - Provide an opportunity to develop **hands-on-literacy** with AWS services, in three steps:
 
 	+ **Introduce** - AWS services/components/concepts using the AWS console (**webinar**).
@@ -18,6 +14,9 @@ Objectives
 
 	+ **Explore** - become familiar with using the AWS APIs directly (**code samples**)
 
+- **NO SLIDES** - content is publicly available on GitHub.
+
+	+ This session is available at **https://github.com/addr2data/webinar-01**.
 
 
 |
