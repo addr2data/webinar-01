@@ -10,11 +10,11 @@ Objectives
 
 - Provide an opportunity to develop **hands-on-literacy** with AWS services, in three steps:
 
-	+ **Introduce** - AWS services/components/concepts using the AWS console (**webinar**).
+	+ **Introduce** - AWS services/components/concepts using the AWS console (**during the webinar**).
 
-	+ **Do** - recreate what was built in the webinar using the awscli (**goingCmdO**).
+	+ **Do** - recreate what was built in the webinar using the awscli (**using the goingCmdO sections**).
 
-	+ **Explore** - how to work with AWS APIs directly (**code samples**)
+	+ **Explore** - become familiar with using the AWS APIs directly (**reading the code samples**)
 
 - Introduce as many AWS service as possible over 4-5 webinars.
 
