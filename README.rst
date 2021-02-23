@@ -119,7 +119,7 @@ The basics
 
 - When you create a VPC, you must define an IPv4 CIDR block (/16 to /28).
 	
-	+ No matter IPv4 CIDR block you use, Amazon treats these addresses as private.
+	+ No matter what IPv4 CIDR block you use, Amazon treats these addresses as private.
 
 - When you create a VPC, you can optionally define an IPv6 CIDR block (/56).
 	
