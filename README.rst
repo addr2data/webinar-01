@@ -915,7 +915,7 @@ Here is a summary of what that script using the *create* argument will do.
 toDoList
 ~~~~~~~~
 
-- Let's go ahead and run it.
+- From **jumpHost**, run the following command to create the Security Group and the Instance.
 
 ::
 
