@@ -8,11 +8,13 @@ Objectives
 
 	+ This session is available at **https://github.com/addr2data/webinar-01**.
 
-- Provide an opportunity to develop **hands-on-literacy** with AWS services, in two steps:
+- Provide an opportunity to develop **hands-on-literacy** with AWS services, in three steps:
 
-	+ Introduce various AWS services/components using the AWS console (during the webinar).
+	+ **Introduce** - AWS services/components/concepts using the AWS console (**webinar**).
 
-	+ On your own, recreate what was built in the webinar using the awscli (**goingCmdO** sections).
+	+ **On your own** - recreate what was built in the webinar using the awscli (**goingCmdO**).
+
+	+ **Explore** - how to work with AWS APIs directly (**code samples**)
 
 - Introduce as many AWS service as possible over 4-5 webinars.
 
