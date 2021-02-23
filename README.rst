@@ -568,9 +568,9 @@ Create four (4) subnets
 
 	aws ec2 create-subnet ^
 		--cidr-block 10.2.130.0/23 ^
-			--vpc-id <vpcId> ^
-			--availability-zone us-east-1b ^
-			--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
+		--vpc-id <vpcId> ^
+		--availability-zone us-east-1b ^
+		--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
 
 |
 
