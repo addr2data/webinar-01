@@ -958,7 +958,7 @@ toDoList
 *goingCmdO*
 ~~~~~~~~~~~
 
-Create a security group.  
+Create a security group.
 
 ::
 
@@ -966,11 +966,27 @@ Create a security group.
 		--group-name webinar-01-sg-web-private ^
 		--description "Allow SHH from anywhere" --vpc-id <vpc-id>
 
+|
+
+Add a rule to the security group to allow SSH from **10.0.0.0/16**.
+
+::
 	aws ec2 authorize-security-group-ingress ^
 		--group-id <GroupId> ^
 		--protocol tcp ^
 		--port 22 ^
-		--cidr 0.0.0.0/0
+		--cidr 10.0.0.0/16
+
+|
+
+Add a rule to the security group to allow SSH from **10.2.0.0/16**.
+
+::
+	aws ec2 authorize-security-group-ingress ^
+		--group-id <GroupId> ^
+		--protocol tcp ^
+		--port 22 ^
+		--cidr 10.2.0.0/16
 
 |
 
