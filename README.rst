@@ -298,13 +298,15 @@ The basics
 
 - A VPC component that contains a set of routes that determine where network traffic is directed within your VPC.
 
-- A route table that automatically comes with your VPC. It is called the **main** route table.
+- One (1) route table is automatically created when you create a VPC. By default, it's the  **main** route table.
 
-- You can create your own **custom** route tables.
+- You can create your own route tables.
 
 - Subnets are associated with route tables, either explicitly or implicitly.
 
-- Any subnet not explicitly associated with a **custom** route table, is implicitly associated with the **main** route table 
+- Any subnet not explicitly associated with a route table, is implicitly associated with the **main** route table.
+
+- You can change which route table is the route table. 
 
 Quotas
 ~~~~~~
