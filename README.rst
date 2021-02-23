@@ -137,11 +137,8 @@ The basics
 
 	+ **Dedicated:** The tenancy of all instances launched in this VPC is dedicated. 
 
-|
-
 VPC Quotas
 ~~~~~~~~~~
-The following table shows the default limits for the components utilized in this exercise.
 
 .. list-table::
    :widths: 25, 25
@@ -156,8 +153,7 @@ The following table shows the default limits for the components utilized in this
    * - IPv6 CIDR blocks per VPC
      - 1 ++
 
-*++ Can not be increased**
-
+*++ Can not be increased*
 
 Costs
 ~~~~~
