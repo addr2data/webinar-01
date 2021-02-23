@@ -971,6 +971,7 @@ Create a security group.
 Add a rule to the security group to allow SSH from **10.0.0.0/16**.
 
 ::
+
 	aws ec2 authorize-security-group-ingress ^
 		--group-id <GroupId> ^
 		--protocol tcp ^
@@ -982,6 +983,7 @@ Add a rule to the security group to allow SSH from **10.0.0.0/16**.
 Add a rule to the security group to allow SSH from **10.2.0.0/16**.
 
 ::
+
 	aws ec2 authorize-security-group-ingress ^
 		--group-id <GroupId> ^
 		--protocol tcp ^
