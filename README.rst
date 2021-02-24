@@ -147,7 +147,7 @@ The basics
 
 	+ **Default:** The tenancy of instances is determined at launch.
 
-	+ **Dedicated:** The tenancy of all instances launched in this VPC is dedicated. 
+	+ **Dedicated:** The tenancy of all instances launched in this VPC are dedicated. 
 
 Quotas
 ~~~~~~
