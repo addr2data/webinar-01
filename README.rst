@@ -1613,7 +1613,7 @@ toDoList
         --load-balancer-arn <loadbalancer-arn> ^
         --protocol HTTP ^
         --port 5000 ^
-        --default-actions Type=forward,TargetGroupArn=$EX006_APP_TG
+        --default-actions Type=forward,TargetGroupArn=<target-group-arn>
 
 |
 
@@ -1654,7 +1654,7 @@ toDoList
         --load-balancer-arn <loadbalancer-arn> ^
         --protocol TCP ^
         --port 5000 ^
-        --default-actions Type=forward,TargetGroupArn=$EX006_NET_TG
+        --default-actions Type=forward,TargetGroupArn=<target-group-arn>
 
 |
 
