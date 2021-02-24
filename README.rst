@@ -899,7 +899,7 @@ Test Connectivity
 The basics
 ~~~~~~~~~~
 
-- We will deploy one (1) Instance to a *private* Subnet and test connectivity.
+- We will deploy one (1) Instance to **webinar-01-sub-private-10** and test connectivity.
 
 - We will use the **webservers.py** script.
 
