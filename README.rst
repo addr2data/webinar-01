@@ -1529,7 +1529,7 @@ toDoList
 
 |
 
-- From Load Balancer details page, copy the **DNS name**
+- From Load Balancer details page, select **webinar-01-lb-net** and copy the **DNS name**
 
 |
 
