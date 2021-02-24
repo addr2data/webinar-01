@@ -1459,7 +1459,11 @@ toDoList
 
 |
 
-From Load Balancer details page, select **Listeners** and review the **Listener**
+- From Load Balancer details page, select **Listeners**. Review the **Listener**
+
+|
+
+- Under **Rules**, click on **webinar-01-tg-app** to take you to the **Target Group**.
 
 |
 
