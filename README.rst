@@ -469,7 +469,7 @@ The basics
 
 - Each Subnet has five (5) addresses reserved from its IPv4 CIDR block.
 
-	+ For example, our Subnets will use IPv4 CIDR blocks with a prefix length of **/23**, which results in **512** possible IPv4 addresses, but only **507** IPv4 addresses available for Instances.
+	+ For example, our Subnets will use IPv4 CIDR blocks with a prefix length of **/23**, which results in **512** possible IPv4 addresses, but only **507** IPv4 addresses available for use.
 
 	+ The reserved addresses are as follows:
 
