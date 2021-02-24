@@ -908,11 +908,6 @@ Before we run **webserver.py**, let's examine the **<cfgfile>** we will be using
 
 	+ **cfg-private.yml**
 
-::
-
-	python webservers.py create cfg-private.yml
-
-
 .. image:: ./images/cfg-private.png
 
 |
