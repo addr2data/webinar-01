@@ -1467,6 +1467,14 @@ toDoList
 
 |
 
+- Review the **Group details** tab.
+
+|
+
+- Select the **Targets** tab and make sure all four (4) **web-public** instances show **healthy**
+
+|
+
 - Create an Network Load-balancer with the following settings
 
 	+ Basic Configuration
