@@ -62,8 +62,8 @@ If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced
 
 |
 
-Notes for awscli
-~~~~~~~~~~~~~~~~
+Notes for awscli (**goingCmdO**)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - For parameters where the value is **static**, the specific **value** for this webinar is included.
 - For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
