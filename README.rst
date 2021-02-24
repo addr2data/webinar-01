@@ -1,8 +1,8 @@
 A series of AWS webinars
 ========================
 
-Goals
------
+The goals
+---------
 
 - Walk through the basic configuration of a significant number of AWS services over 4-5 webinars.
 
