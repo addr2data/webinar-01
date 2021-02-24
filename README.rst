@@ -291,9 +291,9 @@ Attach the Internet Gateway to a VPC.
 
 ::
 
-	aws ec2 attach-internet-gateway ^
-		--internet-gateway-id <InternetGatewayId> ^
-		--vpc-id <vpcId>
+    aws ec2 attach-internet-gateway ^
+        --internet-gateway-id <InternetGatewayId> ^
+        --vpc-id <vpcId>
 
 |
 
