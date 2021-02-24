@@ -205,8 +205,8 @@ The above awscli command will return the configuration of the newly created VPC.
 ::
 
 	aws ec2 describe-vpcs ^
-	--filters Name=tag:Name,Values=webinar-01 ^
-	--query Vpcs[].VpcId --output text
+		--filters Name=tag:Name,Values=webinar-01 ^
+		--query Vpcs[].VpcId --output text
 
 |
 
