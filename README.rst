@@ -67,6 +67,9 @@ Notes for awscli (**goingCmdO**)
 
 - For parameters where the value is **static**, the specific **value** for this webinar is included.
 - For parameters where the value is **dynamic**, and must be discovered, **<parameter>** is included.
+- For commands broken over multiple lines, the **^** character is used, which is specific to Windows.
+- All the **goingCmdO** examples use awscli_v2.
+- The latest version of awscli_v2 for Windows can be installed using the following link: https://awscli.amazonaws.com/AWSCLIV2.msi.
 
 |
 
