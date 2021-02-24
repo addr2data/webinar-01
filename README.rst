@@ -36,9 +36,9 @@ During this webinar we will introduce the following AWS services/components/conc
 - Subnets
 - VPC Peering
 - Security Groups
-- Deploying instances via the API
+- Deploying Instances via the API
 - NAT (Network Address Translation) Gateways
-- Elastic IP Addresses
+- Elastic IP Addresses vs. Public IPv4 Addresses
 - Application Load Balancers (ALB)
 - Network Load Balancers (NLB) 
 
