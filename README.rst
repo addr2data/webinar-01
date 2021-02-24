@@ -1084,33 +1084,17 @@ Elastic IP addresses vs. Public IPv4 addresses
 The basics
 ~~~~~~~~~~
 
-- An Elastic IP address is a static Internet routable IPv4 address.
+- Both **Elastic IP addresses** and **Public IPv4 addresses** are static, Internet routable IPv4 addresses.
 
-- An Elastic IP address is allocated to your AWS account, and is yours until you release it. 
+- What are the differences?
 
-- Elastic IP addresses are not currently supported for IPv6.
+	+ Elastic IP addresses are allocated to your AWS account. Public IPv4 addresses are not.
 
-- Elastic IP addresses can be associate it with your instance or a network interface.
+	+ Elastic IP addresses are yours until you release them. Public IPv4 addresses are released back to AWS as soon as you stop using them.
 
-	+ When you associate it with an Instance it is associated with the primary network interface.
+	+ Elastic IP addresses are allocated and associated though the console, awscli or EC2 API. Public IPv4 addresses are allocated and associated automatically when **Auto-assign IPv4** is set at the Instance or Subnet level.
 
-- When you associate an Elastic IP address with a network interface that is attached to an instance, it is also associated with the instance.
-
-- When you associate an Elastic IP address with an instance or its primary network interface, the instance's public IPv4 address (if it had one) is released back into Amazon's pool of public IPv4 addresses. You cannot reuse a public IPv4 address, and you cannot convert a public IPv4 address to an Elastic IP address. For more information, see Public IPv4 addresses and external DNS hostnames.
-
-- You can disassociate an Elastic IP address from a resource, and then associate it with a different resource.
-
-- A disassociated Elastic IP address remains allocated to your account until you explicitly release it.
-
-- When you associate an Elastic IP address with an instance that previously had a public IPv4 address, the public DNS host name of the instance changes to match the Elastic IP address.
-
-- We resolve a public DNS host name to the public IPv4 address or the Elastic IP address of the instance outside the network of the instance, and to the private IPv4 address of the instance from within the network of the instance.
-
-- An Elastic IP address comes from Amazon's pool of IPv4 addresses, or from a custom IP address pool that you have brought to your AWS account.
-
-- When you allocate an Elastic IP address from an IP address pool that you have brought to your AWS account, it does not count toward your Elastic IP address limits.
-
-- An Elastic IP address is for use in a specific Region only, and cannot be moved to a different Region.
+	+ Elastic IP addresses can be disassociated from one resource, and then associated with a different resource. Public IPv4 addresses can not.
 
 Quotas
 ~~~~~~
