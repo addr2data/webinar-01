@@ -941,7 +941,7 @@ Here is a summary of what **webservers.py create cfg-private.yml** will do.
 	
 	+ Tags: *Key* = **Name**, *Value* = **web-private**
 
-- Write some details to **output_file** (private.json).
+- Write some details to **results_file** (private.json).
 
 |
 
