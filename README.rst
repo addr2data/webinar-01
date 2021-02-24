@@ -904,7 +904,9 @@ What parameters does **webservers.py** take?
 
 |
 
-Before we run **webserver.py**, let's examine that **cfg-private.yml** file.
+Before we run **webserver.py**, let's examine the **<cfgfile>** we will be using.
+
+	+ **cfg-private.yml**
 
 ::
 
