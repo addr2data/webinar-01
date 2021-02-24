@@ -1017,9 +1017,9 @@ Create a security group.
 
 ::
 
-	aws ec2 create-security-group ^
-		--group-name webinar-01-sg-web-private ^
-		--description "Allow SHH from anywhere" --vpc-id <vpc-id>
+    aws ec2 create-security-group ^
+        --group-name webinar-01-sg-web-private ^
+        --description "Allow SHH from anywhere" --vpc-id <vpc-id>
 
 |
 
@@ -1027,11 +1027,11 @@ Add a rule to the security group to allow SSH from **10.0.0.0/16**.
 
 ::
 
-	aws ec2 authorize-security-group-ingress ^
-		--group-id <GroupId> ^
-		--protocol tcp ^
-		--port 22 ^
-		--cidr 10.0.0.0/16
+    aws ec2 authorize-security-group-ingress ^
+        --group-id <GroupId> ^
+        --protocol tcp ^
+        --port 22 ^
+        --cidr 10.0.0.0/16
 
 |
 
@@ -1039,11 +1039,11 @@ Add a rule to the security group to allow SSH from **10.2.0.0/16**.
 
 ::
 
-	aws ec2 authorize-security-group-ingress ^
-		--group-id <GroupId> ^
-		--protocol tcp ^
-		--port 22 ^
-		--cidr 10.2.0.0/16
+    aws ec2 authorize-security-group-ingress ^
+        --group-id <GroupId> ^
+        --protocol tcp ^
+        --port 22 ^
+        --cidr 10.2.0.0/16
 
 |
 
@@ -1051,13 +1051,13 @@ Launch a single instance.
 
 ::
 
-	aws ec2 run-instances ^
-		--image-id ami-0090f21784e1f13dd ^
-		--instance-type t2.micro ^
-		--key-name web-private ^
-		--subnet-id <SubnetId> ^
-		--security-group-ids <GroupId> ^
-		--tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
+    aws ec2 run-instances ^
+        --image-id ami-0090f21784e1f13dd ^
+        --instance-type t2.micro ^
+        --key-name web-private ^
+        --subnet-id <SubnetId> ^
+        --security-group-ids <GroupId> ^
+        --tag-specifications ResourceType=instance,Tags=[{Key=Name,Value=web-public}]
 
 |
 
@@ -1065,11 +1065,11 @@ Add a rule to the security group to allow TCP port 5000 from **10.0.0.0/16**.
 
 ::
 
-	aws ec2 authorize-security-group-ingress ^
-		--group-id <GroupId> ^
-		--protocol tcp ^
-		--port 5000 ^
-		--cidr 10.0.0.0/16
+    aws ec2 authorize-security-group-ingress ^
+        --group-id <GroupId> ^
+        --protocol tcp ^
+        --port 5000 ^
+        --cidr 10.0.0.0/16
 
 |
 
@@ -1077,11 +1077,11 @@ Add a rule to the security group to allow TCP port 5000 from **10.2.0.0/16**.
 
 ::
 
-	aws ec2 authorize-security-group-ingress ^
-		--group-id <GroupId> ^
-		--protocol tcp ^
-		--port 5000 ^
-		--cidr 10.2.0.0/16
+    aws ec2 authorize-security-group-ingress ^
+        --group-id <GroupId> ^
+        --protocol tcp ^
+        --port 5000 ^
+        --cidr 10.2.0.0/16
 
 |
 
