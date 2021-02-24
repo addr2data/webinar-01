@@ -1537,8 +1537,13 @@ toDoList
 
 |
 
-- Why didn't it work?
+- Discuss why it didn't work?
 
+|
+
+- Add a rule to allow TCP 5000 from **0.0.0.0/0** to security group **webinar-01-sg-web-public**
+
+|
 
 
 *goingCmdO*
