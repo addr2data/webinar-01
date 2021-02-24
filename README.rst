@@ -557,29 +557,29 @@ Create four (4) subnets
 
 ::
 
-	aws ec2 create-subnet ^
-		--cidr-block 10.2.0.0/23 ^
-		--vpc-id <vpcId> ^
-		--availability-zone us-east-1a ^
-		--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-01}]
+    aws ec2 create-subnet ^
+        --cidr-block 10.2.0.0/23 ^
+        --vpc-id <vpcId> ^
+        --availability-zone us-east-1a ^
+        --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-01}]
 
-	aws ec2 create-subnet ^
-		--cidr-block 10.2.2.0/23 ^
-		--vpc-id <vpcId> ^
-		--availability-zone us-east-1b ^
-		--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-02}]
+    aws ec2 create-subnet ^
+        --cidr-block 10.2.2.0/23 ^
+        --vpc-id <vpcId> ^
+        --availability-zone us-east-1b ^
+        --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-private-02}]
 
-	aws ec2 create-subnet ^
-		--cidr-block 10.2.128.0/23 ^
-		--vpc-id <vpcId> ^
-		--availability-zone us-east-1a ^
-		--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-01}]
+    aws ec2 create-subnet ^
+        --cidr-block 10.2.128.0/23 ^
+        --vpc-id <vpcId> ^
+        --availability-zone us-east-1a ^
+        --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-01}]
 
-	aws ec2 create-subnet ^
-		--cidr-block 10.2.130.0/23 ^
-		--vpc-id <vpcId> ^
-		--availability-zone us-east-1b ^
-		--tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
+    aws ec2 create-subnet ^
+        --cidr-block 10.2.130.0/23 ^
+        --vpc-id <vpcId> ^
+        --availability-zone us-east-1b ^
+        --tag-specifications ResourceType=subnet,Tags=[{Key=Name,Value=webinar-01-sub-public-02}]
 
 |
 
@@ -587,8 +587,8 @@ Review the the four (4) subnets created above.
 
 ::
 
-	aws ec2 describe-subnets ^
-		--filters "Name=vpc-id,Values=<vpc-id>"
+    aws ec2 describe-subnets ^
+        --filters "Name=vpc-id,Values=<vpc-id>"
 
 |
 
@@ -596,20 +596,20 @@ Show the **Name** and **SubnetId** of the four (4) Subnets in a table.
 
 ::
 
-	aws ec2 describe-subnets ^
-		--filters "Name=vpc-id,Values=<vpcId>" ^
-		--query "Subnets[*].{name: Tags[?Key=='Name'] | [0].Value, Id: SubnetId}" --output table --color off
+    aws ec2 describe-subnets ^
+        --filters "Name=vpc-id,Values=<vpcId>" ^
+        --query "Subnets[*].{name: Tags[?Key=='Name'] | [0].Value, Id: SubnetId}" --output table --color off
 
-	-----------------------------------------------------------
-	|                     DescribeSubnets                     |
-	+---------------------------+-----------------------------+
-	|            Id             |            name             |
-	+---------------------------+-----------------------------+
-	|  subnet-06d45e8022909b538 |  webinar-01-sub-private-01  |
-	|  subnet-0a89f3ebc7a958154 |  webinar-01-sub-public-02   |
-	|  subnet-057041e32aad58f18 |  webinar-01-sub-private-02  |
-	|  subnet-085968550caaec8d7 |  webinar-01-sub-public-01   |
-	+---------------------------+-----------------------------+
+    -----------------------------------------------------------
+    |                     DescribeSubnets                     |
+    +---------------------------+-----------------------------+
+    |            Id             |            name             |
+    +---------------------------+-----------------------------+
+    |  subnet-06d45e8022909b538 |  webinar-01-sub-private-01  |
+    |  subnet-0a89f3ebc7a958154 |  webinar-01-sub-public-02   |
+    |  subnet-057041e32aad58f18 |  webinar-01-sub-private-02  |
+    |  subnet-085968550caaec8d7 |  webinar-01-sub-public-01   |
+    +---------------------------+-----------------------------+
 
 |
 
@@ -617,9 +617,9 @@ Associate **webinar-01-sub-public-01** and **webinar-01-sub-public-02** with **w
 
 ::
 
-	aws ec2 associate-route-table ^
-		--route-table-id <RouteTableId> ^
-		--subnet-id <SubnetId>
+    aws ec2 associate-route-table ^
+        --route-table-id <RouteTableId> ^
+        --subnet-id <SubnetId>
 
 |
 
@@ -627,8 +627,8 @@ Review the associations in **webinar-01-rt-public**.
 
 ::
 
-	aws ec2 describe-route-tables ^
-		--filters "Name=vpc-id,Values=vpc-0728135c72ee58885"
+    aws ec2 describe-route-tables ^
+        --filters "Name=vpc-id,Values=vpc-0728135c72ee58885"
 
 |
 
