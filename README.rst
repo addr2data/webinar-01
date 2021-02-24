@@ -269,8 +269,8 @@ Create an Internet Gateway
 
 ::
 
-	aws ec2 create-internet-gateway ^
-		--tag-specifications ResourceType=internet-gateway,Tags=[{Key=Name,Value=webinar-01-igw}]
+    aws ec2 create-internet-gateway ^
+        --tag-specifications ResourceType=internet-gateway,Tags=[{Key=Name,Value=webinar-01-igw}]
 
 |
 
@@ -280,10 +280,10 @@ as text, from the awscli.
 
 ::
 
-	aws ec2 describe-internet-gateways ^
-		--filters Name=tag:Name,Values=webinar-01-igw ^
-		--query InternetGateways[].InternetGatewayId ^
-		--output text
+    aws ec2 describe-internet-gateways ^
+        --filters Name=tag:Name,Values=webinar-01-igw ^
+        --query InternetGateways[].InternetGatewayId ^
+        --output text
 
 |
 
