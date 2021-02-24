@@ -876,7 +876,14 @@ Quotas
 Costs
 ~~~~~
 
-- Charges for Instances are based on Instance Type and Reservation Type.
+- Charges for Instances are based on multiple factors
+
+	+ jumpHost (On-demand, Windows, t2.medium ): **$0.0644** per hour
+	
+	+ cfgHost (On-demand, Linux, t2.medium ): **$0.0464** per hour
+
+	+ web (On-demand, Linux, t2.micro): **$0.0116** per hour
+
 
 |
 
