@@ -1557,12 +1557,14 @@ toDoList
 
 |
 
-Wait a few minutes, then from **jumpHost**, browse to **http://<dns name>:5000** and click refresh several times.
+- Wait a few minutes, then from **jumpHost**, browse to **http://<dns name>:5000** and click refresh several times.
 
 |
 
 *goingCmdO*
 ~~~~~~~~~~~
+
+- Application Load Balancer
 
 ::
 
@@ -1575,6 +1577,34 @@ Wait a few minutes, then from **jumpHost**, browse to **http://<dns name>:5000**
 		--security-groups <SecurityGroupId>
 
 |
+
+::
+
+	aws elbv2 create-target-group ^
+		--name webinar-01-tg-app ^
+		--protocol HTTP ^
+		--port 5000 ^
+		--vpc-id <VpcId>
+
+|
+
+::
+
+	aws elbv2 register-targets \
+    	--target-group-arn $EX006_APP_TG \
+    	--targets Id=$EX006_INST_WEB1 Id=$EX006_INST_WEB2
+
+|
+
+::
+
+	aws elbv2 create-listener \
+    	--load-balancer-arn $EX006_APP_LB \
+    	--protocol HTTP \
+    	--port 80 \
+    	--default-actions Type=forward,TargetGroupArn=$EX006_APP_TG
+
+
 
 ****
 
