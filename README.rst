@@ -967,9 +967,9 @@ toDoList
 
 |
 
-Let's take a look at the data flow and why the last command failed.
+Why did the last command failed.
 
-.. image:: ./images/webinar_net-03.png
+.. image:: ./images/webinar_net-03a.png
 
 |
 
