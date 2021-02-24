@@ -14,7 +14,7 @@ Goals
 
 	+ **Do** - Allow attendees to recreate the steps from the webinar using the awscli (**goingCmdO**).
 
-	+ **Explore** - become familiar with using the AWS APIs directly (**code samples**)
+	+ **Explore** - Allow attendees to become familiar with using the AWS APIs directly (**code samples**)
 
 - **NO SLIDES** - content is publicly available on GitHub.
 
