@@ -1604,8 +1604,16 @@ toDoList
     	--port 80 \
     	--default-actions Type=forward,TargetGroupArn=$EX006_APP_TG
 
+|
 
+****
 
 ****
 
-****
+It's a wrap
+-----------
+
+|
+
+.. image:: ./images/webinar_net-01.png
+
