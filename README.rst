@@ -904,7 +904,7 @@ What parameters does **webservers.py** take?
 
 |
 
-Before we run **webserver.py**, let's examine the **<cfgfile>** we will be using.
+Before we run **webserver.py**, let's examine the **<cfgfile>** that will be used.
 
 	+ **cfg-private.yml**
 
@@ -912,19 +912,13 @@ Before we run **webserver.py**, let's examine the **<cfgfile>** we will be using
 
 |
 
-Before we run **webserver.py**, let's take a look what the output file **private.json** should look like
+Here is a summary of what **webserver.py create cfg-private.yml** will do.
 
-.. image:: ./images/private-json.png
+- Create a security group named **webinar-01-sg-web-private**
 
-|
+- Add an ingress rule to **webinar-01-sg-web-private** that allows **SSH** traffic from **10.0.0.0/16** and **10.2.0.0/16** 
 
-Here is a summary of what **webserver.py** with the *create* argument will do.
-
-- It will create a security group named **webinar-01-sg-web-private**
-
-- It will add an ingress rule to **webinar-01-sg-web-private** that allows **SSH** traffic from **10.0.0.0/16** and **10.2.0.0/16** 
-
-- It will launch a single instance, using the following parameters:
+- Launch a single instance, using the following parameters:
 
 	+ AMI: **base_webserver** (previously saved image - on boot, a simple web server starts on port 5000)
 	
@@ -935,6 +929,17 @@ Here is a summary of what **webserver.py** with the *create* argument will do.
 	+ Security Groups: **webinar-01-sg-web-private**
 	
 	+ Tags: *Key* = **Name**, *Value* = **web-private**
+
+- Write some details to **output_file** (private.json).
+
+
+Let's examine **private.json**.
+
+.. image:: ./images/private-json.png
+
+|
+
+
 
 toDoList
 ~~~~~~~~
