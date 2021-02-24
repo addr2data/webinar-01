@@ -1137,8 +1137,8 @@ toDoList
 
 ::
 
-	aws ec2 allocate-address ^
-		--domain vpc
+    aws ec2 allocate-address ^
+        --domain vpc
 
 |
 
