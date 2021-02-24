@@ -1602,15 +1602,15 @@ toDoList
 ::
 
     aws elbv2 register-targets ^
-        --target-group-arn $EX006_APP_TG ^
-        --targets Id=$EX006_INST_WEB1 Id=$EX006_INST_WEB2
+        --target-group-arn <loadbalancer-arn> ^
+        --targets Id=<InstanceId> Id=<InstanceId> Id=<InstanceId> Id=<InstanceId>
 
 |
 
 ::
 
     aws elbv2 create-listener ^
-        --load-balancer-arn $EX006_APP_LB ^
+        --load-balancer-arn <loadbalancer-arn> ^
         --protocol HTTP ^
         --port 5000 ^
         --default-actions Type=forward,TargetGroupArn=$EX006_APP_TG
@@ -1626,7 +1626,7 @@ toDoList
         --scheme internet-facing ^
         --type network ^
         --ip-address-type ipv4 ^
-        --subnets $EX006_SUBNET_LB1 $EX006_SUBNET_LB2
+        --subnets <SubnetId> <SubnetId>
 
 |
 
@@ -1643,15 +1643,15 @@ toDoList
 ::
 
     aws elbv2 register-targets ^
-        --target-group-arn $EX006_NET_TG ^
-        --targets Id=$EX006_INST_WEB1 Id=$EX006_INST_WEB2
+        --target-group-arn <loadbalancer-arn> ^
+        --targets Id=<InstanceId> Id=<InstanceId> Id=<InstanceId> Id=<InstanceId>
 
 |
 
 ::
 
     aws elbv2 create-listener ^
-        --load-balancer-arn $EX006_NET_LB ^
+        --load-balancer-arn <loadbalancer-arn> ^
         --protocol TCP ^
         --port 5000 ^
         --default-actions Type=forward,TargetGroupArn=$EX006_NET_TG
