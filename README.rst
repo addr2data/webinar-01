@@ -898,7 +898,7 @@ The basics
 
 |
 
-Let's take a look at what arguments **webservers.py** takes
+What parameters does **webservers.py** take?
 
 .. image:: ./images/webserver_cmd-01.png
 
