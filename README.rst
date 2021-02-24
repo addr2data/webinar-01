@@ -884,15 +884,17 @@ Costs
 
 ****
 
-Getting started with the EC2 API
---------------------------------
+Test Connectivity
+-----------------
 
 The basics
 ~~~~~~~~~~
 
-- We are going to deploy an Instance and test connectivity.
+- We will deploy one (1) Instance to a *private* Subnet and test connectivity.
 
-- To do that. we will use a Python script **webservers.py** that communicates with EC2 API via **boto3**.
+- We will use the **webservers.py** script.
+
+	+ Uses **boto3** (AWS SDK for Python)
 
 |
 
@@ -962,7 +964,7 @@ toDoList
 
 |
 
-Let's take a look at the data flow and the last command failed.
+Let's take a look at the data flow and why the last command failed.
 
 .. image:: ./images/webinar_net-03.png
 
