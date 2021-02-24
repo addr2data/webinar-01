@@ -306,43 +306,43 @@ Route Tables and Routes
 The basics
 ~~~~~~~~~~
 
-- A VPC component that contains a set of routes that determine where network traffic is directed within your VPC.
+- Route Tables contain a set of Routes that determine where network traffic is directed within your VPC.
 
-- One (1) route table is automatically created when you create a VPC. By default, it's the  **main** route table.
+- One (1) Route Table is automatically created when you create a VPC. By default, it's the  **main** route table.
 
-- You can create your own route tables.
+- You can create your own Route Tables.
 
-- Subnets are associated with route tables, either explicitly or implicitly.
+- Subnets are associated with Route Tables, either explicitly or implicitly.
 
-- Any subnet not explicitly associated with a route table, is implicitly associated with the **main** route table.
+- A Route Table defines the routing for any Subnet associated with it. 
 
-- A route table defines the routing for any subnet associated with it. 
+- Any Subnet not explicitly associated with a Route Table, is implicitly associated with the **main** Route Table.
 
-- You can change which route table is the **main** route table.
+- You can change which Route Table is the **main** route table.
 
-- IPv4 and IPv6 is handled separately.
+- IPv4 and IPv6 routing is handled separately within a Route Table.
 
-- Each route has a **destination** and a **target**.
+- Each Route has a **destination** and a **target**.
 
-	+ The IPv4 default route associated with your *public* subnets, may look like this:
+	+ The IPv4 default route associated with your *public* subnets, will look like this:
 
 		+ Destination: **0.0.0.0/0**
 
 		+ Target: **igw-xxxxxxxxxxxxxxxxx**
 
-	+ Every route table has an IPv4 local route automatically added to it, for routing IPv4 traffic within a VPC:
+	+ Every Route Table has an IPv4 local Route automatically added to it, for routing IPv4 traffic within a VPC:
 
 		+ Destination: **10.2.0.0/16** (or whatever your VPC IPv4 CIDR block is)
 
 		+ Target: **local**
 
-	+ If you have enabled IPv6, then every route table will also have an IPv6 local route automatically added to it:
+	+ If you have enabled IPv6, then every Route Table will also have an IPv6 local Route automatically added to it:
 
 		+ Destination: **2600:1f18:a1c:b300::/56** (or whatever your VPC IPv6 CIDR block is)
 
 		+ Target: **local**
 
-- When a route table has multiple routes, the most specific route (longest prefix) that matches the traffic, determines how traffic is routed.
+- When a Route Table has multiple Routes, the most specific Route (longest prefix) that matches the traffic, determines how traffic is routed.
 
 Quotas
 ~~~~~~
