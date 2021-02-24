@@ -1553,6 +1553,10 @@ toDoList
 
 |
 
+- From Load Balancer details page, select **webinar-01-lb-net** and under **Actions**, select **Edit attributes**. Enable **Cross-zone load balancing**.
+
+|
+
 *goingCmdO*
 ~~~~~~~~~~~
 
