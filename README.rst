@@ -1255,6 +1255,9 @@ Application Load Balancers
 
 - Supports Security Groups
 
+- Must operate across at least two (2) AZs
+
+
 Network Load Balancers
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1380,7 +1383,7 @@ toDoList
 
 		+ Scheme: **internet-facing**
 
-		+ IP address type: ipv4
+		+ IP address type: **ipv4**
 
 	+ Listeners
 
@@ -1442,7 +1445,7 @@ toDoList
 
 		+ Instances
 
-			Select **all**
+			Select the four (4) **web-public** Instances
 
 			Click **Add to registered**
 
