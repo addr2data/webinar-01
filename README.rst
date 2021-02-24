@@ -431,10 +431,10 @@ Add a default route to the **webinar-01-rt-public** route table.
 
 ::
 
-	aws ec2 create-route ^
-		--destination-cidr-block 0.0.0.0/0 ^
-		--gateway-id <igw-id> ^
-		--route-table-id <rtb-id>
+    aws ec2 create-route ^
+        --destination-cidr-block 0.0.0.0/0 ^
+        --gateway-id <igw-id> ^
+        --route-table-id <rtb-id>
 
 |
 
