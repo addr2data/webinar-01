@@ -12,7 +12,7 @@ Goals
 
 	+ **Introduce** - AWS services/components/concepts using the AWS console (**webinar**).
 
-	+ **Do** - recreate what was built in the webinar using the awscli (**goingCmdO**).
+	+ **Do** - Allow attendees to recreate the steps from the webinar using the awscli (**goingCmdO**).
 
 	+ **Explore** - become familiar with using the AWS APIs directly (**code samples**)
 
