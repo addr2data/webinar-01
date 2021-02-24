@@ -1,10 +1,10 @@
 A series of AWS webinars
 ========================
 
-Objectives
-----------
+Goals
+-----
 
-- Expose attendees to significant number of AWS services over 4-5 webinars.
+- Walk through the basic configuration of a significant number of AWS services over 4-5 webinars.
 
 	+ Each webinar will build on the previous webinars
 
