@@ -220,7 +220,7 @@ Internet Gateway
 The basics
 ~~~~~~~~~~
 
-- A VPC component that allows communication between your VPC and the Internet.
+- Allows communication between your VPC and the Internet.
 
 - Internet Gateways are highly-available and scalable.
 
@@ -228,7 +228,7 @@ The basics
 
 - Supports both IPv4 and IPv6
 
-- Performs Network Address Translation (NAT) for IPv4
+- Performs Network Address Translation (NAT) for IPv4 (need a Internet routable IPv4 address)
 
 - You can have one (1) Internet Gateway per VPC. 
 
