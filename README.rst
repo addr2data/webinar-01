@@ -920,7 +920,7 @@ Here is a summary of what **webserver.py create cfg-private.yml** will do.
 
 - Launch a single instance, using the following parameters:
 
-	+ AMI: **base_webserver** (previously saved image - on boot, a simple web server starts on port 5000)
+	+ AMI: **base_webserver** (a simple web server starts on boot - port 5000)
 	
 	+ Network: **webinar-01**
 	
@@ -932,6 +932,7 @@ Here is a summary of what **webserver.py create cfg-private.yml** will do.
 
 - Write some details to **output_file** (private.json).
 
+|
 
 Let's examine **private.json**.
 
