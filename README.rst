@@ -598,7 +598,8 @@ Show the **Name** and **SubnetId** of the four (4) Subnets in a table.
 
     aws ec2 describe-subnets ^
         --filters "Name=vpc-id,Values=<vpcId>" ^
-        --query "Subnets[*].{name: Tags[?Key=='Name'] | [0].Value, Id: SubnetId}" --output table --color off
+        --query "Subnets[*].{name: Tags[?Key=='Name'] | [0].Value, Id: SubnetId}" ^
+        --output table --color off
 
     -----------------------------------------------------------
     |                     DescribeSubnets                     |
