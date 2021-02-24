@@ -1196,6 +1196,12 @@ toDoList
 
 - Deploy NAT Gateway named **webinar-01-nat**
 
+- Review the current configuration while the NAT Gateway deploys
+
+.. image:: ./images/webinar_net-04.png
+
+|
+
 - Add a default route to the **webinar-01-rt-private** route table, using the NAT gateway as the target.
 
 - From **web-private**, run the following command.
