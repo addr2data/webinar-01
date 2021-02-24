@@ -1453,9 +1453,13 @@ toDoList
 
 - From Load Balancer details page, copy the **DNS name**
 
+|
+
 - From **jumpHost**, browse to **http://<dns name>:5000**. Click refresh until you have hit all four (4) **web-public** Instances.
 
+|
 
+From Load Balancer details page, select **Listeners** and review the **Listener**
 
 |
 
