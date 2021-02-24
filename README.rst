@@ -8,7 +8,7 @@ Three goals
 
 	+ Each webinar will build on the previous webinars
 
-- Provide an opportunity for attendees to develop **hands-on-literacy** with AWS services, in three steps:
+- Provide an opportunity for attendees to develop **hands-on-literacy** with AWS services (in three steps):
 
 	+ **Introduce** - AWS services/components/concepts using the AWS console (**webinar**).
 
