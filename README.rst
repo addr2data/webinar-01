@@ -1471,7 +1471,7 @@ toDoList
 
 |
 
-- Select the **Targets** tab and make sure all four (4) **web-public** instances show **healthy**
+- Select the **Targets** tab and make sure all four (4) **web-public** Instances show **healthy**
 
 |
 
