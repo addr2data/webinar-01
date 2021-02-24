@@ -884,6 +884,8 @@ Costs
 
 	+ web (On-demand, Linux, t2.micro): **$0.0116** per hour
 
+	+ EBS (General Purpose SSD - gp2): **$0.10** per GB-month 
+
 
 |
 
