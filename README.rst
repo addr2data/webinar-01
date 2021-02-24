@@ -1621,38 +1621,39 @@ toDoList
 
 ::
 
-	aws elbv2 create-load-balancer ^
-    	--name ex-006-net-lb ^
-    	--scheme internet-facing ^
-    	--type network ^
-    	--ip-address-type ipv4 ^
-    	--subnets $EX006_SUBNET_LB1 $EX006_SUBNET_LB2
-|
-
-::
-
-	aws elbv2 create-target-group ^
-		--name ex-006-tg-net-lb ^
-		--protocol TCP ^
-		--port 80 ^
-		--vpc-id <VpcId>
+    aws elbv2 create-load-balancer ^
+        --name ex-006-net-lb ^
+        --scheme internet-facing ^
+        --type network ^
+        --ip-address-type ipv4 ^
+        --subnets $EX006_SUBNET_LB1 $EX006_SUBNET_LB2
 
 |
 
 ::
 
-	aws elbv2 register-targets ^
-    	--target-group-arn $EX006_NET_TG ^
-    	--targets Id=$EX006_INST_WEB1 Id=$EX006_INST_WEB2
+    aws elbv2 create-target-group ^
+        --name ex-006-tg-net-lb ^
+        --protocol TCP ^
+        --port 5000 ^
+        --vpc-id <VpcId>
 
 |
 
 ::
 
-	aws elbv2 create-listener ^
-		--load-balancer-arn $EX006_NET_LB ^
-		--protocol TCP ^
-		--port 80 ^
+    aws elbv2 register-targets ^
+        --target-group-arn $EX006_NET_TG ^
+        --targets Id=$EX006_INST_WEB1 Id=$EX006_INST_WEB2
+
+|
+
+::
+
+    aws elbv2 create-listener ^
+        --load-balancer-arn $EX006_NET_LB ^
+        --protocol TCP ^
+        --port 5000 ^
 		--default-actions Type=forward,TargetGroupArn=$EX006_NET_TG
 
 |
