@@ -1533,9 +1533,13 @@ toDoList
 
 |
 
-- From **jumpHost**, browse to **http://<dns name>:5000**.
+- From **jumpHost**, attempt to browse to **http://<dns name>:5000**.
 
 |
+
+- Why didn't it work?
+
+
 
 *goingCmdO*
 ~~~~~~~~~~~
