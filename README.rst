@@ -1591,19 +1591,19 @@ toDoList
 
 ::
 
-	aws elbv2 create-target-group ^
-		--name webinar-01-tg-app ^
-		--protocol HTTP ^
-		--port 5000 ^
-		--vpc-id <VpcId>
+    aws elbv2 create-target-group ^
+        --name webinar-01-tg-app ^
+        --protocol HTTP ^
+        --port 5000 ^
+        --vpc-id <VpcId>
 
 |
 
 ::
 
-	aws elbv2 register-targets ^
-    	--target-group-arn $EX006_APP_TG ^
-    	--targets Id=$EX006_INST_WEB1 Id=$EX006_INST_WEB2
+    aws elbv2 register-targets ^
+        --target-group-arn $EX006_APP_TG ^
+        --targets Id=$EX006_INST_WEB1 Id=$EX006_INST_WEB2
 
 |
 
