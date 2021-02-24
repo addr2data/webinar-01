@@ -1227,9 +1227,9 @@ toDoList
 
 ::
 
-	aws ec2 create-nat-gateway ^
-		--allocation-id <AllocationId> ^
-		--subnet-id <SubnetId>
+    aws ec2 create-nat-gateway ^
+        --allocation-id <AllocationId> ^
+        --subnet-id <SubnetId>
 
 |
 
@@ -1237,10 +1237,10 @@ Add a default route to the **webinar-01-rt-private** route table, using the NAT 
 
 ::
 
-	aws ec2 create-route ^
-		--destination-cidr-block 0.0.0.0/0 ^
-		--nat-gateway-id <NatGatewayId> ^
-		--route-table-id <RouteTableId>
+    aws ec2 create-route ^
+        --destination-cidr-block 0.0.0.0/0 ^
+        --nat-gateway-id <NatGatewayId> ^
+        --route-table-id <RouteTableId>
 
 |
 
