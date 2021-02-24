@@ -1545,7 +1545,7 @@ toDoList
 
 |
 
-- From **jumpHost**, attempt to browse to **http://<dns name>:5000** and click refresh several times.
+- From **jumpHost**, browse to **http://<dns name>:5000** and click refresh several times.
 
 |
 
@@ -1554,6 +1554,10 @@ toDoList
 |
 
 - From Load Balancer details page, select **webinar-01-lb-net** and under **Actions**, select **Edit attributes**. Enable **Cross-zone load balancing**.
+
+|
+
+Wait a few minutes, then from **jumpHost**, browse to **http://<dns name>:5000** and click refresh several times.
 
 |
 
