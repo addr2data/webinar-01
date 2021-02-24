@@ -1141,9 +1141,10 @@ Nat Gateway
 The basics
 ~~~~~~~~~~
 
-- NAT (Network Address Translation) Gateways allow instances on a private subnet to connect to the Internet or other AWS services, but prevent the Internet from initiating a connection with those instances.
+- NAT (Network Address Translation) Gateways allow instances on a *private* subnet to connect to the Internet or other AWS services, but prevent the Internet from initiating a connection with those instances.
 
 - NAT gateways are not supported for IPv6 traffic
+
 	+  Egress-only Internet Gateways can be used instead.
 
 - When you create a NAT gateway, you specify the *public* subnet in which the NAT gateway will reside. 
