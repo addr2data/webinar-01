@@ -991,6 +991,13 @@ Why did the last command fail?
 
 	ping www.google.com
 
+|
+
+Why did the last command fail?
+
+.. image:: ./images/webinar_net-03b.png
+
+|
 
 *goingCmdO*
 ~~~~~~~~~~~
