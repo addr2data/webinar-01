@@ -1648,10 +1648,10 @@ toDoList
 ::
 
 	aws elbv2 create-listener ^
-    	--load-balancer-arn $EX006_NET_LB ^
-    	--protocol TCP ^
-    	--port 80 ^
-    	--default-actions Type=forward,TargetGroupArn=$EX006_NET_TG
+		--load-balancer-arn $EX006_NET_LB ^
+		--protocol TCP ^
+		--port 80 ^
+		--default-actions Type=forward,TargetGroupArn=$EX006_NET_TG
 
 |
 
