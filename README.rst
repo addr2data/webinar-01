@@ -728,10 +728,10 @@ Create a VPC peering connection between **webinar-01** (requester) and **addr2da
 
 ::
 
-	aws ec2 create-vpc-peering-connection ^
-		--peer-vpc-id <vpcId> ^
-		--vpc-id <vpcId> ^
-		--tag-specifications ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=webinar-01-peerlink}]
+    aws ec2 create-vpc-peering-connection ^
+        --peer-vpc-id <vpcId> ^
+        --vpc-id <vpcId> ^
+        --tag-specifications ResourceType=vpc-peering-connection,Tags=[{Key=Name,Value=webinar-01-peerlink}]
 
 |
 
@@ -739,8 +739,8 @@ Accept the VPC peering connection
 
 ::
 
-	aws ec2 accept-vpc-peering-connection ^
-		--vpc-peering-connection-id <VpcPeeringConnectionId>
+    aws ec2 accept-vpc-peering-connection ^
+        --vpc-peering-connection-id <VpcPeeringConnectionId>
 
 |
 
@@ -748,10 +748,10 @@ Add the following route to **webinar-01-rt-public**
 
 ::
 
-	aws ec2 create-route ^
-		--destination-cidr-block 10.0.0.0/16 ^
-		--gateway-id <VpcPeeringConnectionId> ^
-		--route-table-id <RouteTableId>
+    aws ec2 create-route ^
+        --destination-cidr-block 10.0.0.0/16 ^
+        --gateway-id <VpcPeeringConnectionId> ^
+        --route-table-id <RouteTableId>
 
 |
 
@@ -759,10 +759,10 @@ Add the following route to **webinar-01-rt-private**
 
 ::
 
-	aws ec2 create-route ^
-		--destination-cidr-block 10.0.0.0/16 ^
-		--gateway-id <VpcPeeringConnectionId> ^
-		--route-table-id <RouteTableId>
+    aws ec2 create-route ^
+        --destination-cidr-block 10.0.0.0/16 ^
+        --gateway-id <VpcPeeringConnectionId> ^
+        --route-table-id <RouteTableId>
 
 |
 
@@ -770,10 +770,10 @@ Add the following route to **addr2data-rt-public**
 
 ::
 
-	aws ec2 create-route ^
-		--destination-cidr-block 10.2.0.0/16 ^
-		--gateway-id <VpcPeeringConnectionId> ^
-		--route-table-id <RouteTableId>
+    aws ec2 create-route ^
+        --destination-cidr-block 10.2.0.0/16 ^
+        --gateway-id <VpcPeeringConnectionId> ^
+        --route-table-id <RouteTableId>
 
 |
 
