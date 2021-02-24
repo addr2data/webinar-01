@@ -1473,7 +1473,7 @@ toDoList
 
 - Select the **Targets** tab and make sure all four (4) **web-public** Instances show **healthy**
 
-|
+****
 
 - Create an Network Load-balancer with the following settings
 
