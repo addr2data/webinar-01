@@ -10,7 +10,7 @@ Three goals
 
 - Provide an opportunity for attendees to develop **hands-on-literacy** with AWS services (in three steps):
 
-	+ **Introduce** - AWS services/components/concepts using the AWS console (**webinar**).
+	+ **See** - Expose attendees to AWS services/components/concepts using the AWS console (**webinar**).
 
 	+ **Do** - Allow attendees to recreate the steps from the webinar using the awscli (**goingCmdO**).
 
