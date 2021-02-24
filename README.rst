@@ -1451,6 +1451,10 @@ toDoList
 
 |
 
+- From Load Balancer details page, copy the **DNS name**
+
+|
+
 - Create an Network Load-balancer with the following settings
 
 	+ Basic Configuration

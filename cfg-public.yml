@@ -17,7 +17,7 @@ webservers:
       Tags:
         -
           Key: 'Name'
-          Value: 'webserver'
+          Value: 'web-public'
 
 security_group:
   name: 'webinar-01-sg-web-public'
