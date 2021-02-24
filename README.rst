@@ -967,7 +967,7 @@ toDoList
 
 |
 
-Why did the last command failed.
+Why did the last command fail?
 
 .. image:: ./images/webinar_net-03a.png
 
