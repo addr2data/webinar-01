@@ -1529,7 +1529,7 @@ toDoList
 
 |
 
-- From Load Balancer details page, select **webinar-01-lb-net** and copy the **DNS name**
+- From Load Balancer details page, select **webinar-01-lb-net** and copy the **DNS name**.
 
 |
 
@@ -1537,14 +1537,21 @@ toDoList
 
 |
 
-- Discuss why it didn't work?
+- Discuss why it didn't work.d
 
 |
 
-- Add a rule to allow TCP 5000 from **0.0.0.0/0** to security group **webinar-01-sg-web-public**
+- Add a rule to allow **TCP 5000** from **0.0.0.0/0** to security group **webinar-01-sg-web-public**.
 
 |
 
+- From **jumpHost**, attempt to browse to **http://<dns name>:5000** and click refresh several times.
+
+|
+
+- Discuss why it doesn't hit all four (4) targets.
+
+|
 
 *goingCmdO*
 ~~~~~~~~~~~
