@@ -1453,6 +1453,10 @@ toDoList
 
 - From Load Balancer details page, copy the **DNS name**
 
+- From **jumpHost**, browse to **http://<dns name>:5000**. Click refresh until you have hit all four (4) **web-public** Instances.
+
+
+
 |
 
 - Create an Network Load-balancer with the following settings
