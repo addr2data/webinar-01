@@ -1523,7 +1523,7 @@ toDoList
 
 		+ Instances
 
-			Select **all**
+			Select the four (4) **web-public** Instances
 
 			Click **Add to registered**
 
