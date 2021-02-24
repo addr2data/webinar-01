@@ -18,7 +18,7 @@ from docopt import docopt
 import yaml
 import simplejson as json
 import subprocess
-from awshelper import Ec2Client, Ec2Resource, AwsHelperError
+from awshelper import Ec2Client, AwsHelperError
 
 
 def main():
@@ -26,7 +26,6 @@ def main():
     args = docopt(__doc__)
 
     ec2_client = Ec2Client()
-    ec2_resource = Ec2Resource()
 
     if args['create']:
         with open(args['<cfgfile>']) as fin:
@@ -39,7 +38,7 @@ def main():
             sys.exit(err)
 
         try:
-            ec2_client.find_subnet_ids(cfg['base']['priv_subnets'])
+            ec2_client.find_subnet_ids(cfg['base']['subnets'])
         except AwsHelperError as err:
             sys.exit(err)
 
@@ -66,7 +65,7 @@ def main():
             if len(status) == 1 and status[0] == "running":
                 break
 
-        with open(cfg['base']['output_file'], 'w') as fout:
+        with open(cfg['base']['results_file'], 'w') as fout:
             fout.write(json.dumps(instances, indent=4, sort_keys=False))
 
     elif args['destroy']:

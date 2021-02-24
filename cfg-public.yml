@@ -1,8 +1,8 @@
 ---
 base:
   vpc_name: "webinar-01"
-  output_file: "public.json"
-  priv_subnets:
+  results_file: "public.json"
+  subnets:
     - "webinar-01-sub-public-01"
     - "webinar-01-sub-public-02"
 
