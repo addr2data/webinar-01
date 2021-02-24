@@ -1481,6 +1481,8 @@ toDoList
 
 		+ name: **webinar-01-lb-net**
 
+		+ Scheme: **internet-facing**
+
 		+ IP address type: ipv4
 
 	+ Listeners
