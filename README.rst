@@ -1609,11 +1609,11 @@ toDoList
 
 ::
 
-	aws elbv2 create-listener ^
-    	--load-balancer-arn $EX006_APP_LB ^
-    	--protocol HTTP ^
-    	--port 5000 ^
-    	--default-actions Type=forward,TargetGroupArn=$EX006_APP_TG
+    aws elbv2 create-listener ^
+        --load-balancer-arn $EX006_APP_LB ^
+        --protocol HTTP ^
+        --port 5000 ^
+        --default-actions Type=forward,TargetGroupArn=$EX006_APP_TG
 
 |
 
