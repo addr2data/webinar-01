@@ -389,8 +389,8 @@ Examine the main route table.
 
 ::
 
-	aws ec2 describe-route-tables ^
-		--filters "Name=vpc-id,Values=<vpc-id>"
+    aws ec2 describe-route-tables ^
+        --filters "Name=vpc-id,Values=<vpc-id>"
 
 |
 
@@ -400,10 +400,10 @@ as text, from the awscli.
 
 ::
 
-	aws ec2 describe-route-tables ^
-		--filters "Name=vpc-id,Values=<vpc-id>" ^
-		--query RouteTables[].RouteTableId ^
-		--output text
+    aws ec2 describe-route-tables ^
+        --filters "Name=vpc-id,Values=<vpc-id>" ^
+        --query RouteTables[].RouteTableId ^
+        --output text
 
 |
 
@@ -411,9 +411,9 @@ Add a name-tag **webinar-01-rt-private** to the **main** route table .
 
 ::
 
-	aws ec2 create-tags ^
-		--resources <route-table-id> ^
-		--tags Key=Name,Value=webinar-01-rt-private
+    aws ec2 create-tags ^
+        --resources <route-table-id> ^
+        --tags Key=Name,Value=webinar-01-rt-private
 
 |
 
@@ -421,9 +421,9 @@ Create a second route table, using the name-tag **webinar-01-rt-public**
 
 ::
 
-	aws ec2 create-route-table ^
-		--vpc-id <vpc-id> ^
-		--tag-specifications ResourceType=route-table,Tags=[{Key=Name,Value=webinar-01-rt-public}]
+    aws ec2 create-route-table ^
+        --vpc-id <vpc-id> ^
+        --tag-specifications ResourceType=route-table,Tags=[{Key=Name,Value=webinar-01-rt-public}]
 
 |
 
