@@ -962,6 +962,13 @@ toDoList
 
 |
 
+Let's take a look at the data flow and the last command failed.
+
+.. image:: ./images/webinar_net-03.png
+
+|
+
+
 - Add a rule to allow TCP 5000 from **10.0.0.0/16** and **10.2.0.0/16** to security group **webinar-01-sg-web-private**
 
 |
