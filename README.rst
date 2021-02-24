@@ -1361,6 +1361,17 @@ toDoList
 
 |
 
+- Let's examine the Security Group that was created **webinar-01-sg-web-public**.
+
+- - From **jumpHost**, run the following command to browse to **http://<web-public>:5000** for all four (4) Instances.
+
+::
+
+	python webservers.py connect public.json
+
+|
+
+
 - Create an Application Load-balancer with the following settings
 
 	+ Basic Configuration
