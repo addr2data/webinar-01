@@ -1527,6 +1527,15 @@ toDoList
 
 			Click **Add to registered**
 
+|
+
+- From Load Balancer details page, copy the **DNS name**
+
+|
+
+- From **jumpHost**, browse to **http://<dns name>:5000**.
+
+|
 
 *goingCmdO*
 ~~~~~~~~~~~
