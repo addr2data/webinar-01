@@ -1579,13 +1579,13 @@ toDoList
 
 ::
 
-	aws elbv2 create-load-balancer ^
-		--name webinar-01-lb-app ^
-		--scheme internet-facing ^
-		--type application ^
-		--ip-address-type ipv4 ^
-		--subnets <SubnetId> <SubnetId> ^
-		--security-groups <SecurityGroupId>
+    aws elbv2 create-load-balancer ^
+        --name webinar-01-lb-app ^
+        --scheme internet-facing ^
+        --type application ^
+        --ip-address-type ipv4 ^
+        --subnets <SubnetId> <SubnetId> ^
+        --security-groups <SecurityGroupId>
 
 |
 
