@@ -1378,6 +1378,8 @@ toDoList
 
 		+ name: **webinar-01-lb-app**
 
+		+ Scheme: **internet-facing**
+
 		+ IP address type: ipv4
 
 	+ Listeners
