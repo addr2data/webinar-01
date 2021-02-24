@@ -469,7 +469,7 @@ The basics
 
 - Each Subnet has five (5) addresses reserved from its IPv4 CIDR block.
 
-	+ For example, our Subnets will use IPv4 CIDR blocks with a prefix length of **/23**, which results in **512** possible IPv4 addresses, but only **507** IPv4 addresses available for use.
+	+ For example, our Subnets will use IPv4 CIDR blocks with a prefix length of **/23**, which results in **512** possible IPv4 addresses, but only **507** IPv4 addresses will be available for use.
 
 	+ The reserved addresses are as follows:
 
@@ -545,7 +545,7 @@ toDoList
 
 - Associate **webinar-01-sub-public-01** and **webinar-01-sub-public-02** with **webinar-01-rt-public**
 
-- Review the association in **webinar-01-rt-public**
+- Review the associations in **webinar-01-rt-public**
 
 ****
 
@@ -641,7 +641,7 @@ VPC peering
 The basics
 ~~~~~~~~~~
 
-- VPC peering allows you to create a network connection (VPC peering connection) between two VPCs.
+- Allows you to create a network connection (VPC peering connection) between two VPCs.
 
 - Traffic can be routed between VPCs, using private IPv4 address or IPv6 addresses.
 
