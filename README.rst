@@ -100,7 +100,7 @@ The basics
 
 - VPCs have the look and feel of traditional networks
 
-	+ You define the address space (IPv4/IPv6)
+	+ You define the address space (IPv4 or IPv4/IPv6)
 	+ You configure subnets
 	+ You configure routing tables
 	+ You configure network gateways
