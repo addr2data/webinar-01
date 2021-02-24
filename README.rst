@@ -1,5 +1,5 @@
-AWS Webinar Series
-==================
+A series of AWS webinars
+========================
 
 Objectives
 ----------
