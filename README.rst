@@ -28,7 +28,7 @@ Webinar-01
 
 Introduction
 ------------
-During this webinar we will introduce the following AWS services/components/concepts:
+This webinar is all about basic plumbing. The following AWS components will be introduced:
 
 - Virtual Private Cloud (VPC)
 - Internet Gateways
