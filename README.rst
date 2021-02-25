@@ -1197,13 +1197,15 @@ The basics
 
 - A NAT gateway supports the following protocols: TCP, UDP, and ICMP.
 
-- You cannot associate a security group with a NAT gateway. You can use security groups for your instances in the private subnets to control the traffic to and from those instances.
+- You cannot associate a Security Group with a NAT gateway.
 
-- You can use a network ACL to control the traffic to and from the subnet in which the NAT gateway is located. The network ACL applies to the NAT gateway's traffic. A NAT gateway uses ports 1024–65535.
+- You can use a Network ACL to control the traffic to and from the subnet in which the NAT gateway is located. NAT gateways use ports 1024–65535.
 
-- You cannot route traffic to a NAT gateway through a VPC peering connection, a Site-to-Site VPN connection, or AWS Direct Connect. A NAT gateway cannot be used by resources on the other side of these connections.
+- You cannot route traffic to a NAT gateway through a VPC peering connection, a Site-to-Site VPN connection, or AWS Direct Connect.
 
-- A NAT gateway can support up to 55,000 simultaneous connections to each unique destination. This limit also applies if you create approximately 900 connections per second to a single destination (about 55,000 connections per minute).
+- A NAT gateways support up to 55,000 simultaneous connections to each unique destination.
+
+    + Simultaneously equates to per minute, so approximately 900 connections per second to a single destination.
 
 
 Quotas
