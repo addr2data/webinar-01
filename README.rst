@@ -897,7 +897,7 @@ Quotas
 Costs
 ~~~~~
 
-- Charges for Instances are based on multiple factors
+- Charges for Instances are based on multiple factors, including pricing model, OS, Instance Type.
 
 	+ jumpHost (On-demand, Windows, t2.medium ): **$0.0644** per hour
 	
