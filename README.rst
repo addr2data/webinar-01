@@ -78,7 +78,7 @@ Notes for awscli (**goingCmdO**)
 ****
 
 
-Let's build something
+The plumbing diagram
 ---------------------
 
 |
