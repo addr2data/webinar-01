@@ -1120,11 +1120,13 @@ The basics
 
 	+ Elastic IP addresses are allocated to your AWS account. Public IPv4 addresses are not.
 
-	+ Elastic IP addresses are yours until you release them. Public IPv4 addresses are released back to AWS as soon as you stop using them.
+	+ Elastic IP addresses are yours until you release them. Public IPv4 addresses are released back to AWS after use.
 
-	+ Elastic IP addresses are allocated and associated though the console, awscli or EC2 API. Public IPv4 addresses are allocated and associated automatically when **Auto-assign IPv4** is set at the Instance or Subnet level.
+	+ Elastic IP addresses are allocated and associated though the console, awscli or EC2 API. Public IPv4 addresses are associated automatically at Instance Launch, when **Auto-assign IPv4** is set at the Instance or Subnet level.
 
-	+ Elastic IP addresses can be disassociated from one resource, and then associated with a different resource. Public IPv4 addresses can not.
+    + Cannot have more than one network interface
+
+	+ Elastic IP addresses can be disassociated from one resource, and then associated with a different resource. Public IPv4 addresses cannot.
 
 Quotas
 ~~~~~~
