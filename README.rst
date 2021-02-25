@@ -138,7 +138,7 @@ The basics
 
 	+ Amazon treats these addresses as public.
 
-- Once created, you can't change the initial IPv4 CIDR block, but you can add/remove other CIDR blocks.
+- Once created, you can't change the initial IPv4 CIDR block, but you can add/remove other IPv4 CIDR blocks.
 
 - You can remove or replace your IPv6 CIDR block.
 
