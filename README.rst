@@ -36,7 +36,7 @@ This webinar is all about basic plumbing. The following AWS components will be i
 - Subnets
 - VPC Peering
 - Security Groups
-- Deploying Instances via the API
+- Deploying Instances via code (with an SDK)
 - NAT (Network Address Translation) Gateways
 - Elastic IP Addresses vs. Public IPv4 Addresses
 - Application Load Balancers (ALB)
