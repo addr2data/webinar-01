@@ -170,6 +170,8 @@ Quotas
 
 *++ Can't be increased*
 
+*You can your quotas here: https://console.aws.amazon.com/servicequotas/home*
+
 Costs
 ~~~~~
 
