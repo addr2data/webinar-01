@@ -77,8 +77,8 @@ Notes for awscli (**goingCmdO**)
 ****
 
 
-The plumbing diagram
----------------------
+Our virtual plumbing diagram
+----------------------------
 
 |
 
