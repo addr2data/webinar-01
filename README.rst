@@ -1276,9 +1276,6 @@ Add a default route to the **webinar-01-rt-private** route table, using the NAT 
 Load Balancers
 --------------
 
-Application Load Balancers
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 The basics
 ~~~~~~~~~~
 
