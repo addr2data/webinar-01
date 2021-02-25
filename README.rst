@@ -1279,38 +1279,26 @@ Load Balancers
 Application Load Balancers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Operates at Layer-7
+The basics
+~~~~~~~~~~
 
-- Load balances HTTP and HTTPS traffic
+- Application Load Balancers (ALB) operate at layer 7. Network Load Balancers (NLB) operate at layer 4.
 
-- Supports TLS Offloading
+- ALBs work with HTTP and HTTPS traffic. NLBs work with TCP and UDP traffic.
 
-- Supports sticky sessions
+- Both support TLS offloading.
 
-- Native IPv6 Support
+- Both support sticky sessions.
 
-- Supports Security Groups
+- Both support dual-stack (IPv4/IPv6) - Internet-facing only.
 
-- Must operate across at least two (2) AZs
+    +  NLB support for dual-stack started in Nov 2020.
 
+- ALBs support Security Groups. NLBs do not.
 
-Network Load Balancers
-~~~~~~~~~~~~~~~~~~~~~~
+- ALBs must operate across at least two (2) AZs. NLBs don't have this requirement.
 
-- Operates at layer 4.
-
-- Load balances TCP and UDP traffic.
-
-- Supports TLS offloading
-
-- Supports sticky sessions
-
-- Low Latency
-
-- Preserves source IP address
-
-- Supports long-lived TCP connections
-
+- NLBs provide lower latency.
 
 Quotas (Regional)
 ~~~~~~~~~~~~~~~~~
