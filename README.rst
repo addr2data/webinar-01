@@ -6,7 +6,7 @@ Three goals
 
 - Walk through the basic configuration of a significant number of AWS services over 4-5 webinars.
 
-	+ Each webinar will build on the previous webinars
+	+ Each webinar building on the previous ones.
 
 - Provide an opportunity for attendees to develop **hands-on-literacy** with AWS services (in three steps):
 
