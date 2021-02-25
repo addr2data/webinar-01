@@ -46,7 +46,7 @@ During this webinar we will introduce the following AWS services/components/conc
 
 **We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.**
 
-	| If you want the nitty-gritty, then join the **AWS Certified Advanced Networking Study Group** (see details below)
+	| If you want the nitty-gritty about plumbing, then join the **AWS Certified Advanced Networking Study Group** (see details below)
 
 |
 
