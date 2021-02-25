@@ -1124,9 +1124,9 @@ The basics
 
 	+ Elastic IP addresses are allocated and associated though the console, awscli or EC2 API. Public IPv4 addresses are associated automatically at Instance Launch, when **Auto-assign IPv4** is set at the Instance or Subnet level.
 
-      Cannot have more than one network interface
-
 	+ Elastic IP addresses can be disassociated from one resource, and then associated with a different resource. Public IPv4 addresses cannot.
+
+- Cannot use **Auto-assign IPv4** if you have more than one network interface
 
 Quotas
 ~~~~~~
