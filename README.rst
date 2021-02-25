@@ -1276,8 +1276,8 @@ Add a default route to the **webinar-01-rt-private** route table, using the NAT 
 Load Balancers
 --------------
 
-The basics
-~~~~~~~~~~
+The basics (the very basics)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Application Load Balancers (ALB) operate at layer 7. Network Load Balancers (NLB) operate at layer 4.
 
