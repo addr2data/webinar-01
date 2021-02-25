@@ -1232,7 +1232,7 @@ toDoList
 
 - Deploy NAT Gateway named **webinar-01-nat**
 
-- Review the current configuration while the NAT Gateway deploys
+- Let's review the current plumbing configuration, while the NAT Gateway deploys
 
 .. image:: ./images/webinar_net-04.png
 
