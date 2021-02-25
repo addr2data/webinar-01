@@ -1189,7 +1189,9 @@ The basics
 
 - Each NAT gateway is created in a specific Availability Zone and implemented with redundancy in that zone.
 
-- A NAT gateway supports 5 Gbps of bandwidth and automatically scales up to 45 Gbps. If you require more, you can distribute the workload by splitting your resources into multiple subnets, and creating a NAT gateway in each subnet.
+- A NAT gateway supports 5 Gbps of bandwidth and automatically scales up to 45 Gbps.
+
+    + If you require more, distribute the workload by using multiple *private* Subnets and multiple NAT gateways.
 
 - You can associate exactly one Elastic IP address with a NAT gateway.
 
