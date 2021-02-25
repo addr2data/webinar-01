@@ -823,7 +823,7 @@ The basics
 
 	+ If you don't, then the default security group will be used.
 
-- You to filter traffic based on protocol and port number(s). 
+- You filter traffic based on protocol and port number(s). 
 
 - You can modify the rules in a Security Group at any time.
 
