@@ -1510,7 +1510,7 @@ toDoList
 
 	+ Listeners
 
-		+ Load Balancer Protocol: **HTTP**
+		+ Load Balancer Protocol: **TCP**
 
 		+ Load Balancer Port: **5000**
 
@@ -1560,7 +1560,7 @@ toDoList
 
 |
 
-- Discuss why it didn't work.d
+- Discuss why it didn't work.
 
 |
 
@@ -1674,8 +1674,8 @@ toDoList
 
 ****
 
-It's a wrap
------------
+The plumbing job is complete.
+-----------------------------
 
 |
 
