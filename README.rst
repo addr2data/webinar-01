@@ -1023,7 +1023,7 @@ Where is the plumbing broken?
 
 |
 
-Why did the last command fail?
+Where is the plumbing broken?
 
 .. image:: ./images/webinar_net-03b.png
 
