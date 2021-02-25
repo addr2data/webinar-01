@@ -46,13 +46,13 @@ During this webinar we will introduce the following AWS services/components/conc
 
 **We are going to cover a lot of ground in this webinar, some details will be glossed over and advanced topics will be skipped altogether.**
 
-	| If you want the nitty-gritty about plumbing, then join the **AWS Certified Advanced Networking Study Group** (see details below)
+	| If you want the plumbing nitty-gritty, then join the **AWS Certified Advanced Networking Study Group** (see details below)
 
 |
 
 AWS Certified Advanced Networking Study Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you are looking for the nitty-gritty, then maybe the **AWS Certified Advanced Networking Study Group** is for you.
+If you are looking for the plumbing nitty-gritty, then maybe the **AWS Certified Advanced Networking Study Group** is for you.
 
 - Private channel on the **API Users** team in Microsoft Teams.
 - Meets every Thu (5:00p -6:00p ET) starting Mar 4, 2021.
