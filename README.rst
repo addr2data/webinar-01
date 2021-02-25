@@ -807,7 +807,13 @@ The basics
 
 	+ Outbound rules control the outgoing traffic from your instance.
 
-- You can specify allow rules only.
+- You only specify allow rules (implicit deny all)
+
+- Security groups are stateful
+  
+    + If an outbound request is allowed, then the response is allowed, regardless of inbound security group rules.
+
+    + If an inbound request is allowed, then the response is allowed, regardless of outbound rules
 
 - A newly created security group, has no inbound rules.
 
